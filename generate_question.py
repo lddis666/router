@@ -4,8 +4,6 @@ import json
 import pandas as pd
 from openai import OpenAI
 from tqdm import tqdm
-from sentence_transformers import SentenceTransformer
-from sklearn.cluster import KMeans
 import re
 
 def extract_funcdef_and_clis(json_path):
@@ -31,16 +29,20 @@ def collect_all_texts(root_dir):
     return result_texts
 
 client2 = OpenAI(
-    base_url="http://localhost:8802/v1",
-    api_key="token-abc123",
+    # base_url="http://localhost:8802/v1",
+    base_url="https://ark.cn-beijing.volces.com/api/v3/",
+    # api_key="token-abc123",
+    api_key="606f1ad7-6633-4c7e-87e8-2e8ab460d003"
+    
 )
 def get_72b_response(prompt):
     completion = client2.chat.completions.create(
-        model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
+        # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
+        model = "deepseek-v3-250324",
         messages=[
             {"role": "user", "content": prompt}
         ],
-        temperature=3,
+        temperature=1.2,
         top_p=0.8,
         max_tokens=1024,
         extra_body={
@@ -62,7 +64,7 @@ prompt = '''
 
 1. 从上面的 "CLIs" 命令中选取一条；
 2. 提出一句简洁的问题，用以考察网络管理员是否掌握该命令的使用方法；
-3. 若待考察命令包含“ParaDef”中的参数，需在问题中给出明确的具体数值或内容，不能使用“某前缀”、“一个AS”等模糊描述；
+3. 若待考察命令包含“ParaDef”中的参数，需在问题中给出明确的具体数值或内容，不能使用“某前缀”、“一个AS”等模糊描述，内容不能与示例当中的重复；
 4. 问题不得直接提及命令名称，且不得使用“你、我、他、网络管理员”等人称，请直接表述问题本身；
 5. 问题应具有通用性，考察角度可适用于不同品牌的设备，但问题中应明确指出华为路由器，以提示考生使用华为CLI作答；
 6. 问题中不要包含有关"ParentView"的描述,不要含有“假设”、“如果”等类似话术。
@@ -77,9 +79,9 @@ prompt = '''
  
 result_list = []
 for cli, path in tqdm(huawei_clis):
-    for i in range(5):
+    for i in range(2):
         response = get_72b_response(prompt.format(cli_config=cli))
         result_list.append({"question": response, "path": path})
 
-with open('question.json', 'w', encoding='utf-8') as f:
+with open('question_test.json', 'w', encoding='utf-8') as f:
     json.dump(result_list, f, indent=4, ensure_ascii=False)
