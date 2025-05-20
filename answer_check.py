@@ -109,26 +109,65 @@ with open('./question_test.json', 'r', encoding='utf-8') as f:
 
 model_name = 'Qwen/Qwen2.5-7B-Instruct'
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.float16)
+model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype=torch.float16, device_map = 'auto').eval()
 model = PeftModel.from_pretrained(model,"./qwen",adapter_name='expert',torch_dtype=torch.float16)
-model.eval()
+# model.to("cuda:0")
 
+
+
+# correct = 0
+# for i in tqdm(data):
+#     path = i['path']
+#     question = i['question']
+#     Def, Cli, Text = extract_funcdef_and_clis(path)
+
+#     response = get_response(question,lora=True)
+
+#     judge = get_72b_response(check_prompt.format(
+#         User_Question=question,
+#         answer=response,
+#         Manual_Excerpt=Text
+#     ))
+#     if "correct" in judge.lower():
+#         correct += 1
+
+# print(f"Accuracy: {correct / len(data) * 100:.2f}%")
+
+
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
+
+def process_sample(i):
+    try:
+        path = i['path']
+        question = i['question']
+        Def, Cli, Text = extract_funcdef_and_clis(path)
+
+        response = get_response(question, lora=True)
+        judge = get_72b_response(check_prompt.format(
+            User_Question=question,
+            answer=response,
+            Manual_Excerpt=Text
+        ))
+        return 'correct' in judge.lower()
+    except Exception as e:
+        print(f"Error processing sample: {e}")
+        return False
+
+# 线程数可根据CPU数和每次API响应速度调整，通常4~8左右合适
+MAX_WORKERS = 10
 
 correct = 0
-for i in tqdm(data):
-    path = i['path']
-    question = i['question']
-    Def, Cli, Text = extract_funcdef_and_clis(path)
+results = []
 
-    response = get_response(question,lora=True)
+with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    # 提交所有任务
+    futures = [executor.submit(process_sample, i) for i in data]
+    # 显示进度条
+    for future in tqdm(as_completed(futures), total=len(futures)):
+        result = future.result()
+        results.append(result)
 
-    judge = get_72b_response(check_prompt.format(
-        User_Question=question,
-        answer=response,
-        Manual_Excerpt=Text
-    ))
-    if "correct" in judge.lower():
-        correct += 1
-
+correct = sum(results)
 print(f"Accuracy: {correct / len(data) * 100:.2f}%")
         
