@@ -23,8 +23,8 @@ def get_72b_response(prompt):
     print(prompt)
     completion = client2.chat.completions.create(
         # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
-        # model = "deepseek-v3-250324",
-        model = "deepseek-r1-250120",
+        model = "deepseek-v3-250324",
+        # model = "deepseek-r1-250120",
         messages=[
             {"role": "user", "content": prompt}
         ],
@@ -67,9 +67,18 @@ def extract_funcdef_and_clis(json_path):
             data = json.load(f)
         func_def = data.get("FuncDef", "").strip()
         clis = data.get("CLIs", [])
-        clis_text = "\n".join([cli for cli in clis])
         para = data.get("ParaDef", [])
-        para_text = "\n".join([str(dic) for dic in para])
+        if clis:
+            clis_text = "\n".join([cli for cli in clis])
+        else: 
+            clis_text = "No CLIs found"
+        if not func_def:
+            func_def = "No FuncDef found"
+        
+        if para:
+            para_text = "\n".join([str(dic) for dic in para])
+        else:
+            para_text = "No ParaDef found"
         return  "CLIs:\n" + clis_text + "\nFuncDef:\n" + func_def + "\nParaDef:\n" + para_text
     except Exception as e:
         print(f"Error processing {json_path}: {e}")
@@ -119,10 +128,10 @@ Do not provide any explanation, description, or code block markers. Only return 
         outputs = model.generate(
             **inputs,
             max_new_tokens=1024,
-            do_sample=True,
-            temperature=0.7,
-            top_p=0.9,
-            top_k=50,
+            do_sample=False,
+            # temperature=0.7,
+            # top_p=0.9,
+            # top_k=50,
             # adapter_names = ['__base__']
             adapter_names = ['expert'] if lora else ['__base__']
         )
@@ -140,61 +149,62 @@ model = PeftModel.from_pretrained(model,"./qwen",adapter_name='expert',torch_dty
 
 
 
-# correct = 0
-# for i in tqdm(data):
-#     path = i['path']
-#     question = i['question']
-#     Def, Cli, Text = extract_funcdef_and_clis(path)
-
-#     response = get_response(question,lora=True)
-
-#     judge = get_72b_response(check_prompt.format(
-#         User_Question=question,
-#         answer=response,
-#         Manual_Excerpt=Text
-#     ))
-#     if "correct" in judge.lower():
-#         correct += 1
-
-# print(f"Accuracy: {correct / len(data) * 100:.2f}%")
-
-
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from tqdm import tqdm
-
-def process_sample(i):
-    try:
-        path = i['path']
-        question = i['question']
-        Text = extract_funcdef_and_clis(path)
-
-        response = get_response(question, lora=True, system=True)
-        cli_list = '\n'.join(extract_commands_from_json(response))
-        judge = get_72b_response(check_prompt.format(
-            User_Question=question,
-            answer=cli_list,
-            Manual_Excerpt=Text
-        ))
-        return not 'incorrect' in judge.lower()
-    except Exception as e:
-        print(f"Error processing sample: {e}")
-        return False
-
-# 线程数可根据CPU数和每次API响应速度调整，通常4~8左右合适
-MAX_WORKERS = 10
-
 correct = 0
-results = []
+for i in tqdm(data):
+    path = i['path']
+    question = i['question']
+    Text = extract_funcdef_and_clis(path)
 
-with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-    # 提交所有任务
-    futures = [executor.submit(process_sample, i) for i in data]
-    # 显示进度条
-    for future in tqdm(as_completed(futures), total=len(futures)):
-        result = future.result()
-        print(result)
-        results.append(result)
+    response = get_response(question,lora=True,  system=True)
+    cli_list = '\n'.join(extract_commands_from_json(response))
 
-correct = sum(results)
+    judge = get_72b_response(check_prompt.format(
+        User_Question=question,
+        answer=cli_list,
+        Manual_Excerpt=Text
+    ))
+    if not 'incorrect' in judge.lower():
+        correct += 1
+
 print(f"Accuracy: {correct / len(data) * 100:.2f}%")
+
+
+# from concurrent.futures import ThreadPoolExecutor, as_completed
+# from tqdm import tqdm
+
+# def process_sample(i):
+#     try:
+#         path = i['path']
+#         question = i['question']
+#         Text = extract_funcdef_and_clis(path)
+
+#         response = get_response(question, lora=True, system=True)
+#         cli_list = '\n'.join(extract_commands_from_json(response))
+#         judge = get_72b_response(check_prompt.format(
+#             User_Question=question,
+#             answer=cli_list,
+#             Manual_Excerpt=Text
+#         ))
+#         return not 'incorrect' in judge.lower()
+#     except Exception as e:
+#         print(f"Error processing sample: {e}")
+#         return False
+
+# # 线程数可根据CPU数和每次API响应速度调整，通常4~8左右合适
+# MAX_WORKERS = 10
+
+# correct = 0
+# results = []
+
+# with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+#     # 提交所有任务
+#     futures = [executor.submit(process_sample, i) for i in data]
+#     # 显示进度条
+#     for future in tqdm(as_completed(futures), total=len(futures)):
+#         result = future.result()
+#         print(result)
+#         results.append(result)
+
+# correct = sum(results)
+# print(f"Accuracy: {correct / len(data) * 100:.2f}%")
         
