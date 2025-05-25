@@ -10,7 +10,7 @@ class CommandRetriever:
         self.model_cli = SentenceTransformer(model_name1)
         self.model_def = SentenceTransformer(model_name2)
         self.embeddings_cli = self.model_cli.encode([cmd for cmd in self.huawei_commands['cli']], convert_to_tensor=True)
-        self.embeddings_def = self.model_def.encode([cmd for cmd in self.nokia_commands['text']], convert_to_tensor=True)
+        self.embeddings_def = self.model_def.encode([cmd for cmd in self.nokia_commands['def']], convert_to_tensor=True)
 
     def retrieve_cli(self, query, top_k=3):
         query_emb = self.model_cli.encode([query], convert_to_tensor=True)
@@ -33,7 +33,7 @@ class CommandRetriever:
 
         results = []
         for idx in top_indices:
-            results.append((idx, float(sim_scores[idx]), self.nokia_commands['text'][idx]))
+            results.append((idx, float(sim_scores[idx]), self.nokia_commands['def'][idx]))
         return results
 
 
@@ -48,13 +48,20 @@ class CommandRetriever:
         cli_results = self.retrieve_cli(query, top_k1)
         # return cli_results
         for idx, score, cmd in cli_results:
-            print(f"CLI: {cmd} (Score: {score:.4f})")
-            print(idx)
+            # print(f"CLI: {cmd} (Score: {score:.4f})")
+            # print(idx)
+            print("匹配的cli")
+            print(cmd)
+
             _, Def, _ = self.get_huawei_item(idx)
+            print("查询的def")
             print(Def)
+            # print(Def)
             def_results = self.retrieve_def(Def, top_k2)
             for idx_def, score_def, def_cmd in def_results:
-                print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
+                print("检索到的def")
+                print(def_cmd)
+                # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
                 _, _, text = self.get_nokia_item(idx_def)
                 results.append(text)
 
@@ -96,7 +103,9 @@ def collect_all_texts(root_dir):
 huawei_texts = collect_all_texts('./BGP配置命令行数据/huawei')
 nokia_texts = collect_all_texts('./BGP配置命令行数据/nokia')
 
-retriever = CommandRetriever(huawei_texts,nokia_texts,'CyCraftAI/CmdCaliper-base','all-MiniLM-L6-v2')
+# retriever = CommandRetriever(huawei_texts,nokia_texts,'CyCraftAI/CmdCaliper-base','all-MiniLM-L6-v2')
+
+retriever = CommandRetriever(huawei_texts,nokia_texts,'BAAI/bge-large-en','BAAI/bge-large-en')
 
 
 
@@ -118,14 +127,18 @@ Retrieved Reference Content (from the configuration manual):
 
 ---
 
-Please generate CLI configuration commands that fulfill the user's request using the information from the reference content. Do not invent commands or parameters that are not present in the provided reference.
-
+Generate CLI configuration commands that fulfill the user's request using the information from the reference content. Please respond directly to the user's question. Do not mention phrases like "based on the information you provided", "according to the documentation", or anything similar.
 
 '''.strip()
 
 
-def get_retrieved_prompt(user_question, llm_command):
-    results = retriever.search(llm_command, top_k1=5, top_k2=2)
+def get_retrieved_prompt(user_question, llm_commands):
+
+    results = []
+    for llm_command in llm_commands:
+        print("原cli:")
+        print(llm_command)
+        results+=(retriever.search(llm_command, top_k1=2, top_k2=2))
     retrieved_docs = '\n'.join(list(set(results)))
     return rag_prompt.format(user_question=user_question, retrieved_docs=retrieved_docs)
 

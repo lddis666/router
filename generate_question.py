@@ -51,7 +51,8 @@ def get_72b_response(prompt):
     )
     # print(completion.choices[0].message.content)
     return completion.choices[0].message.content
-huawei_clis = collect_all_texts('./BGP配置命令行数据/huawei')
+# huawei_clis = collect_all_texts('./BGP配置命令行数据/huawei')
+huawei_clis = collect_all_texts('./BGP配置命令行数据/nokia')
 
 
 prompt = '''

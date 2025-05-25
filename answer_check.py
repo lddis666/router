@@ -104,6 +104,8 @@ def extract_commands_from_json(json_str):
         return []
 
 def get_response(input_text, lora = True, system = False):
+    print("input_text")
+    print(input_text)
     # system
     system_prompt = '''
 You are a router command assistant. Please generate the required router configuration commands based on my input, and output ONLY in JSON format as shown below:
@@ -117,26 +119,42 @@ You are a router command assistant. Please generate the required router configur
   ]
 }
 
-Do not provide any explanation, description, or code block markers. Only return the pure JSON object.
+Only the most essential CLI commands are needed, a complete list of all CLI is not required.
+Do not provide any explanation, description, or code block markers. Only return the pure JSON object. 
 '''
     if system:
         messages = [{"role": "system","content":system_prompt},{"role": "user", "content": input_text}]
     else:
         messages = [{"role": "user", "content": input_text}]
-    inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=1024,
-            do_sample=False,
-            # temperature=0.7,
-            # top_p=0.9,
-            # top_k=50,
-            # adapter_names = ['__base__']
-            adapter_names = ['expert'] if lora else ['__base__']
-        )
-    return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
+    # inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    # inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
+    # with torch.no_grad():
+    #     outputs = model.generate(
+    #         **inputs,
+    #         max_new_tokens=1024,
+    #         do_sample=False,
+    #         # temperature=0.7,
+    #         # top_p=0.9,
+    #         # top_k=50,
+    #         # adapter_names = ['__base__']
+    #         adapter_names = ['expert'] if lora else ['__base__']
+    #     )
+    # return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
+
+    completion = client2.chat.completions.create(
+        # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
+        model = "deepseek-v3-250324",
+        # model = "deepseek-r1-250120",
+        messages=messages,
+        temperature=1.2,
+        top_p=0.8,
+        max_tokens=1024,
+        extra_body={
+            "repetition_penalty": 1.05,
+        },
+    )
+    print(completion.choices[0].message.content)
+    return completion.choices[0].message.content
 
 with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
@@ -156,10 +174,14 @@ for i in tqdm(data):
     question = i['question']
     Text = extract_funcdef_and_clis(path)
 
-    response = get_response(question.replace('Nokia','huawei'),lora=False,  system=True)
-    cli_list = '\n'.join(extract_commands_from_json(response))
+    # response = get_response(question,lora=False,  system=True)
+    # response = response.strip('```').strip("json").strip()
+    # cli_list = '\n'.join(extract_commands_from_json(response))
 
-    retrieved_prompt = get_retrieved_prompt(question, cli_list)
+
+    response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
+    response = response.strip('```').strip("json").strip()
+    retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
     cli_list = get_response(retrieved_prompt, lora=False, system=False)
 
     judge = get_72b_response(check_prompt.format(

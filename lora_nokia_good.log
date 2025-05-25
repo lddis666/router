@@ -2941,4 +2941,729 @@ Your answer:
 ------------
 Correct
 ------------
-  0%|          | 11/4550 [03:58<26:17:05, 20.85s/it]
+  0%|          | 11/4550 [03:58<26:17:05, 20.85s/it]CLI: display bgp link-state unicast routing-table [ peer <ipv4-address> { received-routes | advertised-routes } ] <bgp-ls-prefix> segment-list (Score: 0.5055)
+17
+The display bgp link-state unicast routing-table segment-list command displays the SID list of the BGP-LS routes with the specified prefix.
+DEF: {
+    "PageTitle": "link-state-import-enable",
+    "FuncDef": "This command enables the import of link-state information into the BGP-LS address family for advertisement to other BGP neighbors.",
+    "CLIs": [
+        "link-state-import-enable",
+        "no link-state-import-enable"
+    ],
+    "ParentView": [
+        "config>router>bgp"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no link-state-import-enable"
+} (Score: 0.5499)
+DEF: {
+    "PageTitle": "sr-isis",
+    "FuncDef": "This command selects the Segment Routing (SR) tunnel type programmed by an IS-IS instance in TTM for next-hop resolution of BGP routes and labeled routes. This option allows BGP to use the segment- routing tunnel in the tunnel table submitted by the lowest preference IS-IS instance or, in case of a tie, the lowest numbered IS-IS instance.",
+    "CLIs": [
+        "sr-isis",
+        "no sr-isis"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-resolution>shortcut-tunn>family>resolution-filter",
+        "config>router>bgp>next-hop-resolution>labeled-routes>transport-tunnel>family>resolution-filter"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": ""
+} (Score: 0.5371)
+CLI: display bgp link-state unicast routing-table [ peer { <ipv4-address> | <ipv6-address> } { received-routes | advertised-routes } ] <bgp-ls-prefix> (Score: 0.4952)
+19
+The display bgp link-state unicast routing-table command displays BGP-LS route information.
+DEF: {
+    "PageTitle": "link-state-import-enable",
+    "FuncDef": "This command enables the import of link-state information into the BGP-LS address family for advertisement to other BGP neighbors.",
+    "CLIs": [
+        "link-state-import-enable",
+        "no link-state-import-enable"
+    ],
+    "ParentView": [
+        "config>router>bgp"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no link-state-import-enable"
+} (Score: 0.5745)
+DEF: {
+    "PageTitle": "sr-isis",
+    "FuncDef": "This command selects the Segment Routing (SR) tunnel type programmed by an IS-IS instance in TTM for next-hop resolution of BGP routes and labeled routes. This option allows BGP to use the segment- routing tunnel in the tunnel table submitted by the lowest preference IS-IS instance or, in case of a tie, the lowest numbered IS-IS instance.",
+    "CLIs": [
+        "sr-isis",
+        "no sr-isis"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-resolution>shortcut-tunn>family>resolution-filter",
+        "config>router>bgp>next-hop-resolution>labeled-routes>transport-tunnel>family>resolution-filter"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": ""
+} (Score: 0.5475)
+CLI: display bgp sr-policy routing-table [ peer <ipv4-address> { advertised-routes | received-routes } ] [ <sr-policy-prefix> ]
+display bgp sr-policy routing-table peer <ipv4-address> { advertised-routes | received-routes } statistics (Score: 0.4915)
+2207
+The display bgp sr-policy routing-table peer command displays information about routes in a BGP IPv4 SR-Policy address family.
+DEF: {
+    "PageTitle": "route-table-import",
+    "FuncDef": "This command specifies the name of a route to control the importation of active routes from the IP route table into one of the BGP RIBs.",
+    "CLIs": [
+        "route-table-import <policy-name>",
+        "no route-table-import"
+    ],
+    "ParentView": [
+        "config>router>bgp>rib-management>ipv4",
+        "config>router>bgp>rib-management>label-ipv4",
+        "config>router>bgp>rib-management>ipv6",
+        "config>router>bgp>rib-management>label-ipv6"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "policy-name",
+            "Info": "Specifies the name of a policy-statement (up to 64 characters)."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no route-table-import"
+} (Score: 0.6535)
+DEF: {
+    "PageTitle": "sr-policy",
+    "FuncDef": "This command enables the use of segment routing policies to resolve the BGP next hop of certain BGP routes (depending on the context). The segment routing policies that are considered are statically configured in the local router or learned by BGP routes (AFI 1/SAFI 73). For a BGP route to be resolved by an SR policy, the highest numbered color extended community attached to BGP route must match the color of the SR policy. Next hop resolution of VPN IP routes by SR policies is not supported.",
+    "CLIs": [
+        "sr-policy",
+        "no sr-policy"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-resolution>shortcut-tunn>family>resolution-filter",
+        "config>router>bgp>next-hop-resolution>labeled-routes>transport-tunnel>family>resolution-filter"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": ""
+} (Score: 0.6174)
+CLI: mpls bgp bfd-trigger-tunnel { host | ip-prefix <ip-prefix-name> }
+undo mpls bgp bfd-trigger-tunnel (Score: 0.4866)
+1862
+The mpls bgp bfd-trigger-tunnel command configures a policy used to establish BGP BFD sessions.
+The undo mpls bgp bfd-trigger-tunnel command deletes a policy used to establish BGP BFD sessions.
+By default, no policy used to establish BGP BFD sessions is configured.
+DEF: {
+    "PageTitle": "bfd-enable",
+    "FuncDef": "This command enables the use of bi-directional forwarding (BFD) to control the state of the associated protocol interface. By enabling BFD on a given protocol interface, the state of the protocol interface is tied to the state of the BFD session between the local node and the remote node. The parameters used for the BFD are set via the BFD command under the IP interface.",
+    "CLIs": [
+        "bfd-enable",
+        "no bfd-enable"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no bfd-enable"
+} (Score: 0.6983)
+DEF: {
+    "PageTitle": "sr-ospf",
+    "FuncDef": "This command selects the Segment Routing (SR) tunnel type programmed by an OSPF instance in TTM for next-hop resolution of BGP routes and labeled routes. This option allows BGP to use the segment routing tunnel in the tunnel table submitted by the lowest preference OSPF instance or, in case of a tie, the lowest numbered OSPF instance.",
+    "CLIs": [
+        "sr-ospf",
+        "no sr-ospf"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-resolution>shortcut-tunn>family>resolution-filter",
+        "config>router>bgp>next-hop-resolution>labeled-routes>transport-tunnel>family>resolution-filter"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": ""
+} (Score: 0.4436)
+CLI: mpls bgp bfd-trigger-tunnel { host | ip-prefix <ip-prefix-name> }
+undo mpls bgp bfd-trigger-tunnel (Score: 0.4866)
+164
+The mpls bgp bfd-trigger-tunnel command configures a policy used to establish BGP BFD sessions.
+The undo mpls bgp bfd-trigger-tunnel command deletes a policy used to establish BGP BFD sessions.
+By default, no policy used to establish BGP BFD sessions is configured.
+DEF: {
+    "PageTitle": "bfd-enable",
+    "FuncDef": "This command enables the use of bi-directional forwarding (BFD) to control the state of the associated protocol interface. By enabling BFD on a given protocol interface, the state of the protocol interface is tied to the state of the BFD session between the local node and the remote node. The parameters used for the BFD are set via the BFD command under the IP interface.",
+    "CLIs": [
+        "bfd-enable",
+        "no bfd-enable"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no bfd-enable"
+} (Score: 0.6983)
+DEF: {
+    "PageTitle": "sr-ospf",
+    "FuncDef": "This command selects the Segment Routing (SR) tunnel type programmed by an OSPF instance in TTM for next-hop resolution of BGP routes and labeled routes. This option allows BGP to use the segment routing tunnel in the tunnel table submitted by the lowest preference OSPF instance or, in case of a tie, the lowest numbered OSPF instance.",
+    "CLIs": [
+        "sr-ospf",
+        "no sr-ospf"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-resolution>shortcut-tunn>family>resolution-filter",
+        "config>router>bgp>next-hop-resolution>labeled-routes>transport-tunnel>family>resolution-filter"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": ""
+} (Score: 0.4436)
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:612: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+------------
+As a network device expert, please determine whether the following answer correctly responds to the user's question based on the router configuration manual. Only output "Correct" or "Incorrect" without any explanation or additional information. You must make your own judgment based on the Router configuration manual provided to you, not on your own knowledge.
+---
+## User question:
+How to configure Nokia router to filter incoming BGP-LS routes from IPv6 peer 2001:DB8:2::2 using route-policy named LS-FILTER?
+---
+## Proposed answer:
+Based on the user's request and the provided reference content, the following CLI configuration commands can be generated to filter incoming BGP-LS routes from the IPv6 peer `2001:DB8:2::2` using a route-policy named `LS-FILTER`:
+
+```plaintext
+config>router>bgp>rib-management>ipv6
+    route-table-import LS-FILTER
+
+config>router>bgp
+    link-state-import-enable
+```
+
+Explanation:
+1. **`route-table-import LS-FILTER`**: This command specifies the name of a policy-statement (`LS-FILTER`) to control the importation of active routes from the IP route table into the BGP RIB for IPv6.
+2. **`link-state-import-enable`**: This command enables the import of link-state information into the BGP-LS address family for advertisement to other BGP neighbors.
+
+These commands should be entered in the appropriate configuration mode on the Nokia router to achieve the desired filtering of BGP-LS routes.
+---
+## Router configuration manual:
+CLIs:
+peer <ipv6-address> route-policy <route-policy-name> import
+undo peer <ipv6-address> route-policy <route-policy-name> import
+FuncDef:
+The peer route-policy import command specifies a route-policy for filtering routes received from a peer.
+The undo peer route-policy import command deletes a specified route-policy.
+By default, no route-policy is configured for filtering routes received from a peer.
+ParaDef:
+{'Parameters': 'ipv6-address', 'Info': 'Specify an IPv6 peer address.\nThe value is a 32-digit hexadecimal number, in the format of X:X:X:X:X:X:X:X'}
+{'Parameters': 'route-policy-name', 'Info': 'Name of the route policy.\nThe value is a string of 1 to 200 case-sensitive characters, spaces not supported.'}
+{'Parameters': 'import', 'Info': 'Specify import policy.\n-'}
+---
+Please answer Correct or Incorrect.
+Your answer:
+------------
+Incorrect
+------------
+  0%|          | 12/4550 [04:17<25:41:19, 20.38s/it]CLI: peer <ipv4-address> route-filter <route-filter-name> export [ ignore-bit-error ]
+undo peer <ipv4-address> route-filter <route-filter-name> export (Score: 0.5355)
+1493
+The peer route-filter export command specifies a route-filter for the routes to be advertised to a specified BGP peer.
+The undo peer route-filter export command restores the default configuration.
+By default, no route-filter is specified for the routes to be advertised to a specified BGP peer.
+DEF: {
+    "PageTitle": "outbound-route-filtering",
+    "FuncDef": "This command opens the configuration tree for sending or accepting BGP filter lists from peers (outbound route filtering).",
+    "CLIs": [
+        "outbound-route-filtering",
+        "no outbound-route-filtering"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no outbound-route-filtering"
+} (Score: 0.5439)
+DEF: {
+    "PageTitle": "advertise-stale-to-all-neighbors",
+    "FuncDef": "This command allows BGP routes marked as LLGR stale to be advertised to BGP peers that did not advertise the LLGR capability when the session was opened. Thenoversion of this command causes advertisement behavior to follow the rule that stale routes cannot be advertised to a peer that does not understand or implement the LLGR capability. Stale routes are withdrawn towards such peers.",
+    "CLIs": [
+        "advertise-stale-to-all-neighbors [ without-no-export | no without-no-export ]",
+        "no advertise-stale-to-all-neighbors"
+    ],
+    "ParentView": [
+        "config>router>bgp>graceful-restart>long-lived",
+        "config>router>bgp>group>graceful-restart>long-lived",
+        "config>router>bgp>group>neighbor>graceful-restart>long-lived"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "without-no-export",
+            "Info": "Allows LLGR stale routes to be advertised to all peers, such that they can exit the local AS."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no advertise-stale-to-all-neighbors"
+} (Score: 0.5132)
+CLI: peer <ipv4-address> route-filter <route-filter-name> export [ ignore-bit-error ]
+undo peer <ipv4-address> route-filter <route-filter-name> export (Score: 0.5355)
+1830
+The peer route-filter export command specifies a route-filter for the routes to be advertised to a specified BGP peer.
+The undo peer route-filter export command restores the default configuration.
+By default, no route-filter is specified for the routes to be advertised to a specified BGP peer.
+DEF: {
+    "PageTitle": "outbound-route-filtering",
+    "FuncDef": "This command opens the configuration tree for sending or accepting BGP filter lists from peers (outbound route filtering).",
+    "CLIs": [
+        "outbound-route-filtering",
+        "no outbound-route-filtering"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no outbound-route-filtering"
+} (Score: 0.5439)
+DEF: {
+    "PageTitle": "advertise-stale-to-all-neighbors",
+    "FuncDef": "This command allows BGP routes marked as LLGR stale to be advertised to BGP peers that did not advertise the LLGR capability when the session was opened. Thenoversion of this command causes advertisement behavior to follow the rule that stale routes cannot be advertised to a peer that does not understand or implement the LLGR capability. Stale routes are withdrawn towards such peers.",
+    "CLIs": [
+        "advertise-stale-to-all-neighbors [ without-no-export | no without-no-export ]",
+        "no advertise-stale-to-all-neighbors"
+    ],
+    "ParentView": [
+        "config>router>bgp>graceful-restart>long-lived",
+        "config>router>bgp>group>graceful-restart>long-lived",
+        "config>router>bgp>group>neighbor>graceful-restart>long-lived"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "without-no-export",
+            "Info": "Allows LLGR stale routes to be advertised to all peers, such that they can exit the local AS."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no advertise-stale-to-all-neighbors"
+} (Score: 0.5132)
+CLI: peer <ipv4-address> filter-policy <acl-number> export
+peer <ipv4-address> filter-policy acl6-name <acl6-name> export
+undo peer <ipv4-address> filter-policy <acl-number> export
+undo peer <ipv4-address> filter-policy acl6-name <acl6-name> export (Score: 0.5078)
+1306
+The peer filter-policy export command configures an ACL-based policy for filtering BGP routes to be advertised to a specified peer.
+The undo peer filter-policy export command cancels this configuration.
+By default, no filtering policy is set for a peer.
+DEF: {
+    "PageTitle": "send-orf",
+    "FuncDef": "This command instructs the router to negotiate the send capability in the BGP outbound route filtering (ORF) negotiation with a peer.",
+    "CLIs": [
+        "send-orf [ <comm-id> ]",
+        "no send-orf [ <comm-id> ]"
+    ],
+    "ParentView": [
+        "config>router>bgp>outbound-route-filtering>extended-community",
+        "config>router>bgp>group>outbound-route-filtering>extended-community",
+        "config>router>bgp>group>neighbor>outbound-route-filtering>extended-community"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "comm-id",
+            "Info": "Specifies up to 32 community policies, which must consist exclusively of route target extended communities. If it is not specified, then the ORF policy is automatically generated from configured route target lists, accepted client route target ORFs and locally configured route targets. Values-[target: {ip-address:comm-val | 2byte-asnumber:ext-comm-val | 4byte-asnumber:comm-val}."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no send-orf"
+} (Score: 0.5641)
+DEF: {
+    "PageTitle": "outbound-route-filtering",
+    "FuncDef": "This command opens the configuration tree for sending or accepting BGP filter lists from peers (outbound route filtering).",
+    "CLIs": [
+        "outbound-route-filtering",
+        "no outbound-route-filtering"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no outbound-route-filtering"
+} (Score: 0.5629)
+CLI: peer <ipv4-address> filter-policy <acl-number> export
+peer <ipv4-address> filter-policy acl6-name <acl6-name> export
+undo peer <ipv4-address> filter-policy <acl-number> export
+undo peer <ipv4-address> filter-policy acl6-name <acl6-name> export (Score: 0.5078)
+1820
+The peer filter-policy export command configures an ACL-based policy for filtering BGP routes to be advertised to a specified peer.
+The undo peer filter-policy export command cancels this configuration.
+By default, no filtering policy is set for a peer.
+DEF: {
+    "PageTitle": "send-orf",
+    "FuncDef": "This command instructs the router to negotiate the send capability in the BGP outbound route filtering (ORF) negotiation with a peer.",
+    "CLIs": [
+        "send-orf [ <comm-id> ]",
+        "no send-orf [ <comm-id> ]"
+    ],
+    "ParentView": [
+        "config>router>bgp>outbound-route-filtering>extended-community",
+        "config>router>bgp>group>outbound-route-filtering>extended-community",
+        "config>router>bgp>group>neighbor>outbound-route-filtering>extended-community"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "comm-id",
+            "Info": "Specifies up to 32 community policies, which must consist exclusively of route target extended communities. If it is not specified, then the ORF policy is automatically generated from configured route target lists, accepted client route target ORFs and locally configured route targets. Values-[target: {ip-address:comm-val | 2byte-asnumber:ext-comm-val | 4byte-asnumber:comm-val}."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no send-orf"
+} (Score: 0.5641)
+DEF: {
+    "PageTitle": "outbound-route-filtering",
+    "FuncDef": "This command opens the configuration tree for sending or accepting BGP filter lists from peers (outbound route filtering).",
+    "CLIs": [
+        "outbound-route-filtering",
+        "no outbound-route-filtering"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no outbound-route-filtering"
+} (Score: 0.5629)
+CLI: peer <ipv4-address> filter-policy <acl-number> export
+peer <ipv4-address> filter-policy acl6-name <acl6-name> export
+undo peer <ipv4-address> filter-policy <acl-number> export
+undo peer <ipv4-address> filter-policy acl6-name <acl6-name> export (Score: 0.5078)
+2137
+The peer filter-policy export command configures an ACL-based policy for filtering BGP routes to be advertised to a specified peer.
+The undo peer filter-policy export command cancels this configuration.
+By default, no filtering policy is set for a peer.
+DEF: {
+    "PageTitle": "send-orf",
+    "FuncDef": "This command instructs the router to negotiate the send capability in the BGP outbound route filtering (ORF) negotiation with a peer.",
+    "CLIs": [
+        "send-orf [ <comm-id> ]",
+        "no send-orf [ <comm-id> ]"
+    ],
+    "ParentView": [
+        "config>router>bgp>outbound-route-filtering>extended-community",
+        "config>router>bgp>group>outbound-route-filtering>extended-community",
+        "config>router>bgp>group>neighbor>outbound-route-filtering>extended-community"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "comm-id",
+            "Info": "Specifies up to 32 community policies, which must consist exclusively of route target extended communities. If it is not specified, then the ORF policy is automatically generated from configured route target lists, accepted client route target ORFs and locally configured route targets. Values-[target: {ip-address:comm-val | 2byte-asnumber:ext-comm-val | 4byte-asnumber:comm-val}."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no send-orf"
+} (Score: 0.5641)
+DEF: {
+    "PageTitle": "outbound-route-filtering",
+    "FuncDef": "This command opens the configuration tree for sending or accepting BGP filter lists from peers (outbound route filtering).",
+    "CLIs": [
+        "outbound-route-filtering",
+        "no outbound-route-filtering"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no outbound-route-filtering"
+} (Score: 0.5629)
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:612: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+------------
+As a network device expert, please determine whether the following answer correctly responds to the user's question based on the router configuration manual. Only output "Correct" or "Incorrect" without any explanation or additional information. You must make your own judgment based on the Router configuration manual provided to you, not on your own knowledge.
+---
+## User question:
+How to configure Nokia router's BGP-LS address family to filter advertised routes to peer 2001:0DB8:ABCD::1 using route-policy named LS_FILTER?
+---
+## Proposed answer:
+Based on the user's request and the provided configuration manual content, the configuration commands to set up BGP-LS address family to filter advertised routes to peer `2001:0DB8:ABCD::1` using a route-policy named `LS_FILTER` would involve setting up the `outbound-route-filtering` and specifying the route-policy. However, the provided content does not directly mention how to apply a route-policy to the `send-orf` command. Therefore, we will assume that the route-policy needs to be applied at the neighbor level.
+
+Here are the necessary configuration commands:
+
+```plaintext
+config>router>bgp
+  config>router>bgp>group>neighbor 2001:0DB8:ABCD::1
+    outbound-route-filtering
+    send-orf
+    route-policy LS_FILTER
+```
+
+Explanation:
+- `config>router>bgp`: Enters the BGP configuration mode.
+- `config>router>bgp>group>neighbor 2001:0DB8:ABCD::1`: Specifies the neighbor for which the BGP configuration is being made.
+- `outbound-route-filtering`: Enables outbound route filtering for the specified neighbor.
+- `send-orf`: Enables the send capability in the BGP outbound route filtering negotiation with the specified neighbor.
+- `route-policy LS_FILTER`: Applies the route-policy named `LS_FILTER` to control the advertised routes.
+
+Note: The exact syntax might vary slightly based on the specific Nokia router model and software version, but the general structure should be similar.
+---
+## Router configuration manual:
+CLIs:
+peer <ipv6-address> route-policy <route-policy-name> export
+undo peer <ipv6-address> route-policy <route-policy-name> export
+FuncDef:
+The peer route-policy export command specifies a route-policy for filtering routes to be advertised to a peer.
+The undo peer route-policy export command deletes a specified route-policy.
+By default, no route-policy is configured for the routes to be advertised to a specified BGP peer.
+ParaDef:
+{'Parameters': 'ipv6-address', 'Info': 'Specify an IPv6 peer address.\nThe value is a 32-digit hexadecimal number, in the format of X:X:X:X:X:X:X:X'}
+{'Parameters': 'route-policy-name', 'Info': 'Name of the route policy.\nThe value is a string of 1 to 200 case-sensitive characters, spaces not supported.'}
+{'Parameters': 'export', 'Info': 'Specify export policy.\n-'}
+---
+Please answer Correct or Incorrect.
+Your answer:
+------------
+Incorrect
+------------
+  0%|          | 13/4550 [04:42<27:27:00, 21.78s/it]CLI: display bgp labeled routing-table large-community [ <aa:bb:cc> ] &<1-33>
+display bgp labeled routing-table statistics large-community [ <aa:bb:cc> ] &<1-33>
+display bgp labeled routing-table large-community [ <aa:bb:cc> ] &<1-33> whole-match
+display bgp labeled routing-table statistics large-community [ <aa:bb:cc> ] &<1-33> whole-match
+display bgp labeled routing-table large-community-filter <large-community-filter-name>
+display bgp labeled routing-table statistics large-community-filter <large-community-filter-name>
+display bgp labeled routing-table large-community-filter <large-community-filter-name> whole-match
+display bgp labeled routing-table statistics large-community-filter <large-community-filter-name> whole-match (Score: 0.4953)
+571
+The display bgp labeled routing-table command displays information about BGP routes with the specified Large-Community attribute in a BGP labeled address family.
+DEF: {
+    "PageTitle": "route-table-import",
+    "FuncDef": "This command specifies the name of a route to control the importation of active routes from the IP route table into one of the BGP RIBs.",
+    "CLIs": [
+        "route-table-import <policy-name>",
+        "no route-table-import"
+    ],
+    "ParentView": [
+        "config>router>bgp>rib-management>ipv4",
+        "config>router>bgp>rib-management>label-ipv4",
+        "config>router>bgp>rib-management>ipv6",
+        "config>router>bgp>rib-management>label-ipv6"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "policy-name",
+            "Info": "Specifies the name of a policy-statement (up to 64 characters)."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no route-table-import"
+} (Score: 0.5647)
+DEF: {
+    "PageTitle": "rr-use-route-table",
+    "FuncDef": "This command enables BGP to perform a lookup of IGP routes in the route table to resolve the BGP next-hop of label-IPv4 and label-IPv6 routes. This is useful for a Route Reflector (RR) that does not participate in tunnel signaling protocols such as LDP and RSVP and therefore, does not have tunnels to resolve the BGP next-hops of label-unicast routes.",
+    "CLIs": [
+        "rr-use-route-table",
+        "no rr-use-route-table"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-res>labeled-routes"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no rr-use-route-table"
+} (Score: 0.5531)
+CLI: display bgp l2vpn-ad routing-table peer <ipv4-address> advertised-routes [ vpls-ad ]
+display bgp l2vpn-ad routing-table peer <ipv4-address> advertised-routes vpls
+display bgp l2vpn-ad routing-table peer <ipv4-address> advertised-routes vpws (Score: 0.4944)
+566
+The display bgp l2vpn-ad routing-table peer advertised-routes command displays the BGP L2VPN-AD routes advertised to the specified peer.
+The display bgp l2vpn-ad routing-table peer advertised-routes vpls command displays statistics about VPLS routes advertised to the specified peer.
+The display bgp l2vpn-ad routing-table peer advertised-routes vpws command displays statistics about VPWS routes advertised to the specified peer.
+DEF: {
+    "PageTitle": "advertise-inactive",
+    "FuncDef": "This command enables the advertising of inactive BGP routes to other BGP peers. By default, BGP only advertises BGP routes to other BGP peers if a given BGP route is chosen by the route table manager as the most preferred route within the system and is active in the forwarding plane. This command allows system administrators to advertise a BGP route even though it is not the most preferred route within the system for a given destination.",
+    "CLIs": [
+        "advertise-inactive",
+        "no advertise-inactive"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no advertise-inactive"
+} (Score: 0.5069)
+DEF: {
+    "PageTitle": "advertise-ipv6-next-hops",
+    "FuncDef": "This command applies to a BGP session established on top of IPv6; transport, BGP routes belonging to the specified families can be advertised with a true IPv6 address when originated or whennext-hop-self(configured or automatic) is applied.",
+    "CLIs": [
+        "advertise-ipv6-next-hops [ vpn-ipv6 ] [ label-ipv6 ] [ vpn-ipv4 ] [ label-ipv4 ]",
+        "no advertise-ipv6-next-hops"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "vpn-ipv6",
+            "Info": "Allows VPN IPv6 routes to be advertised to IPv6 transport peers with an IPv6 address as the BGP next hop in cases of route origination or next-hop-self (configured or automatic)."
+        },
+        {
+            "Parameters": "label-ipv6",
+            "Info": "Allows label IPv6 routes to be advertised to IPv6 transport peers with an IPv6 address as the BGP next hop in cases of route origination or next-hop-self (configured or automatic)."
+        },
+        {
+            "Parameters": "vpn-ipv4",
+            "Info": "Allows VPN IPv4 routes to be advertised to IPv6 transport peers with an IPv6 address as the BGP next hop in cases of route origination or next-hop-self (configured or automatic). It also allows export policies to change the BGP next hop of a VPN IPv4 route to an IPv6 address. All of these cases require the remote peer to advertise the necessary extended NH encoding capability."
+        },
+        {
+            "Parameters": "label-ipv4",
+            "Info": "Allows label IPv4 routes to be advertised to IPv6 transport peers with an IPv6 address as the BGP next hop in cases of route origination or next-hop-self (configured or automatic). It also allows export policies to change the BGP next hop of a label IPv4 route to an IPv6 address. All of these cases require the remote peer to advertise the necessary extended NH encoding capability."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no advertise-ipv6-next-hops"
+} (Score: 0.4765)
+CLI: display bgp l2vpn-ad routing-table [ vpls-ad ] statistics
+display bgp l2vpn-ad routing-table peer <ipv4-address> advertised-routes [ vpls-ad ] statistics
+display bgp l2vpn-ad routing-table peer <ipv4-address> received-routes [ vpls-ad | active ] statistics
+display bgp l2vpn-ad route-distinguisher <route-distinguisher> routing-table [ vpls-ad ] statistics
+display bgp l2vpn-ad routing-table peer <ipv4-address> advertised-routes vpls statistics
+display bgp l2vpn-ad routing-table peer <ipv4-address> received-routes vpls statistics
+display bgp l2vpn-ad routing-table peer <ipv4-address> advertised-routes vpws statistics
+display bgp l2vpn-ad routing-table peer <ipv4-address> received-routes vpws statistics (Score: 0.4935)
+568
+The display bgp l2vpn-ad routing-table statistics command displays BGP L2VPN-AD routes.
+DEF: {
+    "PageTitle": "vpn-apply-export",
+    "FuncDef": "This command causes the base instance BGP export route policies to be applied to vpn-ipv4/6, mvpn-ipv4/6, l2-vpn, mdt-safi, mcast-vpn-ipv4, and evpn routes.",
+    "CLIs": [
+        "vpn-apply-export",
+        "no vpn-apply-export"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no vpn-apply-export"
+} (Score: 0.4612)
+DEF: {
+    "PageTitle": "advertise-inactive",
+    "FuncDef": "This command enables the advertising of inactive BGP routes to other BGP peers. By default, BGP only advertises BGP routes to other BGP peers if a given BGP route is chosen by the route table manager as the most preferred route within the system and is active in the forwarding plane. This command allows system administrators to advertise a BGP route even though it is not the most preferred route within the system for a given destination.",
+    "CLIs": [
+        "advertise-inactive",
+        "no advertise-inactive"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no advertise-inactive"
+} (Score: 0.4515)
+CLI: display bgp l2vpn-ad routing-table <prefix> { as-path | community-list | large-community | ext-community | cluster-list | advertised-peer }
+display bgp l2vpn-ad routing-table peer <peerIpv4Addr> advertised-routes <prefix> { as-path | community-list | large-community | ext-community | cluster-list | advertised-peer } (Score: 0.4921)
+569
+The display bgp l2vpn-ad routing-table command displays BGP L2VPN-AD routes.
+DEF: {
+    "PageTitle": "advertise-inactive",
+    "FuncDef": "This command enables the advertising of inactive BGP routes to other BGP peers. By default, BGP only advertises BGP routes to other BGP peers if a given BGP route is chosen by the route table manager as the most preferred route within the system and is active in the forwarding plane. This command allows system administrators to advertise a BGP route even though it is not the most preferred route within the system for a given destination.",
+    "CLIs": [
+        "advertise-inactive",
+        "no advertise-inactive"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no advertise-inactive"
+} (Score: 0.4743)
+DEF: {
+    "PageTitle": "vpn-apply-export",
+    "FuncDef": "This command causes the base instance BGP export route policies to be applied to vpn-ipv4/6, mvpn-ipv4/6, l2-vpn, mdt-safi, mcast-vpn-ipv4, and evpn routes.",
+    "CLIs": [
+        "vpn-apply-export",
+        "no vpn-apply-export"
+    ],
+    "ParentView": [
+        "config>router>bgp",
+        "config>router>bgp>group",
+        "config>router>bgp>group>neighbor"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": "Default: no vpn-apply-export"
+} (Score: 0.4724)
+CLI: display bgp sr-policy routing-table [ peer <ipv4-address> { advertised-routes | received-routes } ] [ <sr-policy-prefix> ]
+display bgp sr-policy routing-table peer <ipv4-address> { advertised-routes | received-routes } statistics (Score: 0.4842)
+2207
+The display bgp sr-policy routing-table peer command displays information about routes in a BGP IPv4 SR-Policy address family.
+DEF: {
+    "PageTitle": "route-table-import",
+    "FuncDef": "This command specifies the name of a route to control the importation of active routes from the IP route table into one of the BGP RIBs.",
+    "CLIs": [
+        "route-table-import <policy-name>",
+        "no route-table-import"
+    ],
+    "ParentView": [
+        "config>router>bgp>rib-management>ipv4",
+        "config>router>bgp>rib-management>label-ipv4",
+        "config>router>bgp>rib-management>ipv6",
+        "config>router>bgp>rib-management>label-ipv6"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "policy-name",
+            "Info": "Specifies the name of a policy-statement (up to 64 characters)."
+        }
+    ],
+    "Examples": null,
+    "ExtraInfo": "Default: no route-table-import"
+} (Score: 0.6535)
+DEF: {
+    "PageTitle": "sr-policy",
+    "FuncDef": "This command enables the use of segment routing policies to resolve the BGP next hop of certain BGP routes (depending on the context). The segment routing policies that are considered are statically configured in the local router or learned by BGP routes (AFI 1/SAFI 73). For a BGP route to be resolved by an SR policy, the highest numbered color extended community attached to BGP route must match the color of the SR policy. Next hop resolution of VPN IP routes by SR policies is not supported.",
+    "CLIs": [
+        "sr-policy",
+        "no sr-policy"
+    ],
+    "ParentView": [
+        "config>router>bgp>next-hop-resolution>shortcut-tunn>family>resolution-filter",
+        "config>router>bgp>next-hop-resolution>labeled-routes>transport-tunnel>family>resolution-filter"
+    ],
+    "ParaDef": null,
+    "Examples": null,
+    "ExtraInfo": ""
+} (Score: 0.6174)
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:590: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:595: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/miniforge/envs/safe/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:612: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
