@@ -10,6 +10,7 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
+from similarity_search import get_retrieved_prompt
 
 client2 = OpenAI(
     # base_url="http://localhost:8802/v1",
@@ -137,7 +138,7 @@ Do not provide any explanation, description, or code block markers. Only return 
         )
     return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
 
-with open('./question_test.json', 'r', encoding='utf-8') as f:
+with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 
@@ -155,8 +156,11 @@ for i in tqdm(data):
     question = i['question']
     Text = extract_funcdef_and_clis(path)
 
-    response = get_response(question,lora=True,  system=True)
+    response = get_response(question.replace('Nokia','huawei'),lora=False,  system=True)
     cli_list = '\n'.join(extract_commands_from_json(response))
+
+    retrieved_prompt = get_retrieved_prompt(question, cli_list)
+    cli_list = get_response(retrieved_prompt, lora=False, system=False)
 
     judge = get_72b_response(check_prompt.format(
         User_Question=question,
