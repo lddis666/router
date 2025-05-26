@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/root/router/answer_check.py", line 161, in <module>
+    with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './question_test_nokia.json'

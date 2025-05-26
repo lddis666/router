@@ -1,0 +1,1458 @@
+[
+    {
+        "question": "How to configure Nokia routers to receive and utilize the link-bandwidth extended community for IPv6 routes advertised by EBGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-from-ebgp_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP group to receive and utilize the link-bandwidth extended community for IPv6 routes advertised by EBGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-from-ebgp_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable BGP ORF negotiation for receiving route filters from a peer?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-orf_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enable receiving BGP outbound route filters from a specified peer during ORF negotiation?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-orf_0.json"
+    },
+    {
+        "question": "How to disable the capability of sending/receiving multiple paths per prefix in BGP on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-paths_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable BGP's capability of sending/receiving multiple paths per prefix for IPv4 unicast in a BGP group named \"transit-peers\"?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-paths_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to automatically attach link-bandwidth extended communities to all received unlabeled unicast IPv6 routes from directly connected EBGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-to-received-ebgp_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to automatically attach link-bandwidth extended communities to all received unlabeled unicast IPv6 routes from directly connected EBGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-to-received-ebgp_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP to enable best-external advertisement for labeled-unicast IPv6 routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-external_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP to advertise best external routes for labeled-unicast IPv6 and unlabeled unicast IPv4 simultaneously?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-external_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow BGP to propagate routes that are not the best path in the routing table?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-inactive_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow BGP to propagate routes that are not the best path in the routing table?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-inactive_0.json"
+    },
+    {
+        "question": "Enable VPN IPv6 and label IPv4 routes to be advertised with an IPv6 next-hop address for BGP sessions over IPv6 transport on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ipv6-next-hops_0.json"
+    },
+    {
+        "question": "How to configure Nokia router BGP to advertise VPN IPv4 routes over IPv6 transport with an IPv6 next-hop address?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ipv6-next-hops_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to allow advertising active /32 LDP FEC prefixes to a BGP peer with an RFC 3107 label, regardless of existing BGP paths for the same prefix?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ldp-prefix_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to allow active /32 LDP FEC prefixes to be advertised to a BGP peer with an RFC 3107 label, regardless of existing BGP paths for the same prefix?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ldp-prefix_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow LLGR stale routes to be advertised to all peers, including those that can exit AS 65530?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-stale-to-all-neighbors_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow LLGR stale routes to be advertised to all peers, enabling them to exit AS 65530?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-stale-to-all-neighbors_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router to advertise a long-lived stale time of 3600 seconds in BGP graceful restart LLGR capability?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertised-stale-time_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to advertise a long-lived BGP graceful restart stale time of 86400 seconds at the global BGP level?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertised-stale-time_0.json"
+    },
+    {
+        "question": "How to configure BGP on a Nokia router to aggregate bandwidth values from link-bandwidth extended communities for IPv4 routes when readvertising with next-hop-self?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregate-used-paths_0.json"
+    },
+    {
+        "question": "\"How to configure BGP on a Nokia router to aggregate bandwidth values from link-bandwidth extended communities for IPv4 routes when readvertising with next-hop-self?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregate-used-paths_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to set the BGP aggregator path attribute router ID to zero when aggregating routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregator-id-zero_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to set the BGP aggregator path attribute router ID to zero when aggregating routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregator-id-zero_0.json"
+    },
+    {
+        "question": "How to enable BGP path selection based on end-to-end IGP metrics for routes spanning multiple ASes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aigp_0.json"
+    },
+    {
+        "question": "How to enable BGP path selection based on end-to-end IGP metrics for routes spanning multiple ASes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aigp_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to permit BGP next-hop resolution for labeled IPv4/IPv6 and VPN-IPv4/IPv6 routes using static routes (excluding default static routes)?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/allow-static_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to permit BGP next-hop resolution for labeled IPv4/IPv6 and VPN-IPv4/IPv6 routes using static routes (excluding default static routes)?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/allow-static_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP best path selection to compare MED attributes strictly from the same neighbor AS, treating routes without MED as having a value of infinity?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/always-compare-med_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to compare BGP paths with different neighbor AS using MED values, treating missing MED attributes as infinity?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/always-compare-med_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to ignore AS-path length for all IPv6 multicast routes during BGP best path selection?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/as-path-ignore_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router to ignore AS-path length for all IPv6 VPRN (SAFI 128) routes during BGP best path selection?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/as-path-ignore_0.json"
+    },
+    {
+        "question": "How to configure TCP authentication with keychain \"BGP_secure123\" for BGP sessions on Nokia routers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/auth-keychain_0.json"
+    },
+    {
+        "question": "Configure a TCP authentication keychain named \"secure_bgp123\" for BGP sessions on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/auth-keychain_0.json"
+    },
+    {
+        "question": "Configure BGP authentication on Nokia routers using an encrypted key \"Kj78$%aPq9@2\" with enhanced encryption method.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/authentication-key_0.json"
+    },
+    {
+        "question": "Configure BGP MD5 authentication on a Nokia router using the encrypted key \"K$j9#mQ2%pL5&vR8\" stored with enhanced security encryption.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/authentication-key_0.json"
+    },
+    {
+        "question": "Configure Nokia router's globally unique identifier for exchanging exterior routing information with neighboring systems, using the value 65501.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/autonomous-system_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's global routing domain identifier with AS number 65530?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/autonomous-system_0.json"
+    },
+    {
+        "question": "Enable BGP fast reroute for labeled-unicast IPv6 routes on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/backup-path_0.json"
+    },
+    {
+        "question": "Enable BGP fast reroute for labeled-unicast IPv6 routes on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/backup-path_0.json"
+    },
+    {
+        "question": "In Nokia router CLI, how to enter the configuration mode for modifying BGP route preference criteria?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/best-path-selection_0.json"
+    },
+    {
+        "question": "How to enter the configuration context for modifying BGP path selection parameters on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/best-path-selection_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to tie BGP neighbor session state with BFD session status?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bfd-enable_0.json"
+    },
+    {
+        "question": "\"How to enable BFD session monitoring for BGP neighbor connectivity on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bfd-enable_0.json"
+    },
+    {
+        "question": "\"How to enable BGP routing protocol on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_0.json"
+    },
+    {
+        "question": "Enable BGP routing protocol on a Nokia router and enter its configuration mode.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_0.json"
+    },
+    {
+        "question": "Enable BGP tunneling for next-hop resolution of IPv4 /32 prefixes on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_1.json"
+    },
+    {
+        "question": "How to enable BGP tunneling for next-hop resolution of labeled IPv4 routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_1.json"
+    },
+    {
+        "question": "How to enter the configuration context for BGP Monitoring Protocol (BMP) on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bmp_0.json"
+    },
+    {
+        "question": "Configure BGP Monitoring Protocol (BMP) on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bmp_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router's BGP group with route reflector cluster ID 192.168.10.5 and ORR location 8, allowing local fallback when no optimal routes are available?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/cluster_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router's BGP group to use route reflector cluster ID 192.168.10.5 with ORR location 8 and enable local fallback when no optimal routes are available?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/cluster_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to prefer BGP routes with valid RPKI origin validation states over those with not-found or invalid states during best path selection?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/compare-origin-validation-state_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to prefer BGP routes with valid RPKI origin validation states over those with not-found or invalid states when multiple paths exist?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/compare-origin-validation-state_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router with confederation AS number 65001 and member AS numbers 65100 and 65200?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/confederation_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to establish a BGP confederation with AS 65001 and include member ASes 65100 and 65200?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/confederation_0.json"
+    },
+    {
+        "question": "How to configure the BGP connect retry timer to 90 seconds on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_0.json"
+    },
+    {
+        "question": "\"How to configure the BGP session retry interval to 90 seconds on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_0.json"
+    },
+    {
+        "question": "How to configure the BMP connection retry timer to 180 seconds on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_1.json"
+    },
+    {
+        "question": "Configure the BMP connection retry timer to 30 seconds on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_1.json"
+    },
+    {
+        "question": "How to enter the configuration context for setting up connection parameters of a BMP monitoring station on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connection_0.json"
+    },
+    {
+        "question": "In Nokia routers, how to enter the configuration context for setting up BMP monitoring station connectivity parameters?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connection_0.json"
+    },
+    {
+        "question": "Configure Nokia router's BGP to suppress unstable peer sessions by setting initial idle time to 10 minutes, doubling wait time to 15 minutes after each failure, capping maximum delay at 120 minutes, and requiring 45 minutes of stable operation to reset penalties.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damp-peer-oscillations_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP to set the initial idle-state hold time to 10 minutes, double the wait time to 20 minutes after repeated failures, cap the maximum wait time at 120 minutes, and require a 45-minute error-free interval to reset the penalty counter?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damp-peer-oscillations_0.json"
+    },
+    {
+        "question": "How to disable BGP route damping for learned routes in Nokia routers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damping_0.json"
+    },
+    {
+        "question": "How to configure BGP to suppress unstable route advertisements while maintaining convergence for stable routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damping_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP group to treat received EVPN routes without encapsulation extended community as VXLAN by default?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/def-recv-evpn-encap_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP group to treat received EVPN routes without encapsulation extended community as VXLAN by default?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/def-recv-evpn-encap_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise the default BGP route (0.0.0.0/0) to specific peers within an established BGP group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/default-route-target_0.json"
+    },
+    {
+        "question": "How to originate a default BGP route towards all peers in a Nokia router's BGP group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/default-route-target_0.json"
+    },
+    {
+        "question": "Add a descriptive note \"Primary_BGP_Peer_Chicago\" to a BGP neighbor configuration on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/description_0.json"
+    },
+    {
+        "question": "Add a descriptive note \"BGP Group East-Coast\" under the BGP group configuration context on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/description_0.json"
+    },
+    {
+        "question": "How can BGP best path selection be made fully deterministic on a Nokia router when comparing routes with MED values from different neighbor ASes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/deterministic-med_0.json"
+    },
+    {
+        "question": "How can Nokia routers ensure BGP best path selection becomes fully deterministic when comparing routes with MED values from different neighbor ASes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/deterministic-med_0.json"
+    },
+    {
+        "question": "How to prevent Nokia routers from using 4-byte Autonomous System Numbers in BGP configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-4byte-asn_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enforce BGP sessions with a specific neighbor to only use 2-byte ASN format?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-4byte-asn_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to strictly support only IPv4 routing exchanges with BGP peer 192.0.2.1 without negotiating any new capabilities?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-capability-negotiation_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to prevent BGP peers from negotiating new capabilities while maintaining strict IPv4 routing exchange support?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-capability-negotiation_0.json"
+    },
+    {
+        "question": "How to prevent route reflection to clients within BGP group \"INTERNAL_PEERS\" on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-client-reflect_0.json"
+    },
+    {
+        "question": "How to prevent Nokia router from reflecting BGP routes to all clients within a specific group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-client-reflect_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to remove standard and large BGP communities when advertising routes to a specific peer?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-communities_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to prevent BGP from sending both standard and large communities to a peer?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-communities_0.json"
+    },
+    {
+        "question": "How to configure BGP on a Nokia router to prevent immediate session teardown upon link failure detection?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-fast-external-failover_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to prevent BGP sessions from using fast external failover?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-fast-external-failover_0.json"
+    },
+    {
+        "question": "How to prevent all IPv4 and IPv6 BGP routes from being installed into RTM and FIB on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-route-table-install_0.json"
+    },
+    {
+        "question": "How to prevent Nokia routers from installing both labeled and unlabeled BGP routes into RTM and FIB while maintaining the BGP session?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-route-table-install_0.json"
+    },
+    {
+        "question": "Configure the Nokia router to accept a maximum of 5000 dynamic BGP sessions for the entire BGP instance.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor-limit_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to accept a maximum of 1024 dynamic BGP sessions from remote peers within a specific BGP peer group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor-limit_0.json"
+    },
+    {
+        "question": "How to enable dynamic BGP session configuration for a peer group on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor_0.json"
+    },
+    {
+        "question": "\"How to enable dynamic BGP session configuration for a peer group on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor_0.json"
+    },
+    {
+        "question": "\"In a Nokia router's BGP configuration for IPv6 VPN routes, how would you configure the system to treat EBGP and IBGP paths equally when selecting the best path?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ebgp-ibgp-equal_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to treat EBGP and IBGP routes equally for labeled IPv6 routes in BGP best path selection?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ebgp-ibgp-equal_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow VPN route exchange between different autonomous systems in a BGP environment?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-inter-as-vpn_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow VPN route exchange between different autonomous systems under BGP?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-inter-as-vpn_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to indicate BGP graceful restart support for NOTIFICATION messages when establishing sessions with peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-notification_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router's BGP graceful restart to indicate support for NOTIFICATION messages when establishing sessions with peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-notification_0.json"
+    },
+    {
+        "question": "\"How to configure origin validation processing for both labeled IPv4 and unlabeled IPv6 routes on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-origin-validation_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router BGP to perform origin validation for both labeled IPv6 routes and unlabeled IPv4 routes from a specific peer?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-origin-validation_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to drop a BGP peer immediately when its resolving route is removed without waiting for the hold timer?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-peer-tracking_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to drop a BGP peer immediately when its resolving route is removed without waiting for the hold timer?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-peer-tracking_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to import all received VPN-IP routes into the dummy VRF for BGP next-hop resolution without regard to route targets?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-rr-vpn-forwarding_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to import all received VPN-IP routes into the dummy VRF for BGP next-hop resolution without regard to route targets?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-rr-vpn-forwarding_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to reject EBGP routes where the last AS in the AS_PATH does not match the peer's configured AS?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-first-as_0.json"
+    },
+    {
+        "question": "How to ensure that all routes received from an EBGP peer on a Nokia router have their most recent ASN in the AS_PATH attribute matching the configured peer AS of the session?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-first-as_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to restrict BGP next-hop resolution for labeled routes to only use LSPs that have been explicitly tagged?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-strict-tunnel-tagging_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to restrict BGP next-hop resolution to only use labeled routes from tunnels that have been explicitly marked with admin tags?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-strict-tunnel-tagging_0.json"
+    },
+    {
+        "question": "Enable the updated BGP error handling procedures on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/error-handling_0.json"
+    },
+    {
+        "question": "How to enable updated BGP error handling procedures on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/error-handling_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router BGP to apply route policies named 'cust123-out' and 'backup-routes' for controlling outbound routes to specific peers?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/export_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to apply route policy named \"INTERNAL-BGP\" for controlling outbound BGP routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/export_0.json"
+    },
+    {
+        "question": "\"How to enable BGP extended community filtering in Nokia router CLI when configuring outbound route filtering?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-community_0.json"
+    },
+    {
+        "question": "How to enable BGP extended community filtering capability in Nokia router's outbound route filtering configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-community_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers' BGP to advertise the capability for receiving label IPv4 routes with NLRI AFI=1, SAFI=4, and next-hop AFI=2?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-nh-encoding_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP to advertise the capability to receive VPN IPv4 routes with NLRI AFI=1, NLRI SAFI=128, and next-hop AFI=2?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-nh-encoding_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP session to additionally support IPv6 multicast VPN address family alongside the default IPv4 unicast?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to advertise IPv6 multicast routes from a VPRN over the provider network using BGP?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_0.json"
+    },
+    {
+        "question": "How to configure long-lived graceful restart for the l2-vpn address family on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_1.json"
+    },
+    {
+        "question": "\"How to configure long-lived graceful restart for the label-IPv6 address family on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_1.json"
+    },
+    {
+        "question": "Configure next-hop-resolution options for labeled-unicast IPv6 routes on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_2.json"
+    },
+    {
+        "question": "How to configure next-hop-resolution options for labeled-unicast IPv6 routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_2.json"
+    },
+    {
+        "question": "How to configure Nokia router to resolve next-hop for unlabeled IPv6 BGP routes using shortcut tunnels?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_3.json"
+    },
+    {
+        "question": "How to configure Nokia router for resolving next-hop of unlabeled IPv6 BGP routes using shortcut tunnels?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_3.json"
+    },
+    {
+        "question": "Configure Nokia router to report both IPv6 unicast (unlabeled) and IPv4 VPN (SAFI 128) address families to a BMP monitoring station.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_4.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router's BMP station to report both labeled IPv6 and VPN IPv4 address families?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_4.json"
+    },
+    {
+        "question": "Enable BGP FlowSpec validation on a Nokia router without applying any specific parameters.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/flowspec_0.json"
+    },
+    {
+        "question": "How to enter the context for enabling BGP flowspec validation on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/flowspec_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to set the F bit to 1 for non-forwarding AFI/SAFI families during BGP graceful restart?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/forwarding-bits-set_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to set the F bit to 1 for only non-forwarding AFI/SAFI families (L2-VPN, route-target, flow-IPv4, and flow-IPv6) during BGP graceful restart?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/forwarding-bits-set_0.json"
+    },
+    {
+        "question": "\"How to enable BGP graceful restart helper functionality for all supported address families on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/graceful-restart_0.json"
+    },
+    {
+        "question": "\"How to enable BGP graceful restart helper functionality on a Nokia router for all supported address families?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/graceful-restart_0.json"
+    },
+    {
+        "question": "Configure a BGP peer group named \"US-West_Cluster1\" on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/group_0.json"
+    },
+    {
+        "question": "How to create a BGP peer group named \"Transit-Partners\" on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/group_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enforce a locally-defined restart time of 300 seconds for all AFI/SAFI included in a BGP peer's Graceful Restart capability during long-lived GR sessions?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-restart-time_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enforce a locally-defined restart time of 300 seconds for all AFI/SAFI included in a BGP peer's GR capability during long-lived graceful restart?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-restart-time_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to impose a local LLGR stale time of 86400 seconds when receiving an LLGR capability from a BGP peer?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-stale-time_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to impose a local LLGR stale time of 86400 seconds when acting as a BGP LLGR helper?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-stale-time_0.json"
+    },
+    {
+        "question": "How to configure BGP on a Nokia router to maintain the session permanently while rejecting any proposed hold-time below 120 seconds?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/hold-time_0.json"
+    },
+    {
+        "question": "Configure BGP on a Nokia router to set the hold time to 120 seconds and reject any session attempts with proposed hold times below 60 seconds.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/hold-time_0.json"
+    },
+    {
+        "question": "How to enable load balancing for multiple IBGP paths with equal cost in Nokia router's BGP configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ibgp-multipath_0.json"
+    },
+    {
+        "question": "How to enable load balancing for multiple IBGP paths with equal cost on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ibgp-multipath_0.json"
+    },
+    {
+        "question": "In Nokia routers, how would you modify BGP best path selection to exclude the resolved distance metric when comparing routes with identical NLRI from base router BGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-nh-metric_0.json"
+    },
+    {
+        "question": "In Nokia routers, how can BGP be configured to exclude the next-hop metric from the best path selection process when comparing routes with identical NLRI?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-nh-metric_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to exclude BGP router ID comparison for MVPN IPv6 paths when selecting the best path?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-router-id_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to exclude BGP identifier comparison for MVPN IPv4 and IPv6 paths when selecting the best path?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-router-id_0.json"
+    },
+    {
+        "question": "In Nokia router CLI, configure a BGP inbound route policy named \"CustomerX_Policy\" with a secondary fallback policy expression \"LocalPref_100\" for specific neighbor route handling.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/import_0.json"
+    },
+    {
+        "question": "How to configure Nokia router BGP to apply inbound route filtering using a policy named \"CUST_A_IN\" followed by a logical expression \"AND CUST_B_PREF\"?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/import_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to immediately send BGP UPDATE messages upon session establishment with peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initial-send-delay-zero_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to immediately send BGP UPDATE messages when sessions are established with specific peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initial-send-delay-zero_0.json"
+    },
+    {
+        "question": "Configure a custom welcome message \"BMP-AlphaStation Contact: support@example.com\" to be sent when a BMP monitoring station connects to the Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initiation-message_0.json"
+    },
+    {
+        "question": "Configure a UTF-8 encoded welcome message \"Primary NOC: +1-555-1234567\" to be automatically sent when a BMP monitoring station connects to the Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initiation-message_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 paths per unlabeled IPv4 unicast prefix and disable receiving multiple routes per prefix?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv4_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise up to 8 alternate paths per unlabeled IPv4 prefix while disabling the ability to receive multiple paths from BGP peers?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv4_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise up to 8 paths per unlabeled IPv6 unicast prefix while disabling the receive capability?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv6_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise up to 8 BGP paths per unlabeled IPv6 prefix while disabling the ability to receive multiple paths for the same prefix?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv6_0.json"
+    },
+    {
+        "question": "Configure the Nokia router to declare a TCP connection down after missing 15 consecutive keepalives.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-count_0.json"
+    },
+    {
+        "question": "\"In Nokia routers, how many missed TCP keepalives should be configured to declare the connection down when the threshold is set to 7?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-count_0.json"
+    },
+    {
+        "question": "Configure the Nokia router to send the first TCP keepalive probe after 300 seconds of inactivity.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-idle_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router to send the first TCP keepalive probe after 300 seconds of idle time?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-idle_0.json"
+    },
+    {
+        "question": "Configure the time between TCP keepalive probes to 30 seconds on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-interval_0.json"
+    },
+    {
+        "question": "How to configure the time between two TCP keepalive probes to 30 seconds on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-interval_0.json"
+    },
+    {
+        "question": "\"How to set the BGP keepalive timer to 60 seconds on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keepalive_0.json"
+    },
+    {
+        "question": "Configure the BGP keepalive timer to 60 seconds on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keepalive_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 labeled-unicast IPv4 paths per prefix and disable receiving multiple paths?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 labeled-unicast IPv4 paths per prefix and negotiate to receive multiple paths?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 labeled-unicast IPv6 paths per prefix and disable receiving multiple paths from BGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv6_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 labeled-unicast IPv6 paths per prefix while disabling the ability to receive multiple such routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv6_0.json"
+    },
+    {
+        "question": "Configure a custom route preference of 150 for BGP labeled-unicast routes on Nokia routers.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-preference_0.json"
+    },
+    {
+        "question": "\"How to set the route preference to 150 for labeled-unicast BGP routes on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-preference_0.json"
+    },
+    {
+        "question": "How to enter the configuration context for setting up labeled route parameters in BGP next-hop resolution on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/labeled-routes_0.json"
+    },
+    {
+        "question": "How to enter the configuration context for setting up labeled BGP routes in Nokia router's next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/labeled-routes_0.json"
+    },
+    {
+        "question": "How to enable LDP tunneling for next-hop resolution of /32 IPv4 FECs on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ldp_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to use LDP tunneling for resolving next-hops of /32 IPv4 FECs and /128 IPv6 FECs?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ldp_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to import BGP routes from another routing instance's IPv4 RIB using a route policy named 'POLICY_123' and an additional policy expression 'EXPR_ABC'?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/leak-import_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to import BGP routes from another routing instance into the base router's unlabeled-IPv4 RIB using the policy named \"INTERNAL_POLICY_1\" and \"BACKUP_POLICY\"?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/leak-import_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to attach a link-bandwidth extended community to BGP routes advertised from a specific neighbor?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-bandwidth_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to attach a link-bandwidth extended community to BGP routes advertised to a specific peer?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-bandwidth_0.json"
+    },
+    {
+        "question": "How to enable BGP-LS address family to advertise link-state information to BGP neighbors on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-state-import-enable_0.json"
+    },
+    {
+        "question": "How to enable BGP-LS address family to advertise link-state information to BGP neighbors on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-state-import-enable_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to use the interface named \"core-link1\" as the source IP address for BGP sessions within a specific group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router's BGP group to use interface 'system1' IP address as the source for peer communication?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_0.json"
+    },
+    {
+        "question": "How to configure the local IP address as 192.168.100.10 for communication between a Nokia router and its BMP monitoring station?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_1.json"
+    },
+    {
+        "question": "How to configure Nokia routers to use 192.0.2.100 as the source IP address for communication with a BMP monitoring station?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_1.json"
+    },
+    {
+        "question": "How to configure a BGP peer on Nokia routers to use a virtual AS number 65535 while hiding both the local and global AS numbers in advertised paths?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-as_0.json"
+    },
+    {
+        "question": "How to configure a BGP neighbor on Nokia routers to use 65535 as a virtual AS while hiding both the local and global AS numbers in advertised paths?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-as_0.json"
+    },
+    {
+        "question": "How to configure the BGP local-preference attribute with a value of 200 on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-preference_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to set the BGP local preference attribute to 200 for incoming routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-preference_0.json"
+    },
+    {
+        "question": "Configure a Nokia router's optimal-route-reflection location 5 with primary IP address 192.168.10.1 and secondary IP address 203.0.113.20.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/location_0.json"
+    },
+    {
+        "question": "Configure a Nokia router's BGP optimal route reflection with location ID 8, using primary IP address 192.0.2.10 and secondary IP address 203.0.113.20.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/location_0.json"
+    },
+    {
+        "question": "Enable BGP Long-Lived Graceful-Restart functionality on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/long-lived_0.json"
+    },
+    {
+        "question": "Enable BGP Long-Lived Graceful-Restart functionality on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/long-lived_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to discard routes received from a peer when detecting the local AS number 65530 in the AS path while maintaining the BGP session?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/loop-detect_0.json"
+    },
+    {
+        "question": "How should Nokia routers handle BGP routes when detecting the local AS number (e.g., AS65530) in the AS path while maintaining the peer session?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/loop-detect_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise up to 8 different paths per multicast IPv4 VPN prefix and enable negotiation to receive multiple routes?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv4_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise up to 8 paths per multicast IPv4 VPN prefix while disabling the ability to receive multiple routes for the same prefix?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 paths per multicast IPv6 VPN prefix and negotiate to receive multiple multicast routes per IPv6 VPN prefix?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv6_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise up to 8 paths per multicast IPv6 VPN prefix and negotiate to receive multiple routes for this prefix?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv6_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to advertise BGP routes with MED value set to 5000 when MED is not already specified?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/med-out_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise BGP routes with a fixed MED value of 15000 when the MED is not explicitly set?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/med-out_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to enforce a minimum interval of 45 seconds between BGP route advertisements to a specific peer?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/min-route-advertisement_0.json"
+    },
+    {
+        "question": "Set the minimum interval to 120 seconds between successive BGP prefix updates on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/min-route-advertisement_0.json"
+    },
+    {
+        "question": "How to disable BGP monitoring on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/monitor_0.json"
+    },
+    {
+        "question": "How to enable monitoring configuration for BGP in a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/monitor_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to retain all MP-BGP routes in RIB-IN without requiring route refresh messages after VPN policy changes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mp-bgp-keep_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to retain all MP-BGP routes without requiring route refresh messages when VPN route policies change?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mp-bgp-keep_0.json"
+    },
+    {
+        "question": "Configure the TTL value for BGP packets to reach an EBGP peer located three hops away on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multihop_0.json"
+    },
+    {
+        "question": "How to set the TTL value to 42 for BGP packets traversing multiple hops between EBGP peers on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multihop_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia router BGP to allow a maximum of 8 equal-cost paths per prefix, with separate limits of 4 paths for EBGP routes and 6 paths for IBGP routes?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multipath_0.json"
+    },
+    {
+        "question": "Enable BGP multipath on a Nokia router with maximum 8 paths for any prefix, allowing up to 12 paths for EBGP routes and restricting non-best paths to those sharing the exact AS path as the best path.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multipath_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 paths per multicast VPN IPv4 prefix and disable receiving multiple routes for the same prefix?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 different paths per multicast VPN IPv4 prefix and enable receiving multiple routes per prefix?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 3 paths per multicast VPN IPv6 prefix while disabling the ability to receive multiple paths for the same prefix?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv6_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 3 different paths per multicast VPN IPv6 prefix and disable receiving multiple paths from peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv6_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to encode the type/subtype in advertised MVPN routes as 0x010b?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-vrf-import-subtype-new_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to encode type/subtype in advertised BGP MVPN routes as 0x010b?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-vrf-import-subtype-new_0.json"
+    },
+    {
+        "question": "Enable inter-AS label security for VPN IPv6 family on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor-trust_0.json"
+    },
+    {
+        "question": "How to enable inter-AS label security for both VPN IPv4 and VPN IPv6 families on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor-trust_0.json"
+    },
+    {
+        "question": "How to configure a BGP peer with IP address 192.0.2.15 on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor_0.json"
+    },
+    {
+        "question": "How to add a BGP peer with IP address 192.168.10.5 on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor_0.json"
+    },
+    {
+        "question": "In a Nokia router's BGP configuration, how would you enter the context to adjust route resolution parameters for indirectly connected destinations?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-resolution_0.json"
+    },
+    {
+        "question": "In a Nokia router's BGP configuration, how would you enter the context to adjust parameters for resolving next-hop addresses?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-resolution_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router's BGP group to always use its own interface IP as the next-hop for advertised routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-self_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router's BGP group to always use its local interface IP as the next-hop address when advertising routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-self_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to preserve BGP next-hop information for both IPv4 and IPv6 routes when advertising to peers within the same group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-unchanged_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable unchanged BGP next-hops for both IPv4 and IPv6 labeled routes when advertising to peers in a specific group?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-unchanged_0.json"
+    },
+    {
+        "question": "How to configure BGP on a Nokia router to enable optimal path selection for reflected routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/optimal-route-reflection_0.json"
+    },
+    {
+        "question": "Configure Nokia routers to enable BGP optimization for reducing redundant route advertisements between route reflectors.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/optimal-route-reflection_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to treat all BGP routes with Invalid origin validation state as unusable in best path selection?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/origin-invalid-unusable_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to treat BGP routes with invalid origin validation state as unusable in best path selection?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/origin-invalid-unusable_0.json"
+    },
+    {
+        "question": "How to enable BGP route filtering capability for receiving prefix updates from peers on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/outbound-route-filtering_0.json"
+    },
+    {
+        "question": "\"How to disable the sending of BGP filter lists to peers on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/outbound-route-filtering_0.json"
+    },
+    {
+        "question": "How to enable entropy label capability for BGP tunnels on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/override-tunnel-elc_0.json"
+    },
+    {
+        "question": "How to enable entropy label capability for BGP tunnels on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/override-tunnel-elc_0.json"
+    },
+    {
+        "question": "How to disable BGP session initiation attempts while maintaining existing connections in a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/passive_0.json"
+    },
+    {
+        "question": "How to configure a BGP group on Nokia routers to prevent initiating TCP connections while still accepting incoming connections?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/passive_0.json"
+    },
+    {
+        "question": "How to enable path MTU discovery for BGP sessions on a Nokia router to prevent IP fragmentation along the transmission path?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/path-mtu-discovery_0.json"
+    },
+    {
+        "question": "How to enable automatic adjustment of TCP segment size based on ICMP feedback in Nokia routers to avoid IP fragmentation along the transmission path?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/path-mtu-discovery_0.json"
+    },
+    {
+        "question": "Configure the autonomous system number 65530 for the remote BGP peer on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-as_0.json"
+    },
+    {
+        "question": "Configure the remote BGP neighbor's autonomous system number as 65001 on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-as_0.json"
+    },
+    {
+        "question": "\"How to configure a BGP peer-tracking policy named 'core-reachability' on a Nokia router to control session establishment based on RTM route eligibility?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-tracking-policy_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP session to track neighbor reachability using a route policy named \"core-routes-only\"?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-tracking-policy_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to use a route policy named \"core-routes-v6\" for BGP next-hop resolution of IPv6 routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/policy_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to apply a route policy named \"BGP_Resolve_Policy123\" for controlling eligible IP routes in RTM during BGP next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/policy_0.json"
+    },
+    {
+        "question": "How to set the route preference to 200 for BGP-learned routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/preference_0.json"
+    },
+    {
+        "question": "\"How to set the BGP route preference value to 200 on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/preference_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to generate a warning message when receiving 5000 IPv6 routes from a BGP peer, with a threshold alert at 80% capacity, without terminating the session?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix-limit_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow a maximum of 5000 IPv6 routes from a BGP peer with a warning threshold at 80%, while keeping the session active and logging only upon reaching the limit?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix-limit_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to accept dynamic BGP sessions from source IP addresses within the range 192.168.10.0/24?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to accept dynamic BGP sessions from peers within the 192.168.100.0/24 subnet?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix_0.json"
+    },
+    {
+        "question": "How to configure the primary IPv4 address as 192.168.100.50 for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ip-address_0.json"
+    },
+    {
+        "question": "How to configure the primary IPv4 address 192.168.100.10 for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ip-address_0.json"
+    },
+    {
+        "question": "How to configure the primary IPv6 address as 2001:db8::1 for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ipv6-address_0.json"
+    },
+    {
+        "question": "\"How to configure the primary IPv6 address 2001:db8:abcd::1/64 for BGP optimal route reflection on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ipv6-address_0.json"
+    },
+    {
+        "question": "In Nokia routers, what is the command to set the maximum time for stale VPN-IP routes to be purged as 15 minutes in BGP configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/purge-timer_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to set the maximum time for purging stale BGP VPN-IP routes to 15 minutes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/purge-timer_0.json"
+    },
+    {
+        "question": "How to configure BGP rapid updates for multicast VPN IPv6 routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-update_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to enable BGP rapid updates for EVPN address family?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-update_0.json"
+    },
+    {
+        "question": "How to immediately send BGP withdrawal notifications without delay in Nokia router configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-withdrawal_0.json"
+    },
+    {
+        "question": "How to disable the delay on sending BGP withdrawals in Nokia routers to ensure immediate propagation of route withdrawal messages?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-withdrawal_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to strip private ASNs from BGP updates while preserving AS64512 when it matches the peer's AS number?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/remove-private_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to strip private AS numbers from BGP updates, except when encountering AS64500 or when the private AS matches the peer's AS number?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/remove-private_0.json"
+    },
+    {
+        "question": "Enable local route reporting to the BMP monitoring station on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/report-local-routes_0.json"
+    },
+    {
+        "question": "Enable local route reporting to the BMP monitoring station on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/report-local-routes_0.json"
+    },
+    {
+        "question": "Configure the resolution filter type for labeled BGP routes in a Nokia router's transport tunnel family context.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_0.json"
+    },
+    {
+        "question": "How to configure BGP next-hop resolution for labeled routes in Nokia routers when transport tunnels require a specific address family?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_0.json"
+    },
+    {
+        "question": "Configure Nokia routers to allow only BGP and SR-TE tunnel types for resolving unlabeled BGP routes.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_1.json"
+    },
+    {
+        "question": "Configure Nokia routers to allow only BGP and SR-TE tunnel types for resolving unlabeled BGP routes.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_1.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP labeled routes to only bind to specific tunnel types defined in the resolution-filter?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to enable binding BGP labeled routes only to the subset of tunnel types specified under resolution-filter?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable BGP prefix resolution using only LDP and RSVP-TE tunnels while excluding other tunnel types?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_1.json"
+    },
+    {
+        "question": "How to configure a Nokia router to bind BGP prefixes exclusively to tunnel types specified in the resolution-filter for BGP shortcut next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_1.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP graceful restart capability to advertise a restart-time of 180 seconds?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/restart-time_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to advertise a BGP graceful restart capability with a restart-time of 600 seconds?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/restart-time_0.json"
+    },
+    {
+        "question": "How to enable BGP next-hop resolution for labeled routes using gRPC-programmed tunnels on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-api_0.json"
+    },
+    {
+        "question": "Enable the use of RibApi gRPC service-programmed tunnels for resolving next hops of label-IPv6 routes on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-api_0.json"
+    },
+    {
+        "question": "How to enter the configuration context for managing BGP routing information base (RIB) parameters on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-management_0.json"
+    },
+    {
+        "question": "In Nokia routers, how to enter the configuration context for managing routing information base parameters within BGP?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-management_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to send both pre-policy and post-policy BGP route monitoring messages?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-monitoring_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable BGP Monitoring Protocol (BMP) for sending only post-policy route monitoring messages?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-monitoring_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to import active IPv4 routes from the IP route table into BGP RIB using a policy named \"core-routes-policy\"?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-table-import_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to import active IPv4 routes from the IP route table into BGP using a policy named \"core_routes\"?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-table-import_0.json"
+    },
+    {
+        "question": "In Nokia router BGP configuration, how to specify accepting or advertising routes only with the route target community values [target:192.0.2.1:100] and [target:64496:200]?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-target-list_0.json"
+    },
+    {
+        "question": "\"On a Nokia router, configure BGP to accept or advertise routes only with the specific route target community values target:192.0.2.10:100 and target:64496:200.\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-target-list_0.json"
+    },
+    {
+        "question": "How to configure a BGP instance on Nokia routers using the IPv4 address 192.168.100.10 as its unique identifier?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_0.json"
+    },
+    {
+        "question": "\"On a Nokia router, configure the BGP instance to use 192.168.100.10 as its identifier.\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_0.json"
+    },
+    {
+        "question": "Configure a 32-bit identifier with value 192.0.2.10 on a Nokia router to uniquely identify it within the network.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_1.json"
+    },
+    {
+        "question": "Configure a Nokia router with the identifier 192.168.100.1.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_1.json"
+    },
+    {
+        "question": "How to configure a Nokia router to use the routing instance \"customer-vpn-123\" for connecting to the associated BMP monitoring station?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router_0.json"
+    },
+    {
+        "question": "Configure the Nokia router to use the routing instance \"vprn-100\" for connecting to the associated BMP monitoring station.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable BGP resolution of next-hops for labeled routes using IGP route table lookups when acting as a Route Reflector without tunnel signaling protocol participation?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rr-use-route-table_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable BGP resolution of labeled-unicast route next-hops using the IGP route table when acting as a Route Reflector without tunnel signaling protocol participation?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rr-use-route-table_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to use RSVP tunnels with the best metric for BGP next-hop resolution when resolving IPv4 destinations?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rsvp_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to use RSVP tunnels with the lowest metric for BGP next-hop resolution when multiple equal-cost paths exist?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rsvp_0.json"
+    },
+    {
+        "question": "How to configure 192.0.2.45 as an additional address for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ip-address_0.json"
+    },
+    {
+        "question": "How to configure a secondary IPv4 address 192.168.100.50 for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ip-address_0.json"
+    },
+    {
+        "question": "How to configure 2001:db8:cafe::2 as an additional IPv6 address for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ipv6-address_0.json"
+    },
+    {
+        "question": "How to configure a secondary IPv6 address 2001:db8:85a3::8a2e:370:7334 for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ipv6-address_0.json"
+    },
+    {
+        "question": "\"How to configure a Nokia router to enable BGP ORF send capability for extended community 'target:192.0.2.1:65535'?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-orf_0.json"
+    },
+    {
+        "question": "\"How to configure Nokia routers to negotiate BGP ORF send capability for route target extended community 'target:192.0.2.10:300'?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-orf_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to advertise link-bandwidth extended community for unlabeled unicast IPv4 routes to EBGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-to-ebgp_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to add link-bandwidth extended community to unlabeled unicast IPv4 routes when advertising to EBGP peers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-to-ebgp_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enable resolution of unlabeled BGP routes using tunnel types under BGP next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shortcut-tunnel_0.json"
+    },
+    {
+        "question": "How to configure the tunnel types for resolving unlabeled IPv4 and IPv6 BGP routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shortcut-tunnel_0.json"
+    },
+    {
+        "question": "How to administratively disable BGP neighbor functionality on a Nokia router without removing its configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shutdown_0.json"
+    },
+    {
+        "question": "\"How to administratively disable a BGP neighbor on a Nokia router without removing its configuration?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shutdown_0.json"
+    },
+    {
+        "question": "Configure Nokia router to set the maximum interval between SPF calculations to 120 seconds, with initial delay of 10 seconds and secondary delay of 30 seconds under BGP optimal route reflection.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/spf-wait_0.json"
+    },
+    {
+        "question": "Configure Nokia router to set the maximum interval between SPF calculations to 120 seconds, with initial delay of 10 seconds and secondary delay of 20 seconds for BGP optimal route reflection.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/spf-wait_0.json"
+    },
+    {
+        "question": "How to prevent BGP routes from being reflected back to the originating peer on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/split-horizon_0.json"
+    },
+    {
+        "question": "How to prevent BGP routes from being reflected back to the originating peer on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/split-horizon_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow BGP to use Segment Routing tunnels from the lowest preference IS-IS instance for next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-isis_0.json"
+    },
+    {
+        "question": "How to configure Nokia router's BGP next-hop resolution to allow using IS-IS segment routing tunnels in the tunnel table when resolving labeled routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-isis_0.json"
+    },
+    {
+        "question": "Enable segment routing tunnels from OSPFv3 instances for BGP next-hop resolution on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf3_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow BGP to use the lowest-preference OSPFv3 instance's segment routing tunnel for IPv6 next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf3_0.json"
+    },
+    {
+        "question": "Enable OSPF-based Segment Routing tunnel selection for BGP next-hop resolution on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to allow BGP to use Segment Routing tunnels from the lowest preference OSPF instance for next-hop resolution?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf_0.json"
+    },
+    {
+        "question": "How to enable BGP on a Nokia router to advertise locally configured segment routing policies as originated routes to peers supporting SR policy IPv4 address family?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy-import_0.json"
+    },
+    {
+        "question": "How to enable BGP on a Nokia router to advertise locally configured segment routing policies as originated routes to BGP peers supporting the SR policy IPv4 address family?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy-import_0.json"
+    },
+    {
+        "question": "How to enable segment routing policy-based next-hop resolution for BGP labeled routes in Nokia routers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy_0.json"
+    },
+    {
+        "question": "How to enable BGP next-hop resolution using segment routing policies for labeled routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy_0.json"
+    },
+    {
+        "question": "How to enable Segment Routing tunnel selection by TE instances for BGP next-hop resolution on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-te_0.json"
+    },
+    {
+        "question": "How to enable Segment Routing TE tunnel selection for BGP next-hop resolution on a Nokia router when multiple tunnels have the same lowest metric?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-te_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to maintain stale routes for 240 seconds during BGP graceful restart?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stale-routes-time_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to maintain stale BGP routes for 240 seconds during graceful restart?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stale-routes-time_0.json"
+    },
+    {
+        "question": "Configure the remote BMP monitoring station with IPv6 address 2001:db8::1 and TCP port 8080 on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station-address_0.json"
+    },
+    {
+        "question": "Configure the remote BMP monitoring station on a Nokia router with IP address 192.168.10.5 and TCP port 45000.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station-address_0.json"
+    },
+    {
+        "question": "Configure a BMP monitoring station named \"NYC-DC1\" on Nokia routers.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_0.json"
+    },
+    {
+        "question": "How to configure a BMP monitoring station named \"NYC-DC1\" on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to send BMP messages to monitoring stations named \"NYC-DC1\" and \"LAX-DC2\" under BGP monitoring?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_1.json"
+    },
+    {
+        "question": "How to configure Nokia router to send BMP messages to monitoring stations named \"NYC-DC1\" and \"LAX-DC2\" under global BGP instance?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_1.json"
+    },
+    {
+        "question": "Configure the Nokia router to send statistics reporting messages to the BMP monitoring station every 300 seconds.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stats-report-interval_0.json"
+    },
+    {
+        "question": "Configure the Nokia router to send statistics reporting messages to the BMP monitoring station every 3600 seconds.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stats-report-interval_0.json"
+    },
+    {
+        "question": "How to enable TCP connection keepalive monitoring on a Nokia router's BMP station?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tcp-keepalive_0.json"
+    },
+    {
+        "question": "Configure TCP keepalive parameters for the station on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tcp-keepalive_0.json"
+    },
+    {
+        "question": "How to configure the third backup IPv4 address (192.0.2.25) for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ip-address_0.json"
+    },
+    {
+        "question": "Configure the tertiary IPv4 address as 192.168.10.15 for BGP optimal route reflection on a Nokia router.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ip-address_0.json"
+    },
+    {
+        "question": "How to configure the tertiary IPv6 address as 2001:db8:85a3::8a2e:370:7334 on a Nokia router for BGP optimal route reflection?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ipv6-address_0.json"
+    },
+    {
+        "question": "How to configure the third IPv6 address as 2001:db8:85a3::8a2e:370:7334 for BGP optimal route reflection on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ipv6-address_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to preserve the original BGP next-hop when advertising routes between EBGP peers within the same IP subnet?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/third-party-nexthop_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to preserve the original BGP next-hop when advertising routes between EBGP peers within the same subnet?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/third-party-nexthop_0.json"
+    },
+    {
+        "question": "Configure the Nokia router to enable tunnel-based next-hop resolution for BGP labeled IPv6 unicast routes.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/transport-tunnel_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enable tunnel-based next-hop resolution for BGP labeled IPv6 unicast routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/transport-tunnel_0.json"
+    },
+    {
+        "question": "How to configure Nokia router BGP to only accept incoming packets with a TTL value of at least 64 from a specific neighbor?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ttl-security_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to only accept incoming BGP packets with a TTL value of at least 64?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ttl-security_0.json"
+    },
+    {
+        "question": "How to configure a BGP peer as internal on Nokia routers?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/type_0.json"
+    },
+    {
+        "question": "\"How to configure a BGP peer as external on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/type_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to use UDP tunnels for BGP labeled route next-hop resolution under the transport tunnel family?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/udp_0.json"
+    },
+    {
+        "question": "Enable UDP tunneling for next-hop resolution on a Nokia router when using labeled routes under BGP.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/udp_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enable non-disruptive handling of BGP UPDATE message errors when no length errors prevent NLRI field parsing?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/update-fault-tolerance_0.json"
+    },
+    {
+        "question": "How to configure Nokia routers to enable non-disruptive handling of BGP UPDATE message errors when no length errors prevent NLRI field parsing?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/update-fault-tolerance_0.json"
+    },
+    {
+        "question": "Enable recursive resolution of BGP next-hop for unlabeled IPv4 and IPv6 routes on a Nokia router, limiting the recursion depth to 3 levels.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/use-bgp-routes_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to enable recursive resolution of BGP next-hops for unlabeled IPv4/IPv6 routes using BGP routes?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/use-bgp-routes_0.json"
+    },
+    {
+        "question": "\"How to enable validation for received Flowspec routes containing destination prefixes on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-dest-prefix_0.json"
+    },
+    {
+        "question": "\"How to disable the validation of destination prefix in received BGP flowspec routes on a Nokia router?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-dest-prefix_0.json"
+    },
+    {
+        "question": "How to enable validation of the redirect-to-IPv4 action for Flowspec routes in a Nokia router's BGP configuration?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-redirect-ip_0.json"
+    },
+    {
+        "question": "How to enable validation of redirect-to-IPv4 actions for flowspec routes in BGP on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-redirect-ip_0.json"
+    },
+    {
+        "question": "How can BGP export route policies for VPN routes (including vpn-ipv4/6, mvpn-ipv4/6, l2-vpn, etc.) be enabled on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-export_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to apply BGP export route policies to VPN IPv4/IPv6 routes by default?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-export_0.json"
+    },
+    {
+        "question": "How to configure Nokia router to apply base instance BGP import route policies to VPN-related routes by default?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-import_0.json"
+    },
+    {
+        "question": "How to enable BGP import route policy application for VPN-related routes on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-import_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 diverse VPN-IPv4 paths to BGP peers while disabling the receive capability?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 diverse VPN-IPv4 paths to BGP peers while disabling the receive capability?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv4_0.json"
+    },
+    {
+        "question": "How to configure a Nokia router to advertise up to 8 diverse VPN-IPv6 paths while disabling the add-paths receive capability?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv6_0.json"
+    },
+    {
+        "question": "Configure Nokia routers to advertise a maximum of 8 VPN-IPv6 paths per NLRI to add-paths peers while disabling the receive capability negotiation.",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv6_0.json"
+    },
+    {
+        "question": "How to enable weighted load balancing for 6PE traffic over RSVP-TE tunnels on a Nokia router?",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/weighted-ecmp_0.json"
+    },
+    {
+        "question": "\"How to enable weighted load balancing for BGP next-hop tunnel selection in Nokia routers when using 6PE?\"",
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/weighted-ecmp_0.json"
+    }
+]

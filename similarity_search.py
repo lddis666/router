@@ -10,7 +10,7 @@ class CommandRetriever:
         self.model_cli = SentenceTransformer(model_name1)
         self.model_def = SentenceTransformer(model_name2)
         self.embeddings_cli = self.model_cli.encode([cmd for cmd in self.huawei_commands['cli']], convert_to_tensor=True)
-        self.embeddings_def = self.model_def.encode([cmd for cmd in self.nokia_commands['def']], convert_to_tensor=True)
+        self.embeddings_def = self.model_def.encode([cmd for cmd in self.nokia_commands['text']], convert_to_tensor=True)
 
     def retrieve_cli(self, query, top_k=3):
         query_emb = self.model_cli.encode([query], convert_to_tensor=True)
@@ -33,7 +33,7 @@ class CommandRetriever:
 
         results = []
         for idx in top_indices:
-            results.append((idx, float(sim_scores[idx]), self.nokia_commands['def'][idx]))
+            results.append((idx, float(sim_scores[idx]), self.nokia_commands['text'][idx]))
         return results
 
 
@@ -45,35 +45,36 @@ class CommandRetriever:
 
     def search(self, query, top_k1=2, top_k2=5):
         results = []
-        def_results = self.retrieve_def(query, top_k2)
-        for idx_def, score_def, def_cmd in def_results:
-            print("检索到的def")
-            print(def_cmd)
-            # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
-            _, _, text = self.get_nokia_item(idx_def)
-            results.append(text)
+
+        # def_results = self.retrieve_def(query, top_k2)
+        # for idx_def, score_def, def_cmd in def_results:
+        #     print("检索到的def")
+        #     print(def_cmd)
+        #     # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
+        #     _, _, text = self.get_nokia_item(idx_def)
+        #     results.append(text)
 
 
 
-        # cli_results = self.retrieve_cli(query, top_k1)
-        # # return cli_results
-        # for idx, score, cmd in cli_results:
-        #     # print(f"CLI: {cmd} (Score: {score:.4f})")
-        #     # print(idx)
-        #     print("匹配的cli")
-        #     print(cmd)
+        cli_results = self.retrieve_cli(query, top_k1)
+        # return cli_results
+        for idx, score, cmd in cli_results:
+            # print(f"CLI: {cmd} (Score: {score:.4f})")
+            # print(idx)
+            print("匹配的cli")
+            print(cmd)
 
-        #     _, Def, _ = self.get_huawei_item(idx)
-        #     print("查询的def")
-        #     print(Def)
-        #     # print(Def)
-        #     def_results = self.retrieve_def(Def, top_k2)
-            # for idx_def, score_def, def_cmd in def_results:
-            #     print("检索到的def")
-            #     print(def_cmd)
-            #     # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
-            #     _, _, text = self.get_nokia_item(idx_def)
-            #     results.append(text)
+            _, _, Def = self.get_huawei_item(idx)
+            print("查询的def")
+            print(Def)
+            # print(Def)
+            def_results = self.retrieve_def(Def, top_k2)
+            for idx_def, score_def, def_cmd in def_results:
+                print("检索到的def")
+                print(def_cmd)
+                # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
+                _, _, text = self.get_nokia_item(idx_def)
+                results.append(text)
 
         return results
                 
@@ -117,11 +118,35 @@ nokia_texts = collect_all_texts('./BGP配置命令行数据/nokia')
 
 retriever = CommandRetriever(huawei_texts,nokia_texts,'BAAI/bge-large-en','BAAI/bge-large-en')
 
+# retriever.search('peer ipv6-address advertise-ext-community')
+
+# retriever.search('peer {ipv6-address} capability-advertise extended-community bandwidth')
+
+# retriever.search('peer <ipv6-address> advertise-link-bandwidth')
 
 
 
 # retriever = HuaweiCommandRetriever(huawei_texts,'CyCraftAI/CmdCaliper-base')
 # llm_command = 'peer 10.10.1.2 route-update-interval 25'
+
+# rag_prompt = '''
+
+# You are an expert assistant in configuring network devices. Based on the user's request and the retrieved content from the router configuration manual below, generate appropriate CLI configuration commands.
+
+# ---
+
+# User Request:  
+# {user_question}
+
+# Retrieved Reference Content (from the configuration manual):  
+# {retrieved_docs}
+
+# ---
+
+# Generate CLI configuration commands that fulfill the user's request using the information from the reference content. Please respond directly to the user's question. Do not mention phrases like "based on the information you provided", "according to the documentation", or anything similar.
+
+# '''.strip()
+
 
 rag_prompt = '''
 
@@ -148,7 +173,7 @@ def get_retrieved_prompt(user_question, llm_commands):
     for llm_command in llm_commands:
         print("原cli:")
         print(llm_command)
-        results+=(retriever.search(llm_command, top_k1=5, top_k2=5))
+        results+=(retriever.search(llm_command, top_k1=2, top_k2=5))
     retrieved_docs = '\n'.join(list(set(results)))
     return rag_prompt.format(user_question=user_question, retrieved_docs=retrieved_docs)
 

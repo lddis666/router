@@ -29,7 +29,7 @@ def get_72b_response(prompt):
         messages=[
             {"role": "user", "content": prompt}
         ],
-        temperature=1.2,
+        temperature=0.7,
         top_p=0.8,
         max_tokens=1024,
         extra_body={
@@ -107,46 +107,48 @@ def get_response(input_text, lora = True, system = False):
     print("input_text")
     print(input_text)
     # system
-    system_prompt = '''
-You are a router command assistant. Please generate the required router configuration commands based on my input, and output ONLY in JSON format as shown below:
-
-{
-  "commands": [
-    "command 1",
-    "command 2",
-    "command 3"
-    // The number of commands may vary depending on the requirements
-  ]
-}
-
-Only the most essential CLI commands are needed, a complete list of all CLI is not required.
-Do not provide any explanation, description, or code block markers. Only return the pure JSON object. 
-'''
     if system:
-        messages = [{"role": "system","content":system_prompt},{"role": "user", "content": input_text}]
+        system_prompt = '''
+    You are a router command assistant. Please generate the required router configuration commands based on my input, and output ONLY in JSON format as shown below:
+
+    {
+    "commands": [
+        "command 1",
+        "command 2",
+        "command 3"
+        // The number of commands may vary depending on the requirements
+    ]
+    }
+
+    Only the most 1-3 essential CLI commands are needed, a complete list of all CLI is not required.
+    Do not provide any explanation, description, or code block markers. Only return the pure JSON object. 
+    '''
+
+        # messages = [{"role": "system","content":system_prompt},{"role": "user", "content": input_text}]
+        messages = [{"role": "user", "content": system_prompt+"\n"+input_text}]
     else:
         messages = [{"role": "user", "content": input_text}]
     inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
-    # with torch.no_grad():
-    #     outputs = model.generate(
-    #         **inputs,
-    #         max_new_tokens=1024,
-    #         do_sample=False,
-    #         # temperature=0.7,
-    #         # top_p=0.9,
-    #         # top_k=50,
-    #         # adapter_names = ['__base__']
-    #         adapter_names = ['expert'] if lora else ['__base__']
-    #     )
-    # return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_new_tokens=1024,
+            do_sample=False,
+            # temperature=0.7,
+            # top_p=0.9,
+            # top_k=50,
+            # adapter_names = ['__base__']
+            adapter_names = ['expert'] if lora else ['__base__']
+        )
+    return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
 
     completion = client2.chat.completions.create(
         # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
         model = "deepseek-v3-250324",
         # model = "deepseek-r1-250120",
         messages=messages,
-        temperature=1.2,
+        temperature=0.7,
         top_p=0.8,
         max_tokens=1024,
         extra_body={
@@ -163,7 +165,7 @@ with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
 model_name = 'Qwen/Qwen2.5-7B-Instruct'
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype='auto', device_map = 'auto').eval()
-model = PeftModel.from_pretrained(model,"./qwen",adapter_name='expert',torch_dtype='auto')
+model = PeftModel.from_pretrained(model,"./qwen",adapter_name='expert',torch_dtype='auto').eval()
 # model.to("cuda:0")
 
 
@@ -183,6 +185,7 @@ for i in tqdm(data):
     response = response.strip('```').strip("json").strip()
     retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
     cli_list = get_response(retrieved_prompt, lora=False, system=True)
+    cli_list = cli_list.strip('```').strip("json").strip()
 
     judge = get_72b_response(check_prompt.format(
         User_Question=question,
