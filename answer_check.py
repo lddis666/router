@@ -126,8 +126,8 @@ Do not provide any explanation, description, or code block markers. Only return 
         messages = [{"role": "system","content":system_prompt},{"role": "user", "content": input_text}]
     else:
         messages = [{"role": "user", "content": input_text}]
-    # inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    # inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
+    inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
     # with torch.no_grad():
     #     outputs = model.generate(
     #         **inputs,
@@ -182,7 +182,7 @@ for i in tqdm(data):
     response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
     response = response.strip('```').strip("json").strip()
     retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
-    cli_list = get_response(retrieved_prompt, lora=False, system=False)
+    cli_list = get_response(retrieved_prompt, lora=False, system=True)
 
     judge = get_72b_response(check_prompt.format(
         User_Question=question,

@@ -43,27 +43,37 @@ class CommandRetriever:
     def get_nokia_item(self, idx):
         return self.nokia_commands['cli'][idx], self.nokia_commands['def'][idx], self.nokia_commands['text'][idx]
 
-    def search(self, query, top_k1=2, top_k2=2):
+    def search(self, query, top_k1=2, top_k2=5):
         results = []
-        cli_results = self.retrieve_cli(query, top_k1)
-        # return cli_results
-        for idx, score, cmd in cli_results:
-            # print(f"CLI: {cmd} (Score: {score:.4f})")
-            # print(idx)
-            print("匹配的cli")
-            print(cmd)
+        def_results = self.retrieve_def(query, top_k2)
+        for idx_def, score_def, def_cmd in def_results:
+            print("检索到的def")
+            print(def_cmd)
+            # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
+            _, _, text = self.get_nokia_item(idx_def)
+            results.append(text)
 
-            _, Def, _ = self.get_huawei_item(idx)
-            print("查询的def")
-            print(Def)
-            # print(Def)
-            def_results = self.retrieve_def(Def, top_k2)
-            for idx_def, score_def, def_cmd in def_results:
-                print("检索到的def")
-                print(def_cmd)
-                # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
-                _, _, text = self.get_nokia_item(idx_def)
-                results.append(text)
+
+
+        # cli_results = self.retrieve_cli(query, top_k1)
+        # # return cli_results
+        # for idx, score, cmd in cli_results:
+        #     # print(f"CLI: {cmd} (Score: {score:.4f})")
+        #     # print(idx)
+        #     print("匹配的cli")
+        #     print(cmd)
+
+        #     _, Def, _ = self.get_huawei_item(idx)
+        #     print("查询的def")
+        #     print(Def)
+        #     # print(Def)
+        #     def_results = self.retrieve_def(Def, top_k2)
+            # for idx_def, score_def, def_cmd in def_results:
+            #     print("检索到的def")
+            #     print(def_cmd)
+            #     # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
+            #     _, _, text = self.get_nokia_item(idx_def)
+            #     results.append(text)
 
         return results
                 
@@ -138,7 +148,7 @@ def get_retrieved_prompt(user_question, llm_commands):
     for llm_command in llm_commands:
         print("原cli:")
         print(llm_command)
-        results+=(retriever.search(llm_command, top_k1=2, top_k2=2))
+        results+=(retriever.search(llm_command, top_k1=5, top_k2=5))
     retrieved_docs = '\n'.join(list(set(results)))
     return rag_prompt.format(user_question=user_question, retrieved_docs=retrieved_docs)
 
