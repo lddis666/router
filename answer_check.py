@@ -103,7 +103,7 @@ def extract_commands_from_json(json_str):
     except json.JSONDecodeError:
         return []
 
-def get_response(input_text, lora = True, system = False):
+def get_response(input_text, lora = True, system = False, model_name = 'r1'):
     print("input_text")
     print(input_text)
     # system
@@ -146,7 +146,7 @@ def get_response(input_text, lora = True, system = False):
     completion = client2.chat.completions.create(
         # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
         # model = "deepseek-v3-250324",
-        model = "deepseek-r1-250120",
+        model = "deepseek-r1-250528" if model_name == 'r1' else "deepseek-v3-250324",
         messages=messages,
         temperature=0.7,
         top_p=0.8,
@@ -158,7 +158,7 @@ def get_response(input_text, lora = True, system = False):
     print(completion.choices[0].message.content)
     return completion.choices[0].message.content
 
-with open('./question_test.json', 'r', encoding='utf-8') as f:
+with open('./question_test_huawei.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 
@@ -176,7 +176,7 @@ for i in tqdm(data):
     question = i['question']
     Text = extract_funcdef_and_clis(path)
 
-    response = get_response(question,lora=False,  system=False)
+    response = get_response(question,lora=False,  system=True, model_name='r1')
     response = response.strip('```').strip("json").strip()
     cli_list = '\n'.join(extract_commands_from_json(response))
 
@@ -198,42 +198,53 @@ for i in tqdm(data):
 print(f"Accuracy: {correct / len(data) * 100:.2f}%")
 
 
-# from concurrent.futures import ThreadPoolExecutor, as_completed
-# from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
 
-# def process_sample(i):
-#     try:
-#         path = i['path']
-#         question = i['question']
-#         Text = extract_funcdef_and_clis(path)
+def process_sample(i):
+    try:
+        path = i['path']
+        question = i['question']
+        Text = extract_funcdef_and_clis(path)
 
-#         response = get_response(question, lora=True, system=True)
-#         cli_list = '\n'.join(extract_commands_from_json(response))
-#         judge = get_72b_response(check_prompt.format(
-#             User_Question=question,
-#             answer=cli_list,
-#             Manual_Excerpt=Text
-#         ))
-#         return not 'incorrect' in judge.lower()
-#     except Exception as e:
-#         print(f"Error processing sample: {e}")
-#         return False
+        response = get_response(question,lora=False,  system=True, model_name='r1')
+        response = response.strip('```').strip("json").strip()
+        cli_list = '\n'.join(extract_commands_from_json(response))
 
-# # 线程数可根据CPU数和每次API响应速度调整，通常4~8左右合适
-# MAX_WORKERS = 10
 
-# correct = 0
-# results = []
+        # response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
+        # response = response.strip('```').strip("json").strip()
+        # retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
+        # cli_list = get_response(retrieved_prompt, lora=False, system=False)
+        # cli_list = cli_list.strip('```').strip("json").strip()
 
-# with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-#     # 提交所有任务
-#     futures = [executor.submit(process_sample, i) for i in data]
-#     # 显示进度条
-#     for future in tqdm(as_completed(futures), total=len(futures)):
-#         result = future.result()
-#         print(result)
-#         results.append(result)
+        judge = get_72b_response(check_prompt.format(
+            User_Question=question,
+            answer=cli_list,
+            Manual_Excerpt=Text
+        ))
 
-# correct = sum(results)
-# print(f"Accuracy: {correct / len(data) * 100:.2f}%")
+
+        return not 'incorrect' in judge.lower()
+    except Exception as e:
+        print(f"Error processing sample: {e}")
+        return False
+
+# 线程数可根据CPU数和每次API响应速度调整，通常4~8左右合适
+MAX_WORKERS = 10
+
+correct = 0
+results = []
+
+with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+    # 提交所有任务
+    futures = [executor.submit(process_sample, i) for i in data]
+    # 显示进度条
+    for future in tqdm(as_completed(futures), total=len(futures)):
+        result = future.result()
+        print(result)
+        results.append(result)
+
+correct = sum(results)
+print(f"Accuracy: {correct / len(data) * 100:.2f}%")
         
