@@ -1,0 +1,1458 @@
+[
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-from-ebgp_0.json",
+        "question": "\"During our IPv6 multihoming deployment, we're receiving link-bandwidth extended communities from multiple EBGP neighbors on our Nokia routers, but they aren't being properly processed—what's the correct configuration approach to ensure these metrics are correctly interpreted and applied to our route selection logic?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-from-ebgp_0.json",
+        "question": "\"During a multi-vendor BGP peering setup, we're observing that our Nokia routers aren't properly utilizing the link-bandwidth attribute carried in extended communities from external peers when making best-path selections for IPv4 prefixes—what's the correct procedure to enable this feature while maintaining backward compatibility with legacy devices?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-orf_0.json",
+        "question": "\"During a scheduled BGP peering session upgrade between our Nokia 7750 routers and a partner AS, we need to ensure that ORF entries are dynamically accepted via extended communities—what’s the proper CLI syntax to enforce this selective route filtering during neighbor negotiation without disrupting existing policy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/accept-orf_0.json",
+        "question": "\"During a scheduled maintenance window, we're implementing BGP ORF to optimize routing updates from a critical peering partner on our Nokia routers; what’s the proper configuration sequence to ensure seamless reception of outbound route filters via extended community negotiation without disrupting existing sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-paths_0.json",
+        "question": "\"During a recent BGP peering session audit on our Nokia 7750 routers, we noticed that some prefixes are being advertised with redundant path attributes—how can I enforce strict single-path advertisement per prefix to simplify route selection and reduce unnecessary overhead?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-paths_0.json",
+        "question": "\"During a scheduled maintenance window, we're establishing multihomed BGP peering with a transit provider using Nokia SR OS routers; what’s the optimal way to implement multipath support for both inbound and outbound prefixes while ensuring compatibility with their advertised route policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-to-received-ebgp_0.json",
+        "question": "\"During a BGP peering migration project, we need to ensure that our Nokia routers dynamically append link-bandwidth extended communities to all IPv4 prefixes learned via EBGP sessions with adjacent autonomous systems—what’s the most efficient way to implement this without disrupting existing route policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/add-to-received-ebgp_0.json",
+        "question": "During a multi-vendor BGP peering migration, we need to ensure consistent traffic engineering across our Nokia routers by propagating bandwidth attributes; what’s the optimal method to dynamically append link-bandwidth extended communities to all IPv4 prefixes learned via EBGP adjacencies without manual per-route intervention?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-external_0.json",
+        "question": "\"During our multi-vendor IPv6 core migration, we're observing that our Nokia routers aren't propagating the optimal external paths via BGP-LU for certain transit prefixes—what's the proper configuration approach to ensure best-external route advertisement gets correctly signaled across our labeled-unicast IPv6 peerings?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-external_0.json",
+        "question": "\"During our MPLS backbone upgrade, we're transitioning to IPv6-labeled unicast, and I need to ensure our Nokia routers prioritize advertising the optimal external BGP path for these routes while preventing any internal paths from being propagated—what’s the most efficient way to implement this selective route advertisement without disrupting existing traffic?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-inactive_0.json",
+        "question": "\"During a multi-vendor network migration where we're integrating Nokia routers with existing Cisco infrastructure, what steps should be taken to ensure BGP peers on the Nokia devices continue receiving alternate routes even when those paths aren't presently selected as optimal in the RIB?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-inactive_0.json",
+        "question": "During a multi-vendor network migration where we're transitioning from Cisco to Nokia routers, I need to ensure continuity for backup paths advertised via BGP; what's the recommended approach on Nokia platforms to enable propagation of suboptimal routes that haven't been prioritized in the active forwarding table?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ipv6-next-hops_0.json",
+        "question": "\"During our MPLS core migration from IPv4 to dual-stack, we're evaluating how to propagate VPNv4 prefixes across an IPv6-based BGP peering between Nokia 7750 nodes—what's the proper method to establish the IPv6 next-hop attribute while maintaining RFC 8950 compliance for the IPv6 transport session?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ipv6-next-hops_0.json",
+        "question": "\"During a multi-vendor core network migration where we're transitioning from IPv4 to dual-stack, what’s the recommended approach for ensuring Nokia routers properly propagate both VPNv4 prefixes and labeled IPv6 routes via BGP peers while maintaining IPv6 next-hop reachability over an IPv6-only underlay?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ldp-prefix_0.json",
+        "question": "\"During a core network migration where we're transitioning from RSVP-TE to LDP-based transport, I need to ensure that our Nokia routers propagate active /32 LDP FEC routes via BGP to a peering AS while maintaining RFC 3107 label distribution, even when alternative BGP-learned paths for those prefixes are present—what's the proper configuration approach to achieve this?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-ldp-prefix_0.json",
+        "question": "\"During a core network migration where we're transitioning from RSVP-TE to LDP-BGP interworking, what’s the proper configuration on a Nokia router to ensure that locally originated /32 LDP FECs are consistently advertised via BGP with RFC 3107 labels, even when alternate BGP-learned paths for those prefixes already exist in the RIB?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-stale-to-all-neighbors_0.json",
+        "question": "\"During a BGP migration where we're transitioning to a new AS, what’s the recommended approach on Nokia routers to ensure LLGR-stale routes propagate consistently across all eBGP peers, particularly those capable of exiting our current autonomous system?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertise-stale-to-all-neighbors_0.json",
+        "question": "\"During a BGP migration where we're transitioning to LLGR-capable Nokia routers, what’s the proper configuration approach to ensure stale routes marked with LLGR attributes propagate to all BGP peers—including legacy devices that don’t support LLGR—without violating the no-export policy for routes leaving our autonomous system?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertised-stale-time_0.json",
+        "question": "\"During a planned maintenance window where we're implementing BGP graceful restart across our Nokia router fleet, what's the recommended approach to ensure stale routes persist for a full 24-hour period (86,400 seconds) in case of control plane disruptions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/advertised-stale-time_0.json",
+        "question": "\"During a planned maintenance window where we're implementing BGP graceful restart across our Nokia router fleet, what’s the proper method to extend the stale route retention period to a full day (86,400 seconds) within the advertised restart capabilities?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregate-used-paths_0.json",
+        "question": "\"During a core network upgrade involving multiple parallel links, I need to ensure proper load balancing for IPv4 prefixes advertised via BGP with next-hop-self on our Nokia routers; what’s the optimal way to aggregate bandwidth metrics derived from link-bandwidth extended communities across ECMP paths in the BGP configuration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregate-used-paths_0.json",
+        "question": "\"During a core network upgrade involving multiple parallel links between our Nokia routers, we need to ensure optimal traffic distribution when readvertising IPv4 routes via BGP with next-hop-self enabled; what’s the proper method to aggregate bandwidth metrics derived from link-bandwidth extended communities across these multipaths in the BGP configuration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregator-id-zero_0.json",
+        "question": "\"During a multi-router BGP aggregation rollout in our Nokia-based AS, we're observing discrepancies in AS path attributes for summarized routes; what’s the recommended approach to enforce uniform AS path propagation while maintaining aggregation efficiency across all nodes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aggregator-id-zero_0.json",
+        "question": "\"During a multi-site BGP deployment involving Nokia routers, what steps should be taken to maintain uniform AS path attributes when aggregating routes across all nodes within our autonomous system to prevent inconsistencies in path advertisement?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aigp_0.json",
+        "question": "\"During a multi-AS backbone migration where we're transitioning from static routes to BGP, what's the optimal method to ensure Nokia routers prioritize IGP-derived metrics when evaluating BGP paths between disparate autonomous systems, particularly when dealing with inconsistent administrative distances?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/aigp_0.json",
+        "question": "\"During a multi-domain MPLS VPN deployment involving inter-AS connectivity between Nokia 7750 routers, what's the optimal method to influence BGP best-path selection by leveraging the underlying IGP cost metrics while maintaining policy consistency across autonomous system boundaries?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/allow-static_0.json",
+        "question": "\"During a core network upgrade involving MPLS VPN services, I need to ensure that my Nokia router resolves BGP next-hops correctly for both labeled and VPN prefixes via static routing—without inadvertently allowing default static routes to interfere with this process—what's the proper configuration approach?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/allow-static_0.json",
+        "question": "\"During a core network migration where we're transitioning from OSPF to BGP, I need to ensure proper next-hop reachability for labeled IPv4/IPv6 prefixes and VPNv4/VPNv6 routes via static routing on our Nokia 7750s - what's the specific configuration approach to achieve this without relying on default static routes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/always-compare-med_0.json",
+        "question": "\"During a multi-vendor network migration where we're integrating Nokia routers into our existing BGP topology, what’s the recommended approach for configuring path selection logic when evaluating routes received from disparate autonomous systems, particularly if some peers omit the MED attribute—should those routes default to the maximum MED value for consistent decision-making?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/always-compare-med_0.json",
+        "question": "\"During a multi-vendor BGP peering scenario where some external neighbors omit the MED attribute in advertised routes, what’s the recommended approach for configuring Nokia routers to prioritize path selection by implicitly assigning the least preferable weight to such paths, effectively treating absent MED values as maximally unfavorable?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/as-path-ignore_0.json",
+        "question": "\"During a multi-vendor IPv6-labeled unicast deployment, our Nokia routers appear to prioritize shorter AS paths over preferred transit links—how can we modify the BGP route selection process to disregard AS-path length while maintaining label distribution integrity?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/as-path-ignore_0.json",
+        "question": "\"During our MPLS backbone migration, we're observing suboptimal path selection for labeled-IPv6 and L2VPN routes due to strict AS-path length consideration on our Nokia PE routers—what's the proper method to disable this BGP bestpath selection criterion specifically for these address families while maintaining normal behavior for regular IPv4 unicast?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/auth-keychain_0.json",
+        "question": "\"During our core network upgrade, we're implementing BGP session hardening across all edge routers; could you outline the steps to enable MD5 authentication for BGP peers on a Nokia 7750 SR platform, utilizing a pre-configured keychain labeled 'secure_bgp123' to ensure secure routing adjacency establishment?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/auth-keychain_0.json",
+        "question": "During a recent security audit, we identified a requirement to enforce TCP MD5 authentication for BGP peering sessions using the existing keychain labeled *BGP_SECURE_KEYS* on our Nokia 7750 SR platform—could you outline the CLI hierarchy and mandatory parameters needed to implement this while maintaining established neighbor relationships?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/authentication-key_0.json",
+        "question": "\"During a recent security audit, we identified that our BGP peering sessions lack strong cryptographic protection; could you outline the steps to implement MD5 authentication with the pre-shared key 'SecureKey123!' utilizing the hash2 algorithm on our Nokia routers to ensure compliance with updated security policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/authentication-key_0.json",
+        "question": "During a recent core network upgrade involving multiple Nokia 7750 SR routers, I need to establish a secure BGP peering session using the pre-shared key \"K8#n9$mQ\"; could you outline the proper CLI syntax to implement MD5 authentication with cryptographic hashing for this session while ensuring backward compatibility with legacy peers?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/autonomous-system_0.json",
+        "question": "\"During a multi-vendor network integration project, what steps should be taken to properly implement BGP peering on a Nokia (Alcatel-Lucent) service router when assigning ASN 65001 as our local autonomous system?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/autonomous-system_0.json",
+        "question": "\"During a multi-vendor network migration, I need to ensure proper BGP peering between our Nokia routers and legacy Cisco devices; what steps should I follow to correctly specify ASN 65535 in the Nokia router's BGP configuration while maintaining backward compatibility?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/backup-path_0.json",
+        "question": "\"During a recent core network upgrade involving dual-homed Nokia PE routers, we observed delayed reconvergence for labeled-IPv6 BGP prefixes when the primary MPLS transport link fails—what's the optimal method to implement sub-second path switchover for these VPNv6 routes while maintaining existing policy controls?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/backup-path_0.json",
+        "question": "\"During a recent core network upgrade involving dual-stack IPv6 deployment, we observed that our Nokia routers running BGP-LU weren’t seamlessly switching to backup paths after primary link failures—what’s the optimal way to implement sub-second convergence for labeled unicast IPv6 prefixes under such failure scenarios?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/best-path-selection_0.json",
+        "question": "\"During a scheduled maintenance window, I need to adjust BGP route preferences on our Nokia 7750 SR to prioritize certain AS paths; what’s the proper CLI sequence to access the hierarchical configuration context where these path attributes can be modified?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/best-path-selection_0.json",
+        "question": "\"During a scheduled maintenance window, I need to adjust the BGP best-path selection parameters on our Nokia 7750 SR; what’s the proper CLI sequence to access the relevant configuration hierarchy for these route-policy modifications?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bfd-enable_0.json",
+        "question": "\"During a recent maintenance window where we upgraded our Nokia routers to enforce stricter BGP hold timers, I noticed that the session flapping correlates with OAM probe failures—what’s the recommended approach to ensure BGP session stability is dynamically influenced by the underlying link-state verification mechanisms?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bfd-enable_0.json",
+        "question": "\"During a planned maintenance window where we're migrating critical BGP peers to redundant links on our Nokia 7750 SR platform, what’s the recommended approach to programmatically tie BGP session state transitions to real-time physical interface availability to minimize route flapping?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_0.json",
+        "question": "\"During a scheduled maintenance window for our core network, I need to configure BGP on a Nokia 7750 SR without triggering any extra approval steps; what’s the most straightforward method to activate the protocol while bypassing secondary authentication requirements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_0.json",
+        "question": "\"During a scheduled maintenance window for our core network, we need to activate BGP on a Nokia 7750 SR without introducing supplementary CLI configurations beyond the baseline setup—what’s the most streamlined approach to achieve this while ensuring the routing instance inherits default administrative parameters?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_1.json",
+        "question": "\"During a recent MPLS core migration, we're encountering issues where IPv4 labeled routes aren't properly resolving next-hops via BGP—what's the recommended approach to configure tunneled next-hop resolution specifically on our Nokia 7750 platforms to maintain forwarding consistency?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bgp_1.json",
+        "question": "\"During a core network migration where we're transitioning from legacy MPLS to segment routing, what’s the recommended approach on a Nokia router to ensure proper next-hop reachability for IPv4 labeled routes by leveraging BGP tunneling?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bmp_0.json",
+        "question": "\"During a maintenance window where we're implementing BMP to monitor BGP peering sessions on our Nokia 7750 SR routers, what CLI steps are required to transition from global configuration mode into the specific context where BMP parameters can be defined?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/bmp_0.json",
+        "question": "\"During a maintenance window where I'm implementing BMP to monitor BGP peering sessions on our Nokia 7750 SRs, what's the correct CLI syntax to access the configuration hierarchy specifically for enabling protocol monitoring?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/cluster_0.json",
+        "question": "\"During a core network upgrade, we're implementing BGP route reflection on our Nokia routers for improved scalability; could you outline the steps to define a BGP group as a route reflector with cluster ID 192.168.10.5 and ORR location 8, ensuring the configuration gracefully defaults to local best-path selection if optimal ORR-advertised routes become unavailable?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/cluster_0.json",
+        "question": "\"During a core network redesign, we're implementing BGP route reflectors with ORR capabilities for improved path selection—given that our Nokia routers need to function as RRs with cluster ID 10.20.30.40 and location ID 5, what would be the proper configuration approach to ensure local prefixes remain reachable via fallback routes when optimal paths become unavailable?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/compare-origin-validation-state_0.json",
+        "question": "\"During a recent core network upgrade, we’ve observed inconsistent routing decisions when multiple BGP paths are available—how can we configure Nokia routers to weigh RPKI origin validation results as a deterministic factor in the best-path algorithm without disrupting existing policy-based route preferences?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/compare-origin-validation-state_0.json",
+        "question": "\"During a core network upgrade involving multiple Nokia 7750 SR nodes, we’re observing inconsistent best-path decisions for BGP prefixes that have undergone RPKI validation—how can we adjust the route selection process to systematically prefer routes with valid RPKI origins while maintaining fallback paths for invalid or unknown states?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/confederation_0.json",
+        "question": "\"During a multi-vendor BGP migration, we're consolidating several legacy autonomous systems under a confederation on our Nokia routers; what's the proper way to define AS 65001 and 65002 as member ASes within confederation 65100 while maintaining existing peer relationships?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/confederation_0.json",
+        "question": "\"During a multi-vendor BGP migration, we're consolidating several legacy autonomous systems under a confederation with AS 12345 on our Nokia routers—what's the proper syntax to designate ASNs 65001 and 65002 as member peers while maintaining existing route reflectors?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_0.json",
+        "question": "\"During a scheduled maintenance window, we're experiencing intermittent BGP peer flapping on our Nokia 7750 SR routers; could you advise on adjusting the hold-down timer for session reestablishment attempts to a 30-second interval to improve convergence stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_0.json",
+        "question": "\"During a maintenance window, we're experiencing intermittent BGP peer flapping on our Nokia routers; what’s the recommended method for configuring the session retry timer to stabilize neighbor adjacencies by extending it to a 90-second interval?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_1.json",
+        "question": "\"During a recent BGP monitoring protocol (BMP) deployment on our Nokia 7750 routers, we've observed persistent session establishment failures—what would be the optimal method to implement a 30-second retry timer for reconnection attempts while maintaining stability in the existing routing infrastructure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connect-retry_1.json",
+        "question": "\"During a recent BGP Monitoring Protocol (BMP) session setup on our Nokia 7750 SR routers, we observed persistent failures in establishing connections to the monitoring station—what would be the recommended approach to adjust the reconnection timer to 300 seconds to balance between rapid failure recovery and avoiding excessive control-plane load?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connection_0.json",
+        "question": "\"During a maintenance window, I'm configuring a Nokia router to establish BGP Monitoring Protocol (BMP) station connectivity; what's the proper CLI sequence to access the hierarchical configuration mode where these collector-specific parameters need to be defined?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/connection_0.json",
+        "question": "\"During a scheduled maintenance window, I need to configure BGP Monitoring Protocol (BMP) station parameters on our Nokia 7750 SR routers; what’s the proper CLI hierarchy or context mode required to access these specific settings without disrupting existing routing policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damp-peer-oscillations_0.json",
+        "question": "\"During a maintenance window where we're implementing BGP dampening policies on our Nokia routers to mitigate route flapping, what's the proper way to adjust the hold-down timers so that initial stable sessions remain idle for 15 minutes post-convergence, progressively increase the backoff interval to 10 minutes upon repeated instability events with a ceiling of 120 minutes, while mandating 45 consecutive minutes of uninterrupted operation before clearing the flap penalties?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damp-peer-oscillations_0.json",
+        "question": "During a recent core network upgrade involving multiple Nokia routers, we observed frequent BGP flapping after transient link failures, causing unnecessary route churn. What would be the recommended approach to implement a backoff timer strategy where the initial idle period is set to 10 minutes post-failure, with exponential delay increments of 15 minutes for recurring events—while enforcing both a 120-minute ceiling for maximum penalty duration and a 45-minute stability threshold before clearing failure counters?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damping_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia routers, we've observed frequent BGP route oscillations on certain prefixes; what strategies could be implemented to suppress these instabilities while ensuring that well-behaved routes maintain their sub-second reconvergence characteristics?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/damping_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia 7750 SR nodes, we've observed intermittent BGP route flapping that's causing unnecessary churn; what’s the optimal method to dampen these transient route advertisements without compromising the reconvergence time for well-established prefixes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/def-recv-evpn-encap_0.json",
+        "question": "\"During a recent EVPN-VXLAN deployment on our Nokia router fleet, we noticed that some received EVPN routes don't carry the expected BGP encapsulation extended community attribute, despite having VXLAN configured as the default encapsulation type—what's the proper forwarding behavior we should expect in this scenario, and should we implement any specific route policy handling for these cases?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/def-recv-evpn-encap_0.json",
+        "question": "\"During our data center fabric migration from MPLS to VXLAN, we've observed that some Nokia 7750 routers aren't properly handling EVPN Type 2 routes missing the BGP encapsulation attribute—how can we modify the route acceptance policy to implicitly interpret these routes as VXLAN endpoints without requiring explicit community tagging?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/default-route-target_0.json",
+        "question": "\"During a scheduled maintenance window, I need to ensure that only designated BGP neighbors within a particular peer group receive the default route advertisement from our Nokia router—what’s the most efficient way to implement this selective propagation of 0.0.0.0/0 without affecting other established sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/default-route-target_0.json",
+        "question": "\"During a core network upgrade, I need to ensure that only designated BGP peers within a particular peer group receive the default route advertisement from our Nokia 7750 SR; what's the most efficient method to implement this selective propagation without affecting other neighbor sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/description_0.json",
+        "question": "\"During our core network upgrade at the New York POP, we're consolidating BGP peer groups – what's the proper syntax in Nokia SR OS to apply a human-readable identifier like 'BGP Core Peers - New York POP' when defining the neighbor group under the BGP hierarchy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/description_0.json",
+        "question": "During a scheduled maintenance window to enhance our BGP peering visibility, I need to annotate the existing BGP neighbor group for our East Coast partners on a Nokia 7750 SR; what's the proper CLI syntax to apply the human-readable identifier \"BGP_Group_EastCoast_Peering\" at the group hierarchy level?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/deterministic-med_0.json",
+        "question": "\"During a multi-vendor BGP peering scenario where our Nokia router receives paths with differing MED values from distinct autonomous systems, what configuration adjustments would ensure deterministic best-path selection, independent of the sequence in which these routes are advertised?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/deterministic-med_0.json",
+        "question": "\"During a multi-vendor network migration where we're integrating Nokia routers into our existing BGP fabric, how can we ensure deterministic path selection when MED attributes from disparate autonomous systems introduce ambiguity in route preference?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-4byte-asn_0.json",
+        "question": "\"During a migration to 32-bit ASN space, we're encountering compatibility issues where legacy BGP speakers reject updates containing 4-byte AS_PATH segments; what’s the proper method in SR OS to enforce strict validation preventing peers from advertising paths with extended AS numbers while maintaining backward interoperability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-4byte-asn_0.json",
+        "question": "\"During a migration to a new peering architecture, we need to ensure our Nokia routers strictly restrict BGP session establishment to legacy 2-byte ASN ranges—what’s the optimal method to implement this constraint without disrupting existing IPv4/IPv6 peerings?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-capability-negotiation_0.json",
+        "question": "\"During a planned migration to dual-stack infrastructure, we need to ensure our legacy Nokia routers only participate in IPv4 BGP peering without inadvertently advertising or accepting any extended capabilities—what’s the most reliable method to harden these sessions for strict IPv4 route exchange?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-capability-negotiation_0.json",
+        "question": "\"During a core network upgrade where legacy IPv6 support isn’t required yet, what’s the recommended way to set up a BGP session on a Nokia router that explicitly restricts peer negotiation to IPv4 prefixes and disables all optional parameter advertisements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-client-reflect_0.json",
+        "question": "During a recent BGP peering session with multiple client routers in a service provider environment, we observed route reflection loops affecting traffic paths within a specific customer group—what configuration adjustments should be implemented on our Nokia routers to ensure these prefixes aren't inadvertently propagated back to members of the same peer cluster?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-client-reflect_0.json",
+        "question": "During a multi-vendor BGP peering migration where we're consolidating route reflectors, what's the recommended method to ensure our Nokia NRCs don't inadvertently propagate learned routes back to designated client peers within a targeted autonomous system block?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-communities_0.json",
+        "question": "\"During a BGP peering session with a partner AS that only supports standard communities, what’s the best approach to modify our Nokia router's export policy to filter out large community attributes while preserving standard ones?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-communities_0.json",
+        "question": "\"During a BGP peering session with a third-party AS that only processes standard communities, what’s the optimal method to filter out extended/large BGP community attributes in outbound updates on our Nokia 7750 SR to avoid compatibility issues?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-fast-external-failover_0.json",
+        "question": "\"During a maintenance window where we're decommissioning an old transit link on our Nokia 7750 SR, what's the recommended approach to ensure BGP retains learned routes temporarily after the physical interface goes down, rather than instantly withdrawing them?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-fast-external-failover_0.json",
+        "question": "\"During a maintenance window where we're decommissioning an old link, what's the recommended approach on Nokia routers to ensure BGP gracefully handles an interface failure without abruptly tearing down the external peering session?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-route-table-install_0.json",
+        "question": "\"During a phased migration to a new core network, we need to ensure our existing Nokia routers continue peering via BGP for monitoring purposes but exclude all dynamically received prefixes—whether IPv4 or IPv6—from being installed in the forwarding table; what’s the recommended approach to implement this selective route absorption without disrupting established neighbor adjacencies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/disable-route-table-install_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia routers, we observed that BGP-learned prefixes were being installed in both the RIB and FIB without proper filtering—what's the recommended method to selectively suppress this automatic propagation while maintaining other route processing functions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor-limit_0.json",
+        "question": "\"During a multi-site BGP peering rollout, we need to enforce a session limit on our Nokia routers to prevent resource exhaustion—what’s the recommended way to cap dynamic BGP peerings at 500 per instance while ensuring existing sessions remain unaffected?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor-limit_0.json",
+        "question": "\"During a core network upgrade, we need to ensure our Nokia routers don't exceed capacity when establishing BGP adjacencies—what's the proper method for configuring session limits to cap dynamic peer connections at 500 per BGP routing instance while maintaining existing policy controls?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor_0.json",
+        "question": "\"During a core network expansion, we're deploying multiple new BGP-speaking devices across different subnets; what's the recommended approach on a Nokia router to dynamically establish peer sessions without manual intervention for all endpoints falling within a predefined IP address block?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/dynamic-neighbor_0.json",
+        "question": "\"During a scheduled maintenance window, I'm looking to automate BGP peering adjustments across multiple routers in our Nokia-based infrastructure; what’s the recommended approach to dynamically configure session parameters for a predefined peer group without manual intervention?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ebgp-ibgp-equal_0.json",
+        "question": "\"During a multi-vendor MPLS core migration, we're observing inconsistent path selection for labeled IPv6 prefixes between Nokia routers running mixed EBGP and IBGP sessions—what’s the recommended approach to normalize the BGP decision process to evaluate these routes uniformly without preferential treatment based on peer type?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ebgp-ibgp-equal_0.json",
+        "question": "\"During a multi-vendor IPv6 migration, we're observing inconsistent path selection between EBGP and IBGP-labeled routes on our Nokia PE routers; what BGP policy configurations would ensure both route types are evaluated without preference during best-path calculation?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-inter-as-vpn_0.json",
+        "question": "\"During a multi-domain BGP VPN deployment involving Nokia 7750 SRs, what steps are necessary to ensure seamless propagation of VPNv4 routes across AS boundaries while maintaining proper route distinguisher and target community handling?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-inter-as-vpn_0.json",
+        "question": "\"During a multi-vendor BGP peering setup involving Nokia routers, what steps are necessary to ensure seamless propagation of VPN routes across disparate autonomous systems while maintaining strict route control and security policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-notification_0.json",
+        "question": "\"During a planned maintenance window where we're upgrading multiple Nokia routers in a core network, what’s the recommended approach for enabling BGP graceful restart to ensure uninterrupted session re-establishment if peers unexpectedly send NOTIFICATION messages due to transient faults?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-notification_0.json",
+        "question": "\"During a maintenance window where we're upgrading our core Nokia routers, I need to ensure seamless BGP convergence—specifically, how can I verify that the routers are properly configured to signal graceful restart capability in NOTIFICATION messages when peers reconnect after a transient failure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-origin-validation_0.json",
+        "question": "\"During a recent migration to dual-stack BGP, we’ve been receiving labeled IPv6 routes from a trusted peer, but I need to ensure proper origin validation is enforced on our Nokia routers—what’s the optimal way to implement this verification without disrupting existing MPLS transport?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-origin-validation_0.json",
+        "question": "\"During a recent core network upgrade, we're implementing stricter route validation policies on our Nokia routers—given that one of our BGP peers occasionally advertises both labeled IPv6 and unlabeled IPv4 prefixes, what’s the proper configuration approach to enforce RPKI-based origin validation selectively for this neighbor’s announcements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-peer-tracking_0.json",
+        "question": "\"During a recent maintenance window where we upgraded links to a critical BGP peer, we observed prolonged reconvergence times after a simulated link failure—despite Fast Reroute being enabled. What Nokia-specific mechanisms exist to expedite BGP path recalculation before hold timeouts, particularly when dealing with flapping transit interfaces carrying full Internet routes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-peer-tracking_0.json",
+        "question": "\"During a critical maintenance window where we're decommissioning an old BGP peer, what steps can I take on our Nokia routers to expedite route reconvergence without relying on the default hold timer expiration, ensuring minimal disruption to downstream traffic?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-rr-vpn-forwarding_0.json",
+        "question": "\"During a recent MPLS VPN deployment, we're encountering issues where our Nokia routers aren't properly resolving BGP next-hops for certain prefixes - what's the optimal method to ensure all VPN-IPv4 routes received via BGP get imported into a designated dummy VRF instance, bypassing standard RT-based filtering constraints?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enable-rr-vpn-forwarding_0.json",
+        "question": "\"During our MPLS backbone migration, we're encountering next-hop reachability issues for certain VPN prefixes; what's the proper method to ensure Nokia routers unconditionally accept all incoming VPN-IP routes into a designated dummy VRF instance strictly for BGP next-hop resolution purposes, bypassing standard RT-based filtering?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-first-as_0.json",
+        "question": "\"During a recent peering session setup with an external provider, I need to ensure my Nokia router discards any incoming BGP updates where the terminating AS in the AS_PATH attribute doesn't align with the neighbor's predefined autonomous system number—what's the most efficient method to implement this validation?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-first-as_0.json",
+        "question": "\"During a recent BGP peering session setup with an external partner, we observed that our Nokia router accepted routes even when the AS_PATH's terminating AS didn't align with the neighbor's configured AS number—what's the proper method to enforce validation so updates are discarded unless the final AS in the path strictly corresponds to the peer's defined autonomous system?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-strict-tunnel-tagging_0.json",
+        "question": "\"During a recent MPLS core migration involving Nokia 7750 routers, we observed that untagged LSPs were inadvertently being considered in BGP next-hop resolution for labeled IPv4 routes—what's the proper configuration approach to ensure only explicitly tagged transport tunnels participate in this process?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/enforce-strict-tunnel-tagging_0.json",
+        "question": "\"During our MPLS backbone migration, we need to ensure that our Nokia routers strictly adhere to policy-based tunnel selection by exclusively considering BGP next-hop routes carrying a specific administrative tag—how can we enforce this constraint in the configuration to prevent any unlabeled paths from being selected?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/error-handling_0.json",
+        "question": "\"During a scheduled maintenance window, we're upgrading our core routers running Nokia SR OS, and given recent instability in our BGP peering sessions, what’s the recommended approach to activate the advanced error-handling mechanisms for BGP to improve session resilience without disrupting existing adjacencies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/error-handling_0.json",
+        "question": "\"During a recent core network upgrade, our Nokia routers started flagging irregular BGP updates; what’s the recommended approach to activate advanced anomaly detection and mitigation features to handle these edge cases without disrupting existing sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/export_0.json",
+        "question": "During a scheduled maintenance window, we're implementing stricter egress traffic controls for a multi-homed BGP setup on our Nokia routers; what's the proper method to enforce the \"customer-routes\" policy specifically when advertising prefixes to certain downstream peers while maintaining existing iBGP relationships?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/export_0.json",
+        "question": "During a scheduled maintenance window where we're optimizing our BGP peering strategy, what steps should be taken on our Nokia router fleet to ensure the \"INTERNAL_PEERS\" route policy properly filters and modifies outbound advertisements to our downstream autonomous systems?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-community_0.json",
+        "question": "\"During a scheduled maintenance window, we're implementing stricter traffic control policies and need to ensure our Nokia routers only propagate BGP routes that match specific extended community attributes; what's the proper methodology for configuring outbound route filtering to enforce this selective advertisement?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-community_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia routers, we observed that BGP updates containing extended communities weren't being properly filtered despite ORF configurations—what's the correct procedure to ensure these routers properly evaluate extended community attributes when applying outbound route filters?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-nh-encoding_0.json",
+        "question": "\"During a core network upgrade involving MPLS-enabled Nokia routers, we need to ensure backward compatibility with legacy devices that expect labeled IPv4 routes. What’s the proper BGP configuration to signal support for accepting such routes when the next-hop address family identifier is set to 2 (IPv4)?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/extended-nh-encoding_0.json",
+        "question": "\"During a recent core network upgrade involving Nokia routers, we're implementing BGP-labeled unicast for seamless MPLS integration; could you outline the necessary BGP session configuration steps to ensure proper advertisement of labeled IPv4 route acceptance, specifically requiring next-hop address family identifier type 2?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_0.json",
+        "question": "\"During our core network upgrade, we're migrating from IPv4-only BGP peering to dual-stack on Nokia routers; what steps are needed to extend the existing BGP session configuration to simultaneously advertise labeled IPv6 unicast routes and EVPN NLRI while maintaining backward compatibility?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_0.json",
+        "question": "\"During our migration to an MPLS-based IPv6 core with EVPN overlay, we're encountering issues where Nokia routers aren't properly propagating both labeled IPv6 prefixes and EVPN routes via BGP—what's the correct sequence of configuration commands to simultaneously enable these address families while maintaining optimal route distribution?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_1.json",
+        "question": "\"During a maintenance window, we're implementing BGP graceful restart for IPv6 VPNs on our Nokia 7750 SR routers to minimize disruption during control plane failovers—what’s the optimal way to adjust the hold timer and ensure persistence across sessions without impacting existing MPLS services?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_1.json",
+        "question": "\"During our migration to dual-stack VPNs, we need to ensure uninterrupted service while adjusting BGP settings—what’s the recommended approach for implementing extended graceful restart timers specifically for IPv6 peers on Nokia 7750 routers?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_2.json",
+        "question": "\"During our core network upgrade, we're deploying MPLS-based IPv6 transport, and I need to ensure proper forwarding of labeled-unicast traffic—what's the recommended method for establishing next-hop resolution on Nokia 7750 routers when implementing this in a dual-stack environment?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_2.json",
+        "question": "\"During a recent MPLS VPN deployment on our Nokia routers, we noticed that certain VPN-IPv4 and VPN-IPv6 routes aren't being properly processed despite correct route distribution—what's the proper procedure for defining next-hop resolution parameters when these routes haven't been associated with any VPRN instances?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_3.json",
+        "question": "\"During our migration to an IPv6-only core, we're encountering issues where BGP-learned IPv6 routes without MPLS labels aren't properly resolving next-hops over our IS-IS shortcut tunnels on Nokia 7750 routers—what's the correct procedure to ensure proper next-hop resolution in this scenario?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_3.json",
+        "question": "\"During our IPv6 BGP migration, we're encountering scenarios where unlabeled routes aren't properly resolving next-hops across our MPLS backbone—what's the recommended approach for implementing shortcut tunneling on Nokia routers to optimize this path resolution without disrupting existing labeled traffic?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_4.json",
+        "question": "\"During a recent core network upgrade involving Nokia routers, we need to ensure that our BGP Monitoring Protocol (BMP) station receives comprehensive visibility into both labeled IPv6 and IPv4 VPN routes (SAFI 128)—what’s the proper configuration approach to achieve this while maintaining existing MPLS service integrity?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/family_4.json",
+        "question": "\"During a core network upgrade involving Nokia routers, I need to ensure that the BGP Monitoring Protocol station collects routing updates for both VPNv4 prefixes and labeled IPv6 routes—what’s the proper BMP configuration to handle these address families simultaneously?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/flowspec_0.json",
+        "question": "\"During a maintenance window, I'm implementing BGP FlowSpec to mitigate DDoS attacks, but I need guidance on accessing the appropriate configuration context within the Nokia SR OS CLI to properly validate flow specifications before pushing them to peers.\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/flowspec_0.json",
+        "question": "\"During a maintenance window, I'm implementing BGP FlowSpec to mitigate DDoS attacks, but I need guidance on navigating the appropriate CLI context in a Nokia 7750 SR to properly validate the flow specification rules before pushing them live—could you clarify the correct configuration hierarchy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/forwarding-bits-set_0.json",
+        "question": "\"During a maintenance window where we're enabling BGP graceful restart across our Nokia router-based MPLS backbone, what’s the proper method to ensure the F-bit is correctly set for L2-VPN, route-target, and flow-specific AFI/SAFIs (IPv4/IPv6) to maintain forwarding state consistency?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/forwarding-bits-set_0.json",
+        "question": "\"During a maintenance window where we're implementing BGP graceful restart on our Nokia routers, what’s the recommended configuration for the F bit to ensure forwarding state preservation is strictly limited to L2-VPN and route-target address families without affecting other services?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/graceful-restart_0.json",
+        "question": "\"During a planned maintenance window where multiple BGP peers will be gracefully restarted, what’s the optimal method for configuring a Nokia router to preserve route stability and maintain forwarding consistency while supporting neighbors undergoing BGP session resets?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/graceful-restart_0.json",
+        "question": "\"During a planned maintenance window where we need to reboot multiple BGP-speaking routers in our core network, what’s the recommended approach to configuring a Nokia router to gracefully preserve existing BGP sessions while supporting neighboring peers through their restart phases?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/group_0.json",
+        "question": "During a multi-regional BGP peering rollout, what’s the recommended approach for defining a peer group labeled \"EUROPE-WEST-1\" on a Nokia 7750 SR to streamline route advertisement policies across our European west-facing edge routers?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/group_0.json",
+        "question": "During a multi-regional BGP peering setup on our Nokia 7750 SRs, I need to consolidate several peers from the EU-West-1 region under a common template—what's the proper CLI syntax to define this peer group while ensuring all inherited policies maintain consistency across members?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-restart-time_0.json",
+        "question": "\"During a maintenance window where we're implementing BGP graceful restart enhancements across our Nokia router fleet, what’s the proper method to ensure that all prefixes from a GR-capable peer remain in a transient state for no longer than 300 seconds before progressing to stable graceful restart mode?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-restart-time_0.json",
+        "question": "\"During a maintenance window where we're implementing BGP long-lived graceful restart across our Nokia routers, I need to ensure that a locally defined restart timer of 300 seconds takes precedence over any values received from peers—what's the proper configuration approach to enforce this override?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-stale-time_0.json",
+        "question": "\"During a maintenance window where we're implementing long-lived graceful restart across our Nokia router fleet, what steps should be taken to ensure proper operation by adjusting the LLGR stale-time parameter to a one-hour duration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/helper-override-stale-time_0.json",
+        "question": "\"During a planned maintenance window where we're implementing long-lived graceful restart across our Nokia router fleet, what steps should be taken to ensure proper BGP convergence by adjusting the local LLGR stale timer to a one-hour duration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/hold-time_0.json",
+        "question": "\"During a scheduled maintenance window for our core network, we're implementing stricter BGP timers on our Nokia routers to ensure stability; what’s the proper configuration to enforce a fixed keepalive interval of 120 seconds while ensuring the router ignores any neighbor proposals that attempt to negotiate values under the 60-second threshold?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/hold-time_0.json",
+        "question": "\"During a scheduled maintenance window for our core network, we need to ensure that BGP sessions on our Nokia routers gracefully terminate after 180 seconds of inactivity while enforcing a minimum acceptable hold time threshold of 60 seconds to prevent unstable peers from establishing connections—what would be the proper configuration approach to implement these requirements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ibgp-multipath_0.json",
+        "question": "\"During a recent core network upgrade, we’ve noticed suboptimal traffic distribution across multiple iBGP paths with identical metrics on our Nokia routers—what’s the recommended approach to implement equitable load sharing without modifying the underlying IGP cost structure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ibgp-multipath_0.json",
+        "question": "\"During a core network upgrade involving redundant iBGP speakers, what steps should be taken on Nokia (Alcatel-Lucent) SR OS devices to ensure optimal utilization of all available equal-cost paths for inbound traffic distribution?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-nh-metric_0.json",
+        "question": "\"During a multi-vendor network migration where we're consolidating routes from legacy BGP speakers into our Nokia routers, what configuration adjustments would allow us to deprioritize the IGP cost evaluation for next-hop reachability when selecting among equivalent NLRI paths advertised by baseline BGP neighbors?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-nh-metric_0.json",
+        "question": "\"During a multi-vendor network migration where we're integrating Nokia routers into our existing BGP fabric, what configuration approach would allow us to ensure route selection between equivalent NLRIs received from legacy BGP peers isn't influenced by next-hop metrics, particularly when these peers reside in our core routing infrastructure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-router-id_0.json",
+        "question": "\"During a multicast VPN IPv6 deployment on our Nokia router infrastructure, we’ve observed that BGP path selection inadvertently prioritizes routes based on router IDs rather than relevant path attributes—how can we adjust the configuration to exclude router IDs from influencing best-path decisions for mvpn-ipv6 routes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ignore-router-id_0.json",
+        "question": "\"During our multicast VPN IPv6 deployment, we're encountering unexpected best path selections on Nokia routers due to BGP router ID comparisons—what’s the recommended approach to disable this specific check while preserving other path selection criteria?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/import_0.json",
+        "question": "During a scheduled maintenance window where we're implementing stricter ingress filtering for BGP peering with customer 123, what would be the proper syntax to combine the existing \"cust123-inbound-filter\" route policy with conditional logic that only accepts routes matching both the preferred path criteria and those with an AS path shorter than 10 hops on our Nokia 7750 platform?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/import_0.json",
+        "question": "\"During a maintenance window, I need to ensure that inbound BGP advertisements from customer 123 are first processed through the 'cust123-inbound' route policy before applying additional filtering logic combining prefix validation with AS path verification on our Nokia platform—what's the proper sequence for implementing these conditional evaluations?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initial-send-delay-zero_0.json",
+        "question": "\"During a maintenance window where we're bringing up new BGP peers on our Nokia routers, what steps should we take to ensure route advertisements propagate immediately upon session establishment, avoiding any unnecessary delays in convergence?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initial-send-delay-zero_0.json",
+        "question": "\"During a maintenance window where we're bringing up new BGP peering with multiple transit providers on our Nokia 7750 SRs, what’s the optimal way to ensure immediate route advertisement upon session establishment without introducing convergence delays?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initiation-message_0.json",
+        "question": "During a scheduled maintenance window where we're deploying BMP monitoring stations across our Nokia router fleet, what's the recommended method to dynamically push a customized connection banner containing emergency contact details (e.g., \"+1-555-1234567\") as these monitoring peers establish sessions?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/initiation-message_0.json",
+        "question": "*\"While preparing for a network upgrade on our Nokia routers, I need to ensure that remote technicians receive appropriate contact details when establishing a session—could you advise on implementing a customized banner displaying 'BMP Station Contact: support@example.com, Phone: +1234567890' upon successful login?\"*"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv4_0.json",
+        "question": "\"During a BGP peering session setup between our Nokia router and a multi-homed ISP, we need to ensure the local device can propagate up to eight additional route alternatives for each standard IPv4 prefix without MPLS labels, while simultaneously enabling multipath reception—what’s the optimal configuration approach under these constraints?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv4_0.json",
+        "question": "\"During a core network upgrade, we need to ensure our Nokia routers propagate up to eight ECMP routes for each IPv4 prefix without label constraints while preventing the acceptance of multipath advertisements from neighboring BGP speakers—what’s the optimal configuration approach to implement this selective path advertisement policy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv6_0.json",
+        "question": "\"During our IPv6 BGP multipath optimization rollout, we need to ensure that our Nokia routers propagate up to eight ECMP routes for each unlabeled prefix while restricting inbound acceptance of multiple paths from neighboring autonomous systems—what’s the proper CLI sequence to implement this asymmetric path handling?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ipv6_0.json",
+        "question": "\"During our IPv6 BGP peering migration, we need to ensure our Nokia routers propagate multiple backup paths without label overhead—specifically, up to 8 alternate IPv6 unicast routes per prefix—while simultaneously preventing the acceptance of similarly advertised routes from peers; what’s the optimal configuration approach for this selective route exchange?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-count_0.json",
+        "question": "\"During a recent maintenance window where we upgraded our Nokia routers to handle increased BGP peering sessions, I noticed that some TCP connections were dropping unexpectedly; could you clarify the threshold for consecutive missed keepalives—currently configured at 15—that would cause the router to flag a TCP session as down?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-count_0.json",
+        "question": "\"During a recent maintenance window on our Nokia router infrastructure, we adjusted the TCP keepalive settings to a threshold of 5, but I'm trying to determine at what point of sustained keepalive failures the router should automatically terminate the session—would this occur immediately upon hitting the fifth consecutive missed response, or does the system incorporate any additional grace periods before declaring the connection down?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-idle_0.json",
+        "question": "\"During our migration to a new core network using Nokia routers, we noticed that persistent TCP sessions from legacy systems occasionally drop due to premature timeout; could you advise on adjusting the initial keepalive probe interval to 300 seconds to better align with these older endpoints?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-idle_0.json",
+        "question": "\"During a recent maintenance window, we observed premature session timeouts impacting our BGP peering over TCP; could you advise on configuring the idle interval threshold to 300 seconds for initiating keepalive probes on our Nokia routers to mitigate this issue?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-interval_0.json",
+        "question": "\"During a recent maintenance window, we observed intermittent session drops across our Nokia router fleet; could you advise on adjusting the interval for successive TCP keepalive transmissions to 30 seconds to mitigate premature connection teardowns?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keep-interval_0.json",
+        "question": "\"During a recent network audit, we noticed inconsistent session persistence across our Nokia router fleet; could you guide me through adjusting the TCP keepalive probe interval to a 30-second threshold to standardize behavior without disrupting existing connections?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keepalive_0.json",
+        "question": "\"During a scheduled maintenance window for our core Nokia routers, we're fine-tuning BGP session stability—given that the hold time is set to 180 seconds, what would be the optimal keepalive message interval to maintain neighbor adjacency without unnecessarily consuming CPU cycles, assuming a baseline timer configuration of 60 seconds?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/keepalive_0.json",
+        "question": "\"During a maintenance window to optimize BGP session stability across our Nokia-based core network, what configuration steps are required to modify the keepalive timer interval to a 60-second threshold without disrupting existing peerings?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv4_0.json",
+        "question": "\"During a BGP-labeled unicast deployment on our Nokia routers, we need to ensure that each IPv4 prefix advertises no more than eight labeled paths while explicitly preventing the acceptance of multipath routes—what’s the optimal way to implement this constraint without disrupting existing peer sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv4_0.json",
+        "question": "\"During a BGP migration where we're consolidating labeled-unicast routing tables across our Nokia PE routers, what's the optimal method to implement prefix-specific outbound policy that advertises a maximum of eight IPv4 labeled paths while ensuring inbound path diversity is constrained by rejecting multipath advertisements from all eBGP peers?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv6_0.json",
+        "question": "\"During our migration to an IPv6-labeled unicast architecture, we need to ensure our Nokia routers propagate a maximum of eight distinct labeled paths per prefix while preventing the acceptance of redundant path advertisements from BGP peers—what’s the optimal configuration approach?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-ipv6_0.json",
+        "question": "\"During our MPLS-enabled IPv6 core migration, we need to ensure our Nokia routers propagate up to eight labeled-unicast routes per IPv6 prefix for optimal traffic engineering, while preventing potential routing instability by rejecting multipath advertisements from BGP neighbors—what's the most efficient way to implement this selective path advertisement control?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-preference_0.json",
+        "question": "\"During our multi-vendor BGP deployment, we're prioritizing labeled-unicast routes from our Juniper peers over Nokia routers—what's the proper syntax to adjust the local preference threshold to 150 specifically for LU routes in the Nokia SR OS BGP configuration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/label-preference_0.json",
+        "question": "\"During a scheduled maintenance window, we're implementing route prioritization for BGP-labeled paths on our Nokia NSP infrastructure; what’s the proper CLI syntax to assign a preference value of 150 to these routes without disrupting existing traffic engineering policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/labeled-routes_0.json",
+        "question": "\"During a scheduled maintenance window, I'm implementing BGP-labeled unicast routes on our Nokia 7750 SRs and need to verify the next-hop resolution behavior; what’s the proper CLI hierarchy to access the configuration context where labeled routing options are specified?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/labeled-routes_0.json",
+        "question": "\"During a recent core network upgrade involving MPLS LSPs and BGP-labeled unicast routes, I encountered an issue where next-hop resolution fails for labeled IPv4 prefixes on our Nokia 7750 SR; what’s the proper CLI sequence to activate BGP next-hop resolution while preserving label handling in this scenario?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ldp_0.json",
+        "question": "\"During a recent MPLS core migration, we're observing that BGP-labeled prefixes aren't resolving via LDP nexthops on our 7750 SRs—what's the proper procedure to ensure LDP-derived nexthop information gets properly incorporated into the BGP route resolution process?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ldp_0.json",
+        "question": "\"During a recent MPLS core migration, we’re observing that BGP-labeled prefixes aren’t resolving via LDP in our Nokia 7750s—what’s the proper method to ensure the tunnel table leverages LDP for next-hop resolution when handling these labeled routes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/leak-import_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia routers running BGP, we need to ensure that specific routes advertised under 'POLICY_123' and 'POLICY_ABC' are properly imported into the IPv4 routing table—what’s the recommended approach for configuring BGP RIB management to handle this selective route propagation while maintaining existing forwarding behavior?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/leak-import_0.json",
+        "question": "\"During a multi-VRF BGP route exchange implementation on Nokia 7750 SR platforms, what’s the proper CLI syntax to enforce selective route importation under policies POLICY_A and POLICY_B when validating RIB-type consistency across peered routing instances?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-bandwidth_0.json",
+        "question": "\"During a recent MPLS core upgrade, we need to ensure that our Nokia routers properly advertise available bandwidth metrics via BGP to peers within the same administrative domain—what's the recommended approach for implementing extended community attributes specifically designed for bandwidth signaling in this group-specific routing scenario?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-bandwidth_0.json",
+        "question": "\"During a recent core network upgrade involving BGP route optimization for traffic engineering, I need to ensure that certain prefixes receive priority bandwidth allocation; could you outline the steps to properly implement extended communities for bandwidth advertisement on our Nokia routers to enforce this policy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-state-import-enable_0.json",
+        "question": "\"During a network optimization project, we're looking to propagate topology data via BGP for path computation purposes—what’s the proper configuration sequence to activate the BGP link-state address family on our Nokia 7750 routers to ensure neighboring peers receive this information correctly?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/link-state-import-enable_0.json",
+        "question": "\"During our multi-vendor SDN migration, we need to ensure seamless integration between Nokia routers running IS-IS and a centralized controller—what's the proper method to propagate IGP topology into BGP-LS on these platforms while maintaining accurate TE attributes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_0.json",
+        "question": "During a core network migration where we're transitioning from static routes to BGP peering, what steps should I follow to ensure our Nokia router’s BGP session sources its traffic exclusively from the \"core-link1\" interface to maintain consistent adjacency with the upstream provider?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_0.json",
+        "question": "\"During a scheduled maintenance window, I need to ensure that all BGP sessions within a specific peer group on our Nokia 7750 SRs originate from the loopback interface (192.0.2.1) for consistency with our new traffic engineering policy—what’s the proper configuration approach to enforce this source address binding at the group level?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_1.json",
+        "question": "\"During our migration to a new BGP Monitoring Protocol (BMP) collector infrastructure, we need to ensure all Nokia router instances consistently originate BMP session traffic from the designated loopback interface (192.168.100.10) rather than using physical interface addresses—what's the optimal method to enforce this source IP binding across our distributed router fleet while maintaining existing monitoring capabilities?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-address_1.json",
+        "question": "\"During our BGP Monitoring Protocol (BMP) deployment, we need to ensure our Nokia router's outbound sessions to the collector originate from the dedicated loopback interface (192.0.2.10) for proper traffic identification—what's the most reliable method to enforce this source address selection across all BMP-related communications?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-as_0.json",
+        "question": "\"During a multi-vendor network migration where we're integrating Nokia routers into our existing BGP fabric, what steps are required to establish a BGP session using a virtual AS of 65535 while ensuring neither the local nor real autonomous system numbers are propagated in path advertisements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-as_0.json",
+        "question": "\"During our multi-vendor BGP migration, we're deploying a Nokia router as a route reflector and need to ensure backward compatibility with legacy peers—what’s the proper method to implement a virtual AS (65530) while suppressing both the true local and global autonomous systems from appearing in path advertisements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-preference_0.json",
+        "question": "\"During a multi-vendor WAN migration where we're prioritizing traffic through our Nokia routers, what's the proper CLI syntax to assign a higher local preference of 150 to inbound BGP routes from specific peers to influence path selection?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/local-preference_0.json",
+        "question": "\"During a multi-vendor migration where we're prioritizing certain inbound BGP paths from a legacy AS, what's the recommended method on a Nokia router to ensure routes received from specific peers are assigned a local preference value of 200 to influence outbound traffic flow?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/location_0.json",
+        "question": "\"During our multi-site BGP deployment using Nokia routers, we need to ensure proper route reflection for location ID 8 (serving as a regional hub), where the designated route reflector with primary interface 192.168.10.1 should optimally propagate paths while maintaining hierarchy—what would be the recommended configuration approach to achieve this?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/location_0.json",
+        "question": "\"During our multi-site BGP deployment, we need to ensure proper route propagation for location ID 8 on the Nokia routers—given that we're using 192.168.10.1 as the primary peering interface and 203.0.113.45 as the backup—what would be the recommended approach to implementing route reflection while maintaining optimal path selection across the topology?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/long-lived_0.json",
+        "question": "\"During a planned maintenance window where we need to gracefully migrate services between redundant Nokia 7750 SR nodes, what's the optimal method for ensuring BGP sessions remain active without triggering unnecessary route withdrawals, particularly when dealing with prolonged control plane instability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/long-lived_0.json",
+        "question": "\"During a planned maintenance window where we're upgrading redundant Nokia router pairs, what's the recommended approach for ensuring uninterrupted BGP peering sessions persist across extended control plane restarts, particularly when dealing with route reflector dependencies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/loop-detect_0.json",
+        "question": "\"During a BGP peering session between our Nokia router and an external partner, we've observed instances where our ASN appears in the AS_PATH attribute of received routes—likely due to misconfigurations downstream. What's the optimal way to configure the router to suppress these potentially looping advertisements without disrupting the established BGP adjacency?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/loop-detect_0.json",
+        "question": "\"During a BGP peering session audit, we observed that our Nokia router isn't properly dropping routes containing our local AS (AS65530) in the AS_PATH attribute—what's the recommended configuration approach to enforce loop prevention by terminating sessions when our autonomous system number appears in incoming updates?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv4_0.json",
+        "question": "\"During our multicast VPN deployment on a Nokia router, we need to ensure it advertises a maximum of eight distinct paths per IPv4 prefix to downstream peers while preventing the acceptance of multipath routes from neighboring routers—what’s the optimal BGP/MPLS configuration approach to enforce this asymmetric path control?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv4_0.json",
+        "question": "\"During our MPLS VPN multicast deployment, we need to ensure that our Nokia PE routers can propagate up to eight distinct BGP paths for each mVPNv4 prefix while maintaining compatibility with remote peers capable of multipath route exchange—what’s the optimal way to implement this without disrupting existing unicast routing policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv6_0.json",
+        "question": "\"During the rollout of our multicast-enabled IPv6 VPN infrastructure, we're observing that our Nokia routers aren't optimally utilizing ECMP capabilities when exchanging routing information—what's the proper BGP/MPLS configuration approach to ensure each PE router can both advertise eight distinct paths per mVPNv6 prefix and accept multiple received routes for identical prefixes during route negotiation?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mcast-vpn-ipv6_0.json",
+        "question": "\"During our multicast IPv6 VPN deployment on Nokia routers, we need to ensure that BGP can propagate up to eight distinct paths for each prefix while maintaining reciprocal capability to accept multiple received routes for identical prefixes—what’s the optimal way to implement this multipath negotiation?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/med-out_0.json",
+        "question": "\"During our multi-vendor BGP peering rollout, we noticed that Nokia routers aren't consistently applying MED values across route advertisements—how can we enforce a default MED of 200 for all routes where the metric isn't specifically defined in the policy configurations?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/med-out_0.json",
+        "question": "\"During a multi-vendor network migration, we need to ensure consistent route advertisement from our Nokia routers; what’s the recommended approach to enforce a MED attribute of 200 for all BGP updates if the metric isn't explicitly defined in the existing policy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/min-route-advertisement_0.json",
+        "question": "\"During a scheduled maintenance window, we're looking to implement rate-limiting for BGP advertisements on our Nokia 7750 SRs to prevent excessive update traffic—what’s the proper method to enforce a 15-second minimum interval between outgoing route announcements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/min-route-advertisement_0.json",
+        "question": "\"During a recent BGP peering session upgrade on our Nokia routers, we observed rapid route flapping that could destabilize the network—what’s the recommended method to implement a 15-second dampening interval between successive BGP updates toward all peers to ensure smoother convergence?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/monitor_0.json",
+        "question": "\"During a maintenance window, I need to adjust BGP monitoring thresholds on our Nokia routers; what’s the proper CLI sequence to access the configuration submenu where these parameters are defined?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/monitor_0.json",
+        "question": "\"During a maintenance window, I need to adjust BGP monitoring thresholds on our Nokia routers; what’s the proper CLI sequence to access the configuration sub-mode where these parameters can be modified?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mp-bgp-keep_0.json",
+        "question": "\"During a scheduled maintenance window for our MPLS backbone, what’s the recommended approach to modify BGP-based VPN routing policies on a Nokia NSP platform without triggering route-refresh requests, ensuring that existing MP-BGP prefixes remain stable in the RIB-IN table throughout the reconfiguration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mp-bgp-keep_0.json",
+        "question": "\"During a phased migration of our MPLS VPN infrastructure, we're updating route policies for several customer VRFs on Nokia 7750 routers; what's the recommended approach to ensure MP-BGP prefixes persist in RIB-IN across these policy modifications without relying on periodic route refresh negotiations?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multihop_0.json",
+        "question": "\"During a recent network upgrade involving multiple AS hops, we observed inconsistent BGP session stability when EBGP updates traverse three intermediary nodes; what’s the recommended method to adjust the time-to-live parameter on a Nokia router to ensure reliable propagation without exceeding the typical hop-count constraints?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multihop_0.json",
+        "question": "\"During a recent BGP peering session setup across multiple autonomous systems, we observed that our EBGP updates are being dropped after exceeding the default TTL threshold; could you advise on configuring the IPv4 time-to-live parameter to 128 specifically for EBGP traffic on our Nokia 7750 SR to ensure reliable propagation through intermediate hops?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multipath_0.json",
+        "question": "\"During a multi-homed edge router upgrade, what’s the recommended approach to modifying BGP route selection on a Nokia platform to permit load balancing across up to eight EBGP routes for the same prefix, while enforcing that all eligible paths must maintain consistent AS-path attributes with the primary best path?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/multipath_0.json",
+        "question": "\"During a multi-homed BGP peering setup with two ISPs, we're observing suboptimal traffic distribution despite enabling multipath on our Nokia routers; what’s the proper configuration approach to permit up to eight ECMP routes for EBGP-learned prefixes while enforcing strict AS-path consistency across all candidate paths to ensure deterministic failover behavior?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv4_0.json",
+        "question": "\"During the rollout of a new multicast VPN service across our Nokia-based infrastructure, we need to ensure that each IPv4 prefix can propagate up to eight distinct BGP paths while maintaining compatibility with peers capable of multipath route exchange—what’s the optimal approach to implement this in the router’s configuration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv4_0.json",
+        "question": "\"During the implementation of a multicast VPN service over our Nokia router infrastructure, we need to ensure optimal path diversity for redundancy; what’s the recommended approach to enable the advertisement of up to eight distinct BGP paths per IPv4 prefix while simultaneously supporting multipath negotiation for inbound route acceptance?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv6_0.json",
+        "question": "\"During the migration of our multicast VPN infrastructure to IPv6, we need to ensure that our Nokia routers propagate up to three distinct BGP paths for each prefix within the MVPN while suppressing multipath reception—what’s the optimal way to implement this selective path advertisement without compromising existing unicast routing policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-ipv6_0.json",
+        "question": "\"During our multicast VPN IPv6 deployment on Nokia routers, we need to ensure that BGP advertises a maximum of three distinct paths per prefix while suppressing inbound multipath reception—what’s the optimal way to implement this selective path control under the existing MPLS infrastructure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-vrf-import-subtype-new_0.json",
+        "question": "\"During our multicast VPN deployment, we're standardizing on RFC 6514 procedures, but I need to ensure that our Nokia (Alcatel-Lucent) PE routers consistently advertise BGP MVPN routes with the type/subtype field set to 0x010b—what's the proper CLI syntax to enforce this encoding scheme across all route advertisements?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/mvpn-vrf-import-subtype-new_0.json",
+        "question": "\"During our multicast VPN deployment using Nokia 7750 SRs, we noticed that the type/subtype field in BGP MVPN route advertisements defaults to a different value; could you outline the steps to explicitly set this attribute to 0x010b to ensure compatibility with our Juniper PE devices?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor-trust_0.json",
+        "question": "\"During our MPLS backbone migration, we need to ensure secure label distribution between autonomous systems—what’s the proper Nokia SR OS CLI syntax to enforce inter-AS label validation checks while maintaining dual-stack VPN support across IPv4 and IPv6 BGP address families?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor-trust_0.json",
+        "question": "\"During our MPLS VPN deployment across multiple autonomous systems, we need to ensure secure label distribution between BGP peers—what’s the proper method to enforce inter-AS label validation for both IPv4 and IPv6 VPN address families on a Nokia 7750 SR?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor_0.json",
+        "question": "\"During a maintenance window, I need to establish an eBGP session from our Nokia 7750 SR to a new transit provider whose loopback interface is reachable at 192.168.10.1—could you outline the necessary neighbor configuration parameters including authentication and prefix limits?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/neighbor_0.json",
+        "question": "\"During a maintenance window, I need to establish an eBGP session from our Nokia 7750 SR to a new transit provider whose edge router is reachable at 192.168.10.5—what would be the proper sequence of commands to implement this peering while ensuring graceful restart capabilities are preserved?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-resolution_0.json",
+        "question": "\"During a maintenance window, I need to adjust BGP path selection criteria on our Nokia 7750 SR, but I'm unsure about navigating to the appropriate CLI hierarchy where these route resolution attributes can be modified—could you clarify the exact configuration subtree?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-resolution_0.json",
+        "question": "\"During a maintenance window, I'm configuring BGP on a Nokia 7750 SR to handle complex multi-homed scenarios, but before adjusting the route selection policies, what's the proper CLI hierarchy to access the specific context where BGP next-hop resolution parameters can be modified?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-self_0.json",
+        "question": "During a multi-vendor BGP peering migration, we're ensuring consistent next-hop behavior across our Nokia routers; what’s the proper method to enforce that each BGP update sourced from a local interface retains its own interface IP as the next-hop attribute, regardless of the advertised route’s origin?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-self_0.json",
+        "question": "\"During a multi-vendor network integration, we're ensuring consistent route propagation from our Nokia routers to a third-party BGP peer; what’s the optimal method to enforce the use of the local BGP instance's next-hop address for all advertised routes toward this neighbor without impacting other sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-unchanged_0.json",
+        "question": "\"During a multi-vendor network migration where we're integrating Nokia routers into our existing BGP-labeled IPv4 infrastructure, what’s the recommended approach to ensure that the routers maintain the original next-hop attribute when redistributing these routes to a designated peer group, avoiding any unintended path preference shifts?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/next-hop-unchanged_0.json",
+        "question": "\"During a multi-vendor core migration where we're transitioning from Cisco to Nokia routers, I need to ensure seamless BGP route advertisement consistency—specifically, I'm looking for guidance on modifying the Nokia router's policy configuration to retain the original BGP next-hop attribute (without changing it to self) when propagating both labeled IPv4 and IPv6 prefixes to a designated peer group that includes legacy devices.\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/optimal-route-reflection_0.json",
+        "question": "\"During a multi-vendor core network upgrade, what’s the most streamlined approach to enhance BGP route reflection efficiency on our Nokia platforms while minimizing manual parameter adjustments?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/optimal-route-reflection_0.json",
+        "question": "\"During a core network upgrade involving multiple Nokia routers running BGP, what advanced configuration parameters should be adjusted to minimize unnecessary route advertisements while maintaining optimal path selection across the autonomous systems?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/origin-invalid-unusable_0.json",
+        "question": "\"During a BGP route optimization project, we’ve observed that some prefixes with questionable RPKI validation status are still being preferred—what’s the recommended approach on Nokia SR OS platforms to deprioritize routes failing origin validation without completely discarding them from the routing table?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/origin-invalid-unusable_0.json",
+        "question": "\"During a core network migration where we're consolidating multiple BGP peers onto our Nokia routers, what’s the recommended approach to modify the best-path selection algorithm so that any prefixes failing RPKI-based origin validation are automatically deprioritized, preventing both their propagation to downstream neighbors and their inclusion in the forwarding table?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/outbound-route-filtering_0.json",
+        "question": "\"During a scheduled maintenance window, I'm deploying a new Nokia router in our core network and need to ensure BGP peers can exchange filtered routes efficiently—what’s the optimal method to implement route filter list propagation between peers?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/outbound-route-filtering_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia 7750 SR nodes, we're looking to optimize BGP route propagation by implementing Outbound Route Filtering (ORF) between peers; what’s the recommended approach to enabling ORF capability negotiation in the BGP session configuration to allow dynamic inbound route filtering adjustments?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/override-tunnel-elc_0.json",
+        "question": "\"During a recent migration to BGP-based VXLAN EVPN overlays on our Nokia 7750 SRs, we've observed suboptimal traffic distribution due to entropy-based load balancing—what's the recommended method to deactivate this feature specifically for BGP-stitched tunnels without impacting ECMP behavior for regular IP routes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/override-tunnel-elc_0.json",
+        "question": "\"During a maintenance window where we're rolling out new BGP-based VPN services across our Nokia 7750 SR routers, I need to ensure backward compatibility with legacy PE devices—what’s the proper method to deactivate the entropy label feature specifically for BGP-stitched pseudowires without impacting other MPLS functionalities?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/passive_0.json",
+        "question": "\"During a maintenance window where we're reconfiguring our edge routers for enhanced security, what's the proper way to configure a Nokia router's BGP peering to passively listen for established sessions without actively initiating outbound connection attempts?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/passive_0.json",
+        "question": "\"During a maintenance window where we're hardening our edge routers, what’s the recommended approach to configure a BGP peer group on a Nokia device so that it only accepts inbound sessions without actively establishing outbound TCP connections to its neighbors?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/path-mtu-discovery_0.json",
+        "question": "\"During a recent core network upgrade involving Nokia routers, we observed BGP session instability due to TCP packet fragmentation along the path; what strategies can we employ to dynamically adjust MTU settings based on ICMP 'Packet Too Big' messages from transit devices to ensure reliable BGP peering?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/path-mtu-discovery_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia routers, we observed intermittent BGP session drops due to TCP fragmentation; what’s the recommended approach to dynamically adjust the MTU for these sessions based on real-time path discovery to ensure stable peering?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-as_0.json",
+        "question": "\"During a maintenance window, I'm deploying a new peering session with an external partner whose ASN is 65535 on our Nokia 7750 platform—what would be the proper BGP neighbor configuration syntax to establish this adjacency while ensuring we maintain our existing route policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-as_0.json",
+        "question": "\"During a scheduled maintenance window, I'm setting up a new eBGP session with a partner network, and need to ensure interoperability—what’s the proper CLI syntax on a Nokia router to specify the remote peer’s ASN as 65001 for this adjacency?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-tracking-policy_0.json",
+        "question": "\"During a maintenance window, if our Nokia routers encounter a scenario where inbound routes from a BGP peer are rejected by the 'core-routes' import policy, what’s the recommended method to automatically terminate the BGP session as a fail-safe measure to prevent blackholing traffic?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/peer-tracking-policy_0.json",
+        "question": "\"During a maintenance window, we need to ensure our Nokia routers gracefully terminate BGP peering sessions if the path to any neighbor’s loopback interface is inadvertently learned through routes that don’t comply with the ‘core-routes-only’ policy—what’s the most efficient method to implement this conditional session teardown?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/policy_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia 7750 SR nodes, we observed that BGP next-hop resolution is inadvertently pulling non-core prefixes from the global routing table; what’s the optimal method to restrict next-hop lookup strictly to the ‘core-routes’ IP route policy within the Route Table Manager?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/policy_0.json",
+        "question": "\"During a core network migration, we need to ensure our Nokia routers strictly adhere to route acceptance criteria for BGP next-hop resolution; specifically, how can we restrict it to only consider IP routes that match the import policy 'customer-routes' while discarding all other prefixes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/preference_0.json",
+        "question": "\"During a recent network migration, we're observing suboptimal traffic paths due to BGP-learned routes overriding our preferred static routes; could you advise on configuring a local preference value of 200 for incoming BGP updates on our Nokia 7750 SR platform to ensure proper route selection?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/preference_0.json",
+        "question": "\"During a multi-vendor migration where we're prioritizing locally originated routes over BGP advertisements from our peering partners, what's the proper method to adjust the administrative distance to 200 specifically for external BGP routes on our Nokia 7750 SR platform?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix-limit_0.json",
+        "question": "\"During a core network upgrade where we're peering with a new ISP over IPv6 BGP, what's the recommended approach on Nokia routers to gracefully handle up to 5,000 received routes—implementing an 80% utilization alert while ensuring the session remains stable even if the prefix count exceeds this ceiling?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix-limit_0.json",
+        "question": "\"During a core network upgrade, we're implementing stricter route control for our Nokia routers—given that a critical BGP neighbor tends to flood prefixes, what’s the proper way to enforce a hard cap of 5000 IPv6 routes while setting up proactive monitoring (triggering alerts at 80% utilization) and ensuring the session automatically recovers within half an hour if the ceiling is breached?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix_0.json",
+        "question": "\"During a recent core network upgrade, we're rolling out redundant BGP peers from a new management subnet (192.168.100.0/24), but our Nokia routers aren't establishing sessions—what's the proper method to authorize dynamic BGP neighbor relationships specifically for this source address block while maintaining existing security policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/prefix_0.json",
+        "question": "\"During our multi-vendor core migration, we need to ensure that our Nokia routers properly authenticate and establish dynamic BGP peering sessions with devices in the 192.168.10.0/24 testbed network—what specific configuration parameters should we implement on the Nokia platforms to facilitate this?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ip-address_0.json",
+        "question": "\"During a core network upgrade, I need to ensure proper route propagation via BGP; what’s the recommended approach for assigning 192.0.2.1 as the primary IPv4 loopback address on a Nokia router to optimize route reflector performance?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ip-address_0.json",
+        "question": "\"During a core network upgrade, we're deploying a new route reflector cluster using Nokia routers—what’s the recommended approach for assigning 192.0.2.10 as the primary IPv4 loopback to ensure optimal BGP path selection and reflection stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ipv6-address_0.json",
+        "question": "\"During a core network upgrade involving multiple Nokia routers acting as route reflectors, what steps should be taken to ensure BGP optimal route reflection prioritizes the designated primary IPv6 address 2001:db8::1 while maintaining path diversity across the topology?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/primary-ipv6-address_0.json",
+        "question": "\"During our migration to a dual-stack core, we're implementing route reflectors for improved BGP scalability—could you outline the steps to designate 2001:db8::1 as the primary IPv6 RID for optimal route reflection on a Nokia 7750 SR, particularly when legacy peers require explicit next-hop-self configurations?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/purge-timer_0.json",
+        "question": "\"During our MPLS VPN service maintenance, we've observed that some BGP VPN-IP routes persist beyond their intended lifetime—what's the proper procedure to implement automatic cleanup of these stale routes on Nokia platforms when they haven't been refreshed for a quarter-hour interval?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/purge-timer_0.json",
+        "question": "\"During a recent BGP session stability assessment for our MPLS/VPN backbone, we observed that Nokia routers retain withdrawn VPN-IP routes longer than our operational policy allows; what's the proper configuration approach to enforce a 15-minute expiration threshold for stale prefixes when route refresh messages aren't forthcoming from peer devices?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-update_0.json",
+        "question": "\"During our multicast VPN IPv6 deployment on Nokia routers, we’re observing delayed convergence; what adjustments are needed to the BGP update timers to accelerate route propagation while maintaining stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-update_0.json",
+        "question": "\"During our multicast VPN IPv6 deployment on Nokia routers, we're observing suboptimal reconvergence times after link flaps—what’s the recommended BGP tuning approach to minimize multicast route re-establishment delays while maintaining stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-withdrawal_0.json",
+        "question": "\"During a scheduled maintenance window where we're decommissioning a legacy BGP peer on our Nokia 7750 SRs, what's the most efficient method to ensure route withdrawals are propagated instantly without any hold-down period affecting convergence?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rapid-withdrawal_0.json",
+        "question": "\"During a scheduled maintenance window where we're decommissioning a legacy BGP peer, what’s the most efficient method to ensure our Nokia router propagates route withdrawals instantaneously, bypassing any hold-down timers or dampening mechanisms?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/remove-private_0.json",
+        "question": "\"During a BGP peering migration involving multiple Nokia routers, we need to ensure that private ASNs within the range 64512-65534 are automatically removed from path attributes in outgoing updates, but this stripping behavior should be bypassed if the update traverses AS 65001 as its initial public peer or if the private AS matches our legacy partner's ASN 64520—what’s the most efficient way to implement this selective AS-path sanitization?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/remove-private_0.json",
+        "question": "\"During a multi-vendor BGP peering migration involving Nokia routers, what’s the proper way to implement selective private ASN stripping in outbound updates—ensuring exceptions for AS64512 and cases where the private AS aligns with the neighbor’s autonomous system?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/report-local-routes_0.json",
+        "question": "\"During our migration to BMP for route monitoring, we need to ensure that internally generated prefixes from our Nokia routers are properly exported to the collector; what’s the recommended method to propagate these local routes via BGP to the designated BMP server?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/report-local-routes_0.json",
+        "question": "\"During our BGP monitoring upgrade, we need to ensure that locally generated prefixes from our Nokia routers are properly exported to the BMP collector for visibility—what’s the correct configuration approach to enable this route propagation while maintaining existing routing policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_0.json",
+        "question": "\"During a recent MPLS core upgrade, I noticed that our Nokia routers aren't properly resolving next-hop addresses when processing labeled BGP routes—what's the recommended approach for adjusting the filter-type parameter to ensure correct path selection without disrupting existing L3VPN services?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_0.json",
+        "question": "\"During a recent MPLS core upgrade on our Nokia 7750 SRs, we're encountering issues where labeled BGP routes aren't properly resolving next-hops—what's the recommended approach for implementing route policy filters to ensure correct next-hop resolution specifically for labeled unicast prefixes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_1.json",
+        "question": "\"During our MPLS core migration, we're enforcing strict tunneling policies—could you outline the steps to restrict a Nokia router's resolution of unlabeled BGP prefixes exclusively through BGP next-hops and SR-ISIS tunnels, ensuring other LSP types are explicitly excluded from the path computation?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution-filter_1.json",
+        "question": "\"During our MPLS core migration, we need to ensure that BGP-learned prefixes without labels are resolved exclusively via LDP or Segment Routing OSPF tunnels on our Nokia routers—how would you implement this selective tunnel-type restriction in the forwarding policy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_0.json",
+        "question": "\"During our MPLS backbone migration, we need to ensure that BGP-labeled routes on Nokia routers only resolve their next-hops through specific SR-TE tunnels rather than LDP or RSVP paths—what's the proper way to implement this selective tunnel binding while maintaining existing forwarding behavior?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_0.json",
+        "question": "\"During a core network upgrade involving Nokia routers, we need to ensure BGP-labeled routes only utilize specific MPLS tunnel types (like RSVP-TE or SR-TE) when exchanging prefixes with certain peers—how can we enforce this selective binding without impacting other transport paths?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_1.json",
+        "question": "\"During a core network migration where we're transitioning from MPLS to SRv6 tunnels, I need to ensure our Nokia routers only resolve BGP prefixes over the specific tunnel types defined in the resolution-filter—how would you implement this selective binding without affecting existing LDP-based forwarding paths?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/resolution_1.json",
+        "question": "\"During a core network migration where we're consolidating BGP route resolution over MPLS tunnels, what’s the proper method to restrict prefix resolution on our Nokia routers to only RSVP-TE and SR-TE tunnels within the resolution-filter framework, ensuring other tunnel types remain excluded?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/restart-time_0.json",
+        "question": "During a scheduled maintenance window where we're implementing BGP graceful restart across our Nokia router fleet, what CLI commands or configuration steps are required to ensure that neighboring peers are given up to 600 seconds to re-establish sessions before routes are withdrawn?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/restart-time_0.json",
+        "question": "\"During a maintenance window where we're implementing BGP graceful restart across our Nokia router fleet to minimize traffic disruption, what’s the proper CLI syntax to ensure the routers signal a maximum recovery interval of 600 seconds to neighboring peers?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-api_0.json",
+        "question": "\"During a recent migration to gRPC-based tunnel provisioning on our Nokia 7750 SR platform, we’ve encountered unresolved next-hops for labeled IPv4 BGP routes—what’s the recommended approach to ensure proper next-hop resolution when dynamically programming these tunnels via gRPC?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-api_0.json",
+        "question": "\"During our MPLS backbone migration, we're leveraging gRPC for dynamic tunnel provisioning on Nokia 7750s; what's the proper method to ensure BGP-labeled routes correctly resolve their next hops through these programmatically established tunnels?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-management_0.json",
+        "question": "\"During a scheduled maintenance window, I need to adjust the RIB parameters on our Nokia 7750 SR; what’s the proper CLI sequence to access the configuration mode where these routing table settings can be modified?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rib-management_0.json",
+        "question": "\"During a scheduled maintenance window, I need to adjust the RIB parameters on our Nokia 7750 SR; what’s the proper CLI sequence to access the relevant configuration mode without disrupting existing BGP sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-monitoring_0.json",
+        "question": "\"During a recent core network upgrade involving multiple BGP peers on our Nokia routers, we need to ensure the BGP monitor session exclusively captures and forwards route monitoring updates while preserving post-policy path attributes for analysis—what’s the optimal method to implement this selective advertisement?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-monitoring_0.json",
+        "question": "\"During a recent network upgrade involving policy-based route filtering, I need to ensure our Nokia routers export BGP monitoring data exclusively reflecting post-policy attributes for accurate traffic analysis—what's the proper CLI sequence to enforce this selective advertisement behavior?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-table-import_0.json",
+        "question": "\"During a core network migration, we need to ensure that our Nokia routers dynamically advertise only active IPv4 prefixes from the routing table via BGP; could you outline the proper policy configuration steps for applying the 'core-routes' policy statement to achieve this selective route redistribution?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-table-import_0.json",
+        "question": "\"During our core network migration, we need to ensure that all active IPv4 routes from the routing table are properly advertised via BGP to downstream peers; could you advise on implementing this in a Nokia router using the existing 'core-routes' policy for selective route redistribution?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-target-list_0.json",
+        "question": "\"During our MPLS VPN migration, we need to ensure that our Nokia PE routers selectively import BGP routes from the new VRF instance—specifically those tagged with the route-target community 192.0.2.1:300—while filtering all other prefixes; what’s the most efficient way to implement this route policy without disrupting existing customer VRFs?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/route-target-list_0.json",
+        "question": "\"During our MPLS VPN migration, we need to ensure that our Nokia PE routers only import BGP routes carrying specific RTs—specifically, target:192.0.2.10:100 for customer A's VRF and target:64496:200 for the inter-AS links—what's the most efficient way to implement this route filtering while maintaining scalability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_0.json",
+        "question": "During a multi-vendor BGP peering setup involving our Nokia routers, I need to ensure proper process identification; what’s the correct CLI syntax to assign the IPv4 address 192.168.10.100 as a distinct router ID for BGP instances?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_0.json",
+        "question": "\"During a multi-vendor network migration where we're consolidating BGP peers onto our Nokia SR OS routers, what's the proper method to assign 192.168.100.10 as the router-id for a new BGP instance while ensuring compatibility with existing route reflector infrastructure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_1.json",
+        "question": "\"During our multi-vendor core network migration, we need to ensure consistent OSPF router ID assignment—could you outline the procedure for specifying 192.168.100.10 as the stable identifier within Nokia's OSPF instance configuration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router-id_1.json",
+        "question": "\"During our core network migration, we need to ensure proper OSPF adjacency formation between legacy Nokia routers and new equipment—what would be the correct procedure to designate 192.168.100.10 as the router ID within the OSPF instance configuration on the Nokia platform?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router_0.json",
+        "question": "During a recent deployment of BGP Monitoring Protocol (BMP) stations for a multi-VPN customer environment, we need to ensure that our Nokia router directs all BMP session traffic exclusively through the dedicated routing instance labeled \"customerA_vpn12\"—what’s the proper configuration approach to enforce this selective path isolation?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/router_0.json",
+        "question": "During a recent network upgrade involving our multi-tenant VPRN architecture, we're encountering challenges in implementing BMP session monitoring for route analytics—could you advise on the proper VPRN-aware configuration steps to establish a BMP peering session using the \"customer-backbone\" service instance on our Nokia 7750 platform?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rr-use-route-table_0.json",
+        "question": "\"During a recent MPLS core migration where our Nokia routers are functioning as Route Reflectors without involvement in LDP or RSVP-TE, we're encountering unresolved next-hop issues for labeled unicast prefixes; what's the recommended approach to leverage the IGP routing table for BGP-labeled next-hop resolution while maintaining the RR functionality?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rr-use-route-table_0.json",
+        "question": "\"During a core network migration where labeled IPv4 routes are being redistributed via BGP, what configuration adjustments would be necessary on Nokia PE routers acting as route reflectors to properly resolve next-hop addresses while maintaining their role as non-participants in LDP or RSVP-TE signaling?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rsvp_0.json",
+        "question": "\"During a core network upgrade, we're transitioning from static routes to BGP on our Nokia routers and need to ensure that BGP path selection dynamically leverages the most efficient RSVP-TE LSPs as next-hops, prioritizing paths based on TE metrics—what's the recommended approach to implement this traffic-engineered BGP next-hop resolution?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/rsvp_0.json",
+        "question": "\"During a core network upgrade involving Nokia routers, we're evaluating BGP implementation strategies where RSVP-TE LSPs serve as next hops; given multiple available paths with varying metrics, what's the recommended approach to configure BGP for dynamically selecting the most efficient LSP while maintaining forwarding consistency?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ip-address_0.json",
+        "question": "\"During a core network upgrade, I need to ensure proper BGP route reflector functionality on our Nokia 7750 SR—what’s the recommended approach for assigning a secondary IPv4 address (192.168.100.10) to optimize path selection without disrupting existing peer sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ip-address_0.json",
+        "question": "\"During a scheduled maintenance window, I need to ensure redundant path selection via BGP on our Nokia 7750 SR, so what’s the proper method to assign a secondary IPv4 address (192.168.100.1) to the loopback interface for optimal route reflector functionality without disrupting existing peer sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ipv6-address_0.json",
+        "question": "\"During a core network upgrade where we're implementing redundant BGP route reflectors for high availability, what steps should be taken to properly assign the secondary IPv6 address 2001:db8::2 as a loopback interface on our Nokia 7750 SR to ensure optimal path selection in the reflection hierarchy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/secondary-ipv6-address_0.json",
+        "question": "\"During a network upgrade to support multi-homing, I need to ensure proper BGP route reflection across our Nokia routers; what’s the correct procedure to assign a secondary IPv6 address (2001:db8::2) to optimize path selection without disrupting existing peer sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-orf_0.json",
+        "question": "\"During a BGP peering session between our Nokia router and a partner AS, we need to ensure that only prefixes tagged with the extended community target 192.0.2.10:65535 are exchanged via ORF capability—what's the proper policy configuration approach to enforce this selective route advertisement?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-orf_0.json",
+        "question": "During a recent core network upgrade involving multiple Nokia 7750 SRs, we encountered inefficiencies in BGP route filtering when exchanging EVPN routes with RT:192.0.2.10:65535—could you advise on implementing ORF capability negotiation to dynamically optimize inbound prefix filtering based on these specific extended communities?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-to-ebgp_0.json",
+        "question": "\"During a multi-vendor BGP peering setup, we're observing that our Nokia routers aren't propagating the link-bandwidth attribute to external peers for traffic engineering purposes—what's the proper method to ensure this extended community gets included in IPv4 route advertisements while maintaining compatibility with third-party devices?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/send-to-ebgp_0.json",
+        "question": "\"During a multi-vendor BGP peering setup involving Nokia routers, we need to ensure that IPv4 route advertisements toward external peers propagate the link-bandwidth attribute as an extended community for traffic engineering purposes—what’s the optimal method to implement this while maintaining compatibility with diverse EBGP implementations?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shortcut-tunnel_0.json",
+        "question": "\"During a core network upgrade involving Nokia 7750 SRs, we're encountering scenarios where BGP-learned prefixes without explicit labels fail to propagate across our MPLS-over-GRE tunnels; what’s the optimal approach to reconfigure the route resolution policies to ensure these unlabeled routes are properly processed and forwarded through the tunnel infrastructure?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shortcut-tunnel_0.json",
+        "question": "\"During a recent core network migration involving multiple VRFs, we observed that our Nokia 7750 routers aren't properly resolving next-hops for unlabeled BGP prefixes received from the legacy MPLS backbone—what's the underlying mechanism governing this next-hop resolution process when label distribution isn't present?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shutdown_0.json",
+        "question": "\"During a scheduled maintenance window, I need to temporarily deactivate a BGP peering session on our Nokia 7750 SR while preserving all configured parameters and historical metrics for later reactivation—what’s the most graceful method to achieve this?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/shutdown_0.json",
+        "question": "\"During a maintenance window where we need to isolate a specific BGP peer on our Nokia 7750 SR while preserving its session parameters for later reactivation, what’s the recommended method to administratively disable the neighbor adjacency without purging its established configuration?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/spf-wait_0.json",
+        "question": "\"During a recent network upgrade involving multiple Nokia routers acting as BGP route reflectors, we observed suboptimal convergence times; could you advise on adjusting the SPF calculation intervals to optimize route reflection, starting with an initial delay of 10 seconds, ramping up to 30 seconds for subsequent delays, and capping the maximum interval at 120 seconds?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/spf-wait_0.json",
+        "question": "\"During our OSPF optimization efforts in a multi-vendor environment, we're adjusting SPF timers on Nokia routers to balance convergence speed and CPU load; what’s the proper CLI sequence to implement a 120-second max SPF interval with staggered delays—10 seconds for the initial calculation and 30 seconds for subsequent ones?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/split-horizon_0.json",
+        "question": "\"During a multi-vendor core network migration where redundant route reflectors are deployed, what measures should be implemented on our Nokia (Alcatel-Lucent) routers to ensure that BGP updates containing optimal paths from edge peers don't inadvertently trigger persistent routing loops through the reflection hierarchy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/split-horizon_0.json",
+        "question": "\"During a recent BGP peering session with a critical transit provider on our Nokia 7750 SR platform, we observed route propagation loops where prefixes learned from the neighbor were inadvertently re-advertised back to them—what's the recommended method to implement outbound route filtering to mitigate this asymmetric routing scenario?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-isis_0.json",
+        "question": "\"During a multi-vendor core migration where IS-IS SR tunnels are being leveraged for transport, what considerations should be made when configuring BGP next-hop resolution over these tunnels on a Nokia 7750 to ensure proper traffic steering without disrupting existing MPLS services?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-isis_0.json",
+        "question": "\"During a core network migration where we're transitioning from traditional MPLS to SR-based transport, what’s the proper method to configure BGP on our Nokia 7750 routers to dynamically resolve next-hops via IS-IS-advertised segment routing tunnels without disrupting existing forwarding paths?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf3_0.json",
+        "question": "\"During a recent IPv6 migration, we've observed suboptimal traffic steering in our Nokia router infrastructure where BGP next-hop resolution favors non-SRv6 tunnels despite OSPFv3-learned SRv6 paths being available—what's the recommended method to adjust the route preference hierarchy to ensure SRv6 tunnels installed via OSPFv3 take precedence for IPv6 traffic?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf3_0.json",
+        "question": "\"During a recent core network upgrade involving Nokia routers running OSPFv3 and SRv6, we've observed that BGP-learned IPv6 routes aren't preferentially using the SRv6 tunnels despite our intent—how would you adjust the route resolution policy to ensure OSPFv3-originated segment-routed paths take precedence over alternative tunnel encapsulations when processing BGP next-hop reachability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf_0.json",
+        "question": "\"During a multi-vendor network migration where we're transitioning from traditional MPLS to SR-based transport, I've noticed that our Nokia routers aren't preferring the OSPF instance with the highest administrative distance when resolving BGP next-hops via segment routing tunnels—how can we ensure proper path selection aligns with our intended traffic engineering policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-ospf_0.json",
+        "question": "\"During a recent core network upgrade involving Nokia routers, we observed that BGP next-hop resolution occasionally selects suboptimal paths due to equal-cost multipath (ECMP) behavior—how can we ensure OSPF-originated segment-routed tunnels take precedence over other protocol-derived paths when resolving BGP next-hops?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy-import_0.json",
+        "question": "During a recent network upgrade where we deployed segment routing across our core, I need to ensure that our Nokia routers propagate locally defined SR policies via BGP; what’s the proper configuration approach to advertise these policies to BGP peers that are already capable of handling the SR Policy IPv4 AFI?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy-import_0.json",
+        "question": "During a recent SRv6 deployment, we need to ensure our Nokia routers propagate locally defined segment routing policies via BGP to neighboring autonomous systems—what's the proper configuration sequence to establish these routes as BGP-originated advertisements while maintaining existing traffic engineering constraints?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy_0.json",
+        "question": "\"During a segment-routing-enabled MPLS core migration, we're observing inconsistent forwarding behavior for labeled IPv4 routes where BGP next-hop resolution fails when applying SR policies tagged with specific color communities—what’s the recommended approach on Nokia routers to ensure deterministic path selection while maintaining community-based policy alignment?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-policy_0.json",
+        "question": "\"During a segment routing migration, we're encountering issues where BGP-learned prefixes aren't properly resolving next-hops across our Nokia router infrastructure—what's the correct procedure to ensure next-hop reachability when leveraging color-extended communities for SR policy selection, particularly when interworking with legacy BGP peering sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-te_0.json",
+        "question": "\"During a recent core network upgrade involving Nokia routers, we've observed that BGP next-hop resolution isn't consistently selecting the optimal SR-TE path when multiple segments present identical metric values—how can we implement a preference for lower tunnel IDs in this decision process to ensure deterministic traffic engineering behavior?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/sr-te_0.json",
+        "question": "\"During a recent core network upgrade involving multiple Nokia routers running Segment Routing, we observed that BGP next-hop resolution occasionally selects suboptimal SR-TE paths despite equal metrics—how can we enforce a preference for tunnels with numerically lower IDs in such ECMP scenarios?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stale-routes-time_0.json",
+        "question": "\"During a planned maintenance window where we're performing a controlled restart on our Nokia router fleet, what’s the recommended approach to ensure BGP neighbor adjacencies maintain stale routes for the full 900-second grace period without prematurely flushing them from the RIB?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stale-routes-time_0.json",
+        "question": "\"During a planned maintenance window where we're implementing BGP graceful restart on our Nokia routers, if the stale route timer is set to 300 seconds, what's the maximum duration these routes could persist in the RIB before being purged if the neighboring peer fails to re-establish the session?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station-address_0.json",
+        "question": "\"During our network upgrade, we need to ensure that telemetry data from the Nokia router is properly forwarded to the centralized monitoring server at 203.0.113.45—could you walk me through the specific CLI commands required to establish this TCP-based remote monitoring session on port 1234?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station-address_0.json",
+        "question": "\"During a recent network upgrade, we're deploying BMP monitoring for our BGP infrastructure and need to ensure our Nokia routers can reliably stream data to the collector at 192.0.2.100—what's the proper configuration approach to establish persistent TCP-based BMP sessions over port 8080 while maintaining existing routing stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_0.json",
+        "question": "\"During our core network upgrade in the New York data center, we're implementing BGP Monitoring Protocol for route visibility—what's the proper CLI sequence to establish a BMP session with collector 'NYC-DC1' on our 7750 SR platform while maintaining existing routing policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_0.json",
+        "question": "*Rewritten Question:*  \n\n**\"During our BGP monitoring rollout in the New York data center, we need to integrate the BMP collector 'NYC-DC-01' into our Nokia 7750 SRs for real-time session tracking—what’s the recommended approach to implement this without disrupting existing peer adjacencies?\"**"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_1.json",
+        "question": "\"During our multi-site BGP monitoring upgrade, we need to ensure our Nokia routers propagate BMP data to both the NYC-DC1 and LON-DC2 collectors—what’s the optimal method to implement this dual-target configuration without disrupting existing telemetry flows?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/station_1.json",
+        "question": "\"During our BGP monitoring upgrade, we need to ensure that our Nokia routers propagate BMP data to both the NYC-DC1 and LAX-DC2 collectors; could you outline the specific configuration steps required within the global BGP instance to establish these targeted telemetry streams?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stats-report-interval_0.json",
+        "question": "\"During a recent network optimization effort where we deployed Nokia routers with BMP monitoring for real-time traffic analysis, what would be the expected reporting cadence from the routers to the collector if the sampling interval is set at half-minute increments?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/stats-report-interval_0.json",
+        "question": "\"During our network performance optimization project, we need to ensure that flow telemetry data from our Nokia routers is consistently delivered to the BMP collector; could you advise on implementing a 5-minute interval for these statistics transmissions while maintaining existing QoS policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tcp-keepalive_0.json",
+        "question": "\"During a recent core router upgrade on our Nokia 7750 SR platform, we observed intermittent session drops for critical applications; what’s the recommended approach to fine-tuning TCP persistent connection parameters to mitigate this under high-throughput conditions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tcp-keepalive_0.json",
+        "question": "\"During a recent network upgrade involving Nokia 7750 SR routers, we observed intermittent session drops for critical applications; what’s the recommended approach to fine-tuning TCP keepalive parameters at the subscriber level to maintain persistent connections without overloading the control plane?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ip-address_0.json",
+        "question": "\"During a recent core network upgrade involving multiple BGP route reflectors, I need to ensure optimal path selection when advertising prefixes from a Nokia router configured with 192.168.10.20 as its tertiary IPv4 interface—what's the proper method to implement this specific address for route reflection while maintaining efficient convergence?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ip-address_0.json",
+        "question": "\"During a maintenance window where we're implementing redundant BGP route reflectors in our Nokia-based core, what’s the recommended approach for assigning the tertiary IPv4 address (192.168.100.10) to ensure optimal path selection and reflection hierarchy?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ipv6-address_0.json",
+        "question": "\"During a recent core network upgrade involving multiple BGP route reflectors, I need to ensure optimal path selection when advertising prefixes from the 2001:db8::3/128 loopback interface on our Nokia 7750 SR; what’s the proper configuration approach to prioritize this specific IPv6 address as the preferred RR source?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/tertiary-ipv6-address_0.json",
+        "question": "\"During a core network upgrade involving Nokia routers acting as route reflectors, what’s the recommended approach to assigning 2001:db8::3 as the tertiary IPv6 address to ensure optimal BGP path selection and minimize suboptimal routing within the RR cluster?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/third-party-nexthop_0.json",
+        "question": "\"During a multi-vendor network migration where we're consolidating EBGP sessions between Nokia routers and Cisco devices within the same /24 transit segment, what's the proper configuration approach to ensure route advertisements maintain the original BGP next-hop attribute rather than rewriting it to the local interface address?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/third-party-nexthop_0.json",
+        "question": "\"During a multi-vendor network migration where we're consolidating EBGP sessions between Nokia routers and Cisco devices within the same /24 transit segment, what's the proper configuration approach on the Nokia platform to ensure BGP route advertisements maintain the original next-hop attribute rather than rewriting it to the local interface address?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/transport-tunnel_0.json",
+        "question": "\"During a core network upgrade involving MPLS-based L3VPN services, we're encountering issues where Nokia (Alcatel-Lucent) routers aren't properly resolving next-hop addresses for BGP-labeled VPNv4 routes through TTM tunnel interfaces—what's the optimal method to implement this tunnel-based next-hop resolution while maintaining existing VPRN service integrity?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/transport-tunnel_0.json",
+        "question": "\"During a core network migration where we're transitioning to IPv6-labeled unicast over transport tunnels, what’s the recommended approach for ensuring proper BGP next-hop resolution on our Nokia routers to avoid forwarding blackholes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ttl-security_0.json",
+        "question": "\"During a recent security audit, we identified a need to enforce stricter BGP session validation on our Nokia routers—specifically, ensuring that incoming BGP updates from our peering partner at AS 12345 are only processed if the TTL field in the IP header meets or exceeds 64. What’s the recommended method to implement this TTL-based filtering for BGP sessions on Nokia SR OS without disrupting existing adjacencies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/ttl-security_0.json",
+        "question": "\"During a scheduled BGP peering session upgrade with a Nokia router, we need to enforce stricter security by ensuring the device only processes incoming BGP updates from our designated partner AS if they arrive with a minimum TTL of 64—what’s the most efficient method to implement this TTL-based filtering while maintaining session stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/type_0.json",
+        "question": "\"During a multi-vendor network integration project, what steps are required to establish an eBGP adjacency between a Nokia 7750 SR running the latest TiMOS release and a third-party device, ensuring proper AS-path handling and prefix exchange?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/type_0.json",
+        "question": "\"During a multi-vendor network migration, I need to establish an eBGP session between our Nokia 7750 SR and a third-party router; what are the necessary CLI steps to properly define this external neighbor under the BGP instance while ensuring correct policy controls?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/udp_0.json",
+        "question": "\"During a core network migration where we're transitioning from MPLS LDP to segment routing, what steps would be necessary to implement UDP encapsulation on our Nokia 7750 routers to ensure proper resolution of BGP-labeled unicast routes' next-hop addresses?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/udp_0.json",
+        "question": "\"During a core network migration where we're transitioning from MPLS-based transport to segment routing, what steps would be necessary to implement UDP encapsulation on our Nokia 7750 routers to ensure proper resolution of BGP-LU next-hops within the traffic topology matrix?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/update-fault-tolerance_0.json",
+        "question": "\"During a scheduled maintenance window, we're upgrading our Nokia router fleet to gracefully handle malformed BGP UPDATE messages without dropping sessions—provided the NLRI remains valid—what's the optimal way to implement this error-tolerant parsing behavior while maintaining route stability?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/update-fault-tolerance_0.json",
+        "question": "\"During a phased migration to a new BGP routing policy, we're encountering scenarios where our Nokia routers receive malformed UPDATE messages but still parse valid NLRI attributes—what's the optimal configuration approach to gracefully handle these error conditions without impacting existing sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/use-bgp-routes_0.json",
+        "question": "\"During a core network migration where we're transitioning from static routing to full BGP implementation, what would be the proper procedure on a Nokia (Alcatel-Lucent) SR OS device to ensure recursive next-hop resolution operates correctly for both labeled and unlabeled IPv4 and IPv6 prefixes when relying solely on BGP-learned routes?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/use-bgp-routes_0.json",
+        "question": "\"During a multi-vendor core migration where we're leveraging Nokia routers for BGP route reflection, what’s the recommended approach to ensure proper recursive resolution of next-hops for both IPv4 and IPv6 prefixes when these routes lack explicit labels, given that the resolving paths are themselves learned via BGP?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-dest-prefix_0.json",
+        "question": "\"During a recent BGP FlowSpec deployment on our Nokia routers, we observed that route validation checks were being applied to destination prefixes unnecessarily—what’s the recommended method to selectively disable these validations while maintaining integrity for other FlowSpec rule components?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-dest-prefix_0.json",
+        "question": "\"During a recent BGP FlowSpec deployment on our Nokia routers, we observed that they're validating destination prefixes in received FlowSpec rules—how can we configure them to bypass this check to ensure proper propagation of traffic filtering policies?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-redirect-ip_0.json",
+        "question": "\"During a recent BGP Flowspec deployment on our Nokia 7750 routers, we noticed that IPv4 traffic redirection isn’t being validated as expected—what’s the proper method to verify and ensure the 'redirect-to-IPv4' action is correctly enforced for propagated flowspec rules?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/validate-redirect-ip_0.json",
+        "question": "During a recent BGP flowspec deployment on our Nokia routers, we observed that IPv4 traffic redirection policies aren't being properly validated before implementation—what's the correct procedure to activate verification for these redirect-to-IPv4 actions to ensure policy integrity?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-export_0.json",
+        "question": "\"During the migration of our MPLS VPN services to a new Nokia 7750 platform, we need to ensure that BGP route policies defined in the base routing instance properly propagate to VPNv4 routes; what’s the recommended method to enforce these export policies across the VPN routing and forwarding tables?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-export_0.json",
+        "question": "\"During a multi-VPN migration on our Nokia SR OS platform, we need to ensure consistent routing policy enforcement across both the base BGP instance and subsequent VPN address families—what’s the recommended approach for propagating export policies between these contexts without manual duplication?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-import_0.json",
+        "question": "\"During a recent migration to an EVPN-VXLAN overlay, we noticed that our existing BGP import route policies aren't being applied to EVPN NLRI on our Nokia 7750 SRs—what's the proper method to extend these policy controls to cover EVPN route advertisements while maintaining consistent traffic engineering across both underlay and overlay?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-apply-import_0.json",
+        "question": "During a recent MPLS VPN deployment on our Nokia 7750 routers, we encountered a scenario where customer-specific BGP import policies applied at the base instance level aren't propagating to VPRN contexts—what's the proper method to ensure consistent route filtering criteria are maintained across both global and virtual routing domains?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv4_0.json",
+        "question": "\"During a BGP/MPLS VPN deployment on a Nokia 7750 SR, we need to ensure that the PE router only advertizes a maximum of eight VPN-IPv4 routes per NLRI prefix while preventing the acceptance of any additional paths from peers—how would you implement this selective add-path behavior without disrupting existing VPNv4 sessions?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv4_0.json",
+        "question": "\"During a BGP/MPLS IP-VPN deployment on a Nokia 7750 SR, we need to ensure the PE router propagates up to eight distinct VPN-IPv4 route advertisements to neighboring RRs while preventing any inbound acceptance of these prefixes—what’s the optimal way to implement this selective route distribution under the existing VPRN service architecture?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv6_0.json",
+        "question": "\"During a BGP/MPLS IPv6 VPN deployment on a Nokia router, what steps are required to ensure the device advertises a maximum of eight distinct VPN-IPv6 route paths while simultaneously preventing the acceptance of any incoming VPN-IPv6 routes from peers?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/vpn-ipv6_0.json",
+        "question": "\"During a multi-vendor SD-WAN migration, we need to ensure our Nokia PE routers propagate up to eight distinct VPN-IPv6 prefixes across the backbone without accepting any external VPNv6 routes—what's the optimal BGP policy configuration to implement this selective route advertisement while maintaining existing MPLS forwarding?\""
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/weighted-ecmp_0.json",
+        "question": "During a recent core network upgrade involving 6PE over RSVP-TE tunnels between Nokia 7750 SR nodes, we've observed suboptimal load balancing where certain LSPs carry disproportionate IPv6 traffic volumes—what mechanisms exist within the router's BGP-LU and TE implementations to achieve more equitable flow distribution while maintaining ECMP constraints?"
+    },
+    {
+        "path": "./BGP配置命令行数据/nokia/bgp-cli/weighted-ecmp_0.json",
+        "question": "\"During a recent MPLS core upgrade, we're evaluating optimal path selection for IPv6 over MPLS (6PE) traffic across our Nokia router fleet—given that RSVP-TE tunnels with unequal bandwidth allocations now participate in ECMP groups, what’s the recommended method to implement normalized weight-based load balancing when steering traffic toward these LSPs?\""
+    }
+]

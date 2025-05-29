@@ -128,25 +128,25 @@ def get_response(input_text, lora = True, system = False):
         messages = [{"role": "user", "content": system_prompt+"\n"+input_text}]
     else:
         messages = [{"role": "user", "content": input_text}]
-    inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=1024,
-            do_sample=False,
-            # temperature=0.7,
-            # top_p=0.9,
-            # top_k=50,
-            # adapter_names = ['__base__']
-            adapter_names = ['expert'] if lora else ['__base__']
-        )
-    return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
+    # inputs = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    # inputs = tokenizer(inputs, return_tensors="pt").to(model.device)
+    # with torch.no_grad():
+    #     outputs = model.generate(
+    #         **inputs,
+    #         max_new_tokens=1024,
+    #         do_sample=False,
+    #         # temperature=0.7,
+    #         # top_p=0.9,
+    #         # top_k=50,
+    #         # adapter_names = ['__base__']
+    #         adapter_names = ['expert'] if lora else ['__base__']
+    #     )
+    # return tokenizer.decode(outputs[0][len(inputs['input_ids'][0]):], skip_special_tokens=True)
 
     completion = client2.chat.completions.create(
         # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
-        model = "deepseek-v3-250324",
-        # model = "deepseek-r1-250120",
+        # model = "deepseek-v3-250324",
+        model = "deepseek-r1-250120",
         messages=messages,
         temperature=0.7,
         top_p=0.8,
@@ -158,14 +158,14 @@ def get_response(input_text, lora = True, system = False):
     print(completion.choices[0].message.content)
     return completion.choices[0].message.content
 
-with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
+with open('./question_test.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 
-model_name = 'Qwen/Qwen2.5-7B-Instruct'
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype='auto', device_map = 'auto').eval()
-model = PeftModel.from_pretrained(model,"./qwen",adapter_name='expert',torch_dtype='auto').eval()
+# model_name = 'Qwen/Qwen2.5-7B-Instruct'
+# tokenizer = AutoTokenizer.from_pretrained(model_name)
+# model = AutoModelForCausalLM.from_pretrained(model_name,torch_dtype='auto', device_map = 'auto').eval()
+# model = PeftModel.from_pretrained(model,"./qwen",adapter_name='expert',torch_dtype='auto').eval()
 # model.to("cuda:0")
 
 
@@ -176,16 +176,16 @@ for i in tqdm(data):
     question = i['question']
     Text = extract_funcdef_and_clis(path)
 
-    # response = get_response(question,lora=False,  system=True)
-    # response = response.strip('```').strip("json").strip()
-    # cli_list = '\n'.join(extract_commands_from_json(response))
-
-
-    response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
+    response = get_response(question,lora=False,  system=False)
     response = response.strip('```').strip("json").strip()
-    retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
-    cli_list = get_response(retrieved_prompt, lora=False, system=True)
-    cli_list = cli_list.strip('```').strip("json").strip()
+    cli_list = '\n'.join(extract_commands_from_json(response))
+
+
+    # response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
+    # response = response.strip('```').strip("json").strip()
+    # retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
+    # cli_list = get_response(retrieved_prompt, lora=False, system=False)
+    # cli_list = cli_list.strip('```').strip("json").strip()
 
     judge = get_72b_response(check_prompt.format(
         User_Question=question,
