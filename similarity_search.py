@@ -116,7 +116,8 @@ nokia_texts = collect_all_texts('./BGP配置命令行数据/nokia')
 
 # retriever = CommandRetriever(huawei_texts,nokia_texts,'CyCraftAI/CmdCaliper-base','all-MiniLM-L6-v2')
 
-retriever = CommandRetriever(huawei_texts,nokia_texts,'BAAI/bge-large-en','BAAI/bge-large-en')
+# retriever = CommandRetriever(huawei_texts,nokia_texts,'BAAI/bge-large-en','BAAI/bge-large-en')
+retriever = CommandRetriever(huawei_texts,nokia_texts,'BAAI/bge-base-en-v1.5','BAAI/bge-base-en-v1.5')
 
 # retriever.search('peer ipv6-address advertise-ext-community')
 
@@ -171,7 +172,7 @@ def get_retrieved_prompt(user_question, llm_commands):
 
     results = []
 
-    def_results = retriever.retrieve_def(user_question, 6)
+    def_results = retriever.retrieve_def(llm_commands, 4)
     for idx_def, score_def, def_cmd in def_results:
         print("检索到的def")
         print(def_cmd)
