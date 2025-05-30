@@ -158,7 +158,9 @@ def get_response(input_text, lora = True, system = False, model_name = 'r1'):
     print(completion.choices[0].message.content)
     return completion.choices[0].message.content
 
-with open('./question_test_huawei.json', 'r', encoding='utf-8') as f:
+with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
+
+# with open('/root/router/rewrite_question.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 
@@ -170,32 +172,32 @@ with open('./question_test_huawei.json', 'r', encoding='utf-8') as f:
 
 
 
-correct = 0
-for i in tqdm(data):
-    path = i['path']
-    question = i['question']
-    Text = extract_funcdef_and_clis(path)
+# correct = 0
+# for i in tqdm(data):
+#     path = i['path']
+#     question = i['question']
+#     Text = extract_funcdef_and_clis(path)
 
-    response = get_response(question,lora=False,  system=True, model_name='r1')
-    response = response.strip('```').strip("json").strip()
-    cli_list = '\n'.join(extract_commands_from_json(response))
+#     response = get_response(question,lora=False,  system=True, model_name='r1')
+#     response = response.strip('```').strip("json").strip()
+#     cli_list = '\n'.join(extract_commands_from_json(response))
 
 
-    # response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
-    # response = response.strip('```').strip("json").strip()
-    # retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
-    # cli_list = get_response(retrieved_prompt, lora=False, system=False)
-    # cli_list = cli_list.strip('```').strip("json").strip()
+#     # response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
+#     # response = response.strip('```').strip("json").strip()
+#     # retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
+#     # cli_list = get_response(retrieved_prompt, lora=False, system=False)
+#     # cli_list = cli_list.strip('```').strip("json").strip()
 
-    judge = get_72b_response(check_prompt.format(
-        User_Question=question,
-        answer=cli_list,
-        Manual_Excerpt=Text
-    ))
-    if not 'incorrect' in judge.lower():
-        correct += 1
+#     judge = get_72b_response(check_prompt.format(
+#         User_Question=question,
+#         answer=cli_list,
+#         Manual_Excerpt=Text
+#     ))
+#     if not 'incorrect' in judge.lower():
+#         correct += 1
 
-print(f"Accuracy: {correct / len(data) * 100:.2f}%")
+# print(f"Accuracy: {correct / len(data) * 100:.2f}%")
 
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -207,16 +209,17 @@ def process_sample(i):
         question = i['question']
         Text = extract_funcdef_and_clis(path)
 
-        response = get_response(question,lora=False,  system=True, model_name='r1')
-        response = response.strip('```').strip("json").strip()
-        cli_list = '\n'.join(extract_commands_from_json(response))
+        # response = get_response(question,lora=False,  system=False, model_name='r1')
+        # cli_list = response
+        # response = response.strip().strip('```').strip("json").strip()
+        # cli_list = '\n'.join(extract_commands_from_json(response))
 
 
-        # response = get_response(question.replace('Nokia','huawei'),lora=True,  system=True)
-        # response = response.strip('```').strip("json").strip()
-        # retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
-        # cli_list = get_response(retrieved_prompt, lora=False, system=False)
-        # cli_list = cli_list.strip('```').strip("json").strip()
+        response = get_response(question.replace('Nokia 7750 SR','Huawei NE40E'),lora=True,  system=True, model_name='v3')
+        response = response.strip().strip('```').strip("json").strip()
+        retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
+        cli_list = get_response(retrieved_prompt, lora=False, system=False)
+        cli_list = cli_list.strip('```').strip("json").strip()
 
         judge = get_72b_response(check_prompt.format(
             User_Question=question,
@@ -231,7 +234,7 @@ def process_sample(i):
         return False
 
 # 线程数可根据CPU数和每次API响应速度调整，通常4~8左右合适
-MAX_WORKERS = 10
+MAX_WORKERS = 100
 
 correct = 0
 results = []

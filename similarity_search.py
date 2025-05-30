@@ -171,18 +171,21 @@ def get_retrieved_prompt(user_question, llm_commands):
 
     results = []
 
-    # def_results = retriever.retrieve_def(user_question, 5)
-    # for idx_def, score_def, def_cmd in def_results:
-    #     print("检索到的def")
-    #     print(def_cmd)
-    #     # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
-    #     _, _, text = retriever.get_nokia_item(idx_def)
-    #     results.append(text)
+    def_results = retriever.retrieve_def(user_question, 6)
+    for idx_def, score_def, def_cmd in def_results:
+        print("检索到的def")
+        print(def_cmd)
+        # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
+        _, _, text = retriever.get_nokia_item(idx_def)
+        results.append(text)
 
-    for llm_command in llm_commands:
-        print("原cli:")
-        print(llm_command)
-        results+=(retriever.search(llm_command, top_k1=2, top_k2=5))
+    # for llm_command in llm_commands:
+    #     print("原cli:")
+    #     print(llm_command)
+    #     results+=(retriever.search(llm_command, top_k1=1, top_k2=3))
+
+
+
     retrieved_docs = '\n'.join(list(set(results)))
     return rag_prompt.format(user_question=user_question, retrieved_docs=retrieved_docs)
 

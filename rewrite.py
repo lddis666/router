@@ -1,6 +1,6 @@
 import json
 from openai import OpenAI
-question = json.load(open("question_test_nokia.json", "r"))
+question = json.load(open("/root/router/question_test_nokia_2.json", "r"))
 
 
 client2 = OpenAI(
@@ -59,8 +59,8 @@ def get_72b_response(prompt):
     print(prompt)
     completion = client2.chat.completions.create(
         # model="Qwen/Qwen2.5-72B-Instruct-GPTQ-Int8",
-        model = "deepseek-v3-250324",
-        # model = "deepseek-r1-250120",
+        # model = "deepseek-v3-250324",
+        model = "deepseek-r1-250120",
         messages=[
             {"role": "user", "content": prompt}
         ],
