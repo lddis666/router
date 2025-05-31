@@ -158,9 +158,9 @@ def get_response(input_text, lora = True, system = False, model_name = 'r1'):
     print(completion.choices[0].message.content)
     return completion.choices[0].message.content
 
-# with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
+with open('./question_test_huawei.json', 'r', encoding='utf-8') as f:
 
-with open('/root/router/rewrite_question.json', 'r', encoding='utf-8') as f:
+# with open('/root/router/rewrite_question.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 
@@ -282,10 +282,10 @@ def process_sample(i):
         # response = response.strip().strip('```').strip("json").strip()
         # cli_list = '\n'.join(extract_commands_from_json(response))
 
-        response = get_response(get_intent_prompt(question),lora=True,  system=False, model_name='v3')
-        response = response.strip().strip('```').strip("json").strip()
+        # response = get_response(get_intent_prompt(question),lora=True,  system=False, model_name='v3')
+        # response = response.strip().strip('```').strip("json").strip()
 
-        # response = None
+        response = None
 
         retrieved_prompt = get_retrieved_prompt(question, response)
         cli_list = get_response(retrieved_prompt, lora=False, system=False)
