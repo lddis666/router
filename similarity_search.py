@@ -10,7 +10,7 @@ class CommandRetriever:
         self.model_cli = SentenceTransformer(model_name1)
         self.model_def = SentenceTransformer(model_name2)
         self.embeddings_cli = self.model_cli.encode([cmd for cmd in self.huawei_commands['cli']], convert_to_tensor=True)
-        self.embeddings_def = self.model_def.encode([cmd for cmd in self.huawei_commands['text']], convert_to_tensor=True)
+        self.embeddings_def = self.model_def.encode([cmd for cmd in self.nokia_commands['text']], convert_to_tensor=True)
 
     def retrieve_cli(self, query, top_k=3):
         query_emb = self.model_cli.encode([query], convert_to_tensor=True)
@@ -33,8 +33,8 @@ class CommandRetriever:
 
         results = []
         for idx in top_indices:
-            # results.append((idx, float(sim_scores[idx]), self.nokia_commands['text'][idx]))
-            results.append((idx, float(sim_scores[idx]), self.huawei_commands['text'][idx]))
+            results.append((idx, float(sim_scores[idx]), self.nokia_commands['text'][idx]))
+            # results.append((idx, float(sim_scores[idx]), self.huawei_commands['text'][idx]))
         return results
 
 
@@ -173,13 +173,16 @@ def get_retrieved_prompt(user_question, llm_commands):
 
     results = []
 
-    def_results = retriever.retrieve_def(user_question, 4)
+    if not llm_commands: 
+        llm_commands = user_question
+    def_results = retriever.retrieve_def(llm_commands, 6)
+
     for idx_def, score_def, def_cmd in def_results:
         print("检索到的def")
         print(def_cmd)
         # print(f"DEF: {def_cmd} (Score: {score_def:.4f})")
-        # _, _, text = retriever.get_nokia_item(idx_def)
-        _, _, text = retriever.get_huawei_item(idx_def)
+        _, _, text = retriever.get_nokia_item(idx_def)
+        # _, _, text = retriever.get_huawei_item(idx_def)
         results.append(text)
 
     # for llm_command in llm_commands:

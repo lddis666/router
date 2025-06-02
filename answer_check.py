@@ -16,7 +16,8 @@ client2 = OpenAI(
     # base_url="http://localhost:8802/v1",
     base_url="https://ark.cn-beijing.volces.com/api/v3/",
     # api_key="token-abc123",
-    api_key="606f1ad7-6633-4c7e-87e8-2e8ab460d003"
+    # api_key="606f1ad7-6633-4c7e-87e8-2e8ab460d003"
+    api_key = "80a86ab3-3a1d-419a-8aae-7a3f10a2d32f"
     
 )
 def get_72b_response(prompt):
@@ -109,19 +110,21 @@ def get_response(input_text, lora = True, system = False, model_name = 'r1'):
     # system
     if system:
         system_prompt = '''
-    You are a router command assistant. Please generate the required router configuration commands based on my input, and output ONLY in JSON format as shown below:
+You are a router command assistant. Please generate the required router configuration commands based on my input, and output ONLY in JSON format as shown below:
 
-    {
-    "commands": [
-        "command 1",
-        "command 2",
-        "command 3"
-        // The number of commands may vary depending on the requirements
-    ]
-    }
+{
+"commands": [
+    "command 1",
+    "command 2",
+    "command 3"
+    // The number of commands may vary depending on the requirements
+]
+}
 
-    Only the most 1-3 essential CLI commands are needed, a complete list of all CLI is not required.
-    Do not provide any explanation, description, or code block markers. Only return the pure JSON object. 
+
+
+Only the most 1-3 essential CLI commands are needed, a complete list of all CLI is not required.
+Do not provide any explanation, description, or code block markers. Only return the pure JSON object. 
     '''
 
         # messages = [{"role": "system","content":system_prompt},{"role": "user", "content": input_text}]
@@ -158,7 +161,7 @@ def get_response(input_text, lora = True, system = False, model_name = 'r1'):
     print(completion.choices[0].message.content)
     return completion.choices[0].message.content
 
-with open('./question_test_huawei.json', 'r', encoding='utf-8') as f:
+with open('./question_test_nokia.json', 'r', encoding='utf-8') as f:
 
 # with open('/root/router/rewrite_question.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
@@ -233,7 +236,7 @@ def get_intent_prompt(question):
 # '''
     prompt = '''
 
-You are a CLI configuration manual expert for Huawei NE40E routers, responsible for writing authoritative and precise command documentation.
+You are a CLI configuration manual expert for Nokia 7750 SR routers, responsible for writing authoritative and precise command documentation.
 
 The user will describe their real-world configuration needs in natural or conversational language. Your task is to accurately identify the user's true, standardized configuration intent, and extract the **single most essential CLI command** that directly fulfills the requirement. Then, generate configuration documentation for that command in the style of the official CLI reference manual.
 
@@ -251,6 +254,23 @@ You must output ONLY a JSON object in the following structure:
         }
     ]
 }
+
+Here is an example:
+{
+    "PageTitle": "accept-from-ebgp",
+    "FuncDef": "This command configures BGP to accept and use the link-bandwidth extended community attached to any route received from any EBGP peer in the scope of the command, as long as that route belongs to one of the listed address families.",
+    "CLIs": [
+        "accept-from-ebgp <family> [ <family> ]",
+        "no accept-from-ebgp"
+    ],
+    "ParaDef": [
+        {
+            "Parameters": "family",
+            "Info": "Specifies the address families for which receiving the link-bandwidth extended community from EBGP peers should be supported. Values-ipv4 - Adds a link-bandwidth extended community to unlabeled unicast IPv4 routes.."
+        }
+    ],
+}
+
 
 Instructions and constraints:
 - This JSON must describe only one CLI command that is central to solving the user's configuration requirement.
@@ -277,19 +297,19 @@ def process_sample(i):
         question = i['question']
         Text = extract_funcdef_and_clis(path)
 
-        # response = get_response(question,lora=False,  system=False, model_name='r1')
-        # cli_list = response
+        response = get_response(question,lora=False,  system=False, model_name='v3')
+        cli_list = response
         # response = response.strip().strip('```').strip("json").strip()
         # cli_list = '\n'.join(extract_commands_from_json(response))
 
         # response = get_response(get_intent_prompt(question),lora=True,  system=False, model_name='v3')
         # response = response.strip().strip('```').strip("json").strip()
 
-        response = None
+        # # response = None
 
-        retrieved_prompt = get_retrieved_prompt(question, response)
-        cli_list = get_response(retrieved_prompt, lora=False, system=False)
-        cli_list = cli_list.strip('```').strip("json").strip()
+        # retrieved_prompt = get_retrieved_prompt(question, response)
+        # cli_list = get_response(retrieved_prompt, lora=False, system=False)
+        # cli_list = cli_list.strip('```').strip("json").strip()
 
         judge = get_72b_response(check_prompt.format(
             User_Question=question,
