@@ -10,7 +10,8 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import json
-from similarity_search import get_retrieved_prompt
+from similarity_search import get_retrieved_prompt, get_topk_index
+
 
 client2 = OpenAI(
     # base_url="http://localhost:8802/v1",
@@ -288,22 +289,42 @@ User input:
     # return prompt.format(ROUTER_MODEL=ROUTER_MODEL, question=question).strip()
 
 
+
+
+def get_path_list(root_dir):
+    """
+    遍历目录下所有JSON文件，返回每个文件中FuncDef和CLIs拼接后的字符串列表
+    """
+    result_list = []
+
+    for subdir, _, files in os.walk(root_dir):
+        for file in files:
+            if file.endswith(".json"):
+                json_path = os.path.join(subdir, file)
+                result_list.append(json_path)
+  
+    return result_list
+
+path_list = get_path_list('./BGP配置命令行数据/nokia')
+
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 
 def process_sample(i):
     try:
+# ----
         path = i['path']
         question = i['question']
-        Text = extract_funcdef_and_clis(path)
+#         Text = extract_funcdef_and_clis(path)
 
-        response = get_response(question,lora=False,  system=False, model_name='v3')
-        cli_list = response
+#         response = get_response(question,lora=False,  system=False, model_name='v3')
+#         cli_list = response
+# ---
         # response = response.strip().strip('```').strip("json").strip()
         # cli_list = '\n'.join(extract_commands_from_json(response))
 
-        # response = get_response(get_intent_prompt(question),lora=True,  system=False, model_name='v3')
-        # response = response.strip().strip('```').strip("json").strip()
+        response = get_response(get_intent_prompt(question),lora=True,  system=False, model_name='v3')
+        response = response.strip().strip('```').strip("json").strip()
 
         # # response = None
 
@@ -311,13 +332,15 @@ def process_sample(i):
         # cli_list = get_response(retrieved_prompt, lora=False, system=False)
         # cli_list = cli_list.strip('```').strip("json").strip()
 
-        judge = get_72b_response(check_prompt.format(
-            User_Question=question,
-            answer=cli_list,
-            Manual_Excerpt=Text
-        ))
 
+# ----
+#         judge = get_72b_response(check_prompt.format(
+#             User_Question=question,
+#             answer=cli_list,
+#             Manual_Excerpt=Text
+#         ))
 
+# ----
         # response = get_response(question.replace('Nokia 7750 SR','Huawei NE40E'),lora=True,  system=True, model_name='v3')
         # response = response.strip().strip('```').strip("json").strip()
         # retrieved_prompt = get_retrieved_prompt(question, extract_commands_from_json(response))
@@ -331,7 +354,13 @@ def process_sample(i):
         # ))
 
 
-        return not 'incorrect' in judge.lower()
+        idx = path_list.index(path)
+
+        idx_list = get_topk_index(response)
+        
+        return idx in idx_list
+
+        # return not 'incorrect' in judge.lower()
     except Exception as e:
         print(f"Error processing sample: {e}")
         return False

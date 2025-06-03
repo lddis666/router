@@ -195,5 +195,16 @@ def get_retrieved_prompt(user_question, llm_commands):
     retrieved_docs = '\n'.join(list(set(results)))
     return rag_prompt.format(user_question=user_question, retrieved_docs=retrieved_docs)
 
+
+def get_topk_index(user_question):
+
+    results = []
+    def_results = retriever.retrieve_def(user_question, 1)
+    for idx_def, score_def, def_cmd in def_results:
+        results.append(idx_def)
+
+    return results
+
+
 # for similarity, cmd in top_matches:
 #     print(f"华为命令: {cmd}（相似度: {similarity:.4f}）")
